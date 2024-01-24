@@ -841,7 +841,7 @@ small {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  top: 68%;
+  top: 73%;
 }
 .result .button-share, .result .button-question, .result .button-tryagain {
   display: inline-block;

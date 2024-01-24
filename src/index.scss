@@ -252,7 +252,6 @@
     &-nickname {
       @extend %position;
       top: 26%;
-
     }
     &-title {
       @extend %default;
@@ -317,32 +316,35 @@
       top: 60%;
     }
   }
-  .button{
-    &-box{
+  .button {
+    &-box {
       @extend %default;
       width: 520px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      top: 68%;
+      top: 73%;
     }
-    &-share, &-question, &-tryagain{
-    @extend %default-bg;
-    display: inline-block;
-    width: 234px;
-    height: 79px;
-    cursor: pointer;
-    transition: transform 200ms;
-    &:hover {
-      width: 241px;
-      height: 77px;
+    &-share,
+    &-question,
+    &-tryagain {
+      @extend %default-bg;
+      display: inline-block;
+      width: 234px;
+      height: 79px;
+      cursor: pointer;
+      transition: transform 200ms;
+      &:hover {
+        width: 241px;
+        height: 77px;
+      }
+      &:active {
+        width: 241px;
+        height: 77px;
+      }
     }
-    &:active {
-      width: 241px;
-      height: 77px;
-    }
-    }
-    &-share, &-question{
+    &-share,
+    &-question {
       margin-bottom: 1rem;
       background-image: url(../public/images/btn_result.png);
       &:hover {

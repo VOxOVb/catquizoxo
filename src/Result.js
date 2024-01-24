@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { questionList } from "./question";
 import { randomNickname } from "./randomNickname";
 export default function Result({ progess, setProgess, score }) {
   const [totalScore, setTotalScore] = useState(null);
@@ -200,7 +199,10 @@ export default function Result({ progess, setProgess, score }) {
           <button className="button-question">
             <img src="images/btn_question_p.png" alt="題目解析"></img>
           </button>
-          <button className="button-tryagain" onClick={() => setProgess("landing")}>
+          <button
+            className="button-tryagain"
+            onClick={() => setProgess("landing")}
+          >
             <img src="images/btn_tryagain_p.png" alt="再測一次"></img>
           </button>
         </div>
