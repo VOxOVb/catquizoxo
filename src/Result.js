@@ -27,8 +27,7 @@ export default function Result({ progess, setProgess, score }) {
         : totalScore < 85
         ? setReward("silver")
         : setReward("gold"));
-    totalScore && nickname !== "" && setNickname(randomNickname);
-  }, [totalScore, nickname]);
+  }, [totalScore]);
 
   const handlePrevious = () => {
     if (imgPick > 0) setImgPick((imgPick) => imgPick - 1);
