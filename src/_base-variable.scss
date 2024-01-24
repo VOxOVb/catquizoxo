@@ -1,0 +1,65 @@
+// 色彩規範=====================================
+// 主色調
+$bg-color: #fbf2e9;
+$primary-color: #fff3b8;
+$highline-color: #3782b8;
+
+// 輔色調
+$light-color: #f8faf6;
+$highline-color-40: #afcde2;
+
+// 半透明色調
+
+// 灰階
+$light_gray: #ccc;
+$gray: #444;
+$deep_gray: #222;
+
+
+// 位置設定
+%position {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+// 動畫圖片初始設定
+%default-position {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+%default-bg {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+%default {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+%section-default{
+position: relative;
+height: 100vh;
+padding: 10vh 0;
+width: 100%;
+}
+
+%size {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}

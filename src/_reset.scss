@@ -1,0 +1,81 @@
+@use "base-variable" as *;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: FakePearl-Regular, "Microsoft JhengHei", "微軟正黑體", "PingFang",
+    "LiHei Pro", "黑體-繁", sans-serif;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+
+ul,
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.set {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* 共用樣式 */
+h3 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.12rem;
+  text-align: center;
+  font-weight: 400;
+  color: $gray;
+  font-family: FakePearl-Regular;
+}
+
+.p {
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  font-weight: 400;
+  color: $gray;
+  font-family: FakePearl-Regular;
+}
+
+small {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  font-weight: 400;
+  color: $gray;
+  font-family: FakePearl-Regular;
+}

@@ -1,0 +1,471 @@
+.landing {
+  .subtitle {
+    animation: sub-blank 2.4s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  .title {
+    animation: title 2s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .cat {
+    animation: cat-opacity 3.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  .p {
+    animation: p-show 3.2s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .btn-blank {
+    animation: btn-blank 4s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  .btn-start {
+    animation: btn-start 0.66s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+}
+
+@keyframes sub-blank {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes title {
+  0% {
+    left: -100%;
+    top: 45%;
+    opacity: 0;
+  }
+  50% {
+    left: 0;
+    top: 45%;
+  }
+  100% {
+    left: 0;
+    top: 17%;
+    opacity: 1;
+  }
+}
+
+@keyframes cat-opacity {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes p-show {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  70% {
+    top: 100%;
+  }
+  100% {
+    top: 62%;
+    opacity: 1;
+  }
+}
+
+@keyframes btn-blank {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes btn-start {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.quiz {
+  .slider {
+    animation: slider-show 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  .cat {
+    animation: cat-opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  // .question {
+  //   animation: q-show 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+  // }
+  // .answer-top {
+  //   animation: a-show-top 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  // }
+  // .answer-bottom {
+  //   animation: a-show-bottom 1s cubic-bezier(0.65, 0, 0.35, 1);
+  // }
+  .answer {
+    &-0,
+    &-1 {
+      &:active {
+        animation: btn-handle-click 0.66s cubic-bezier(0.33, 1, 0.68, 1);
+      }
+    }
+  }
+  .handle-click {
+    animation: btn-handle-click 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+}
+
+@keyframes slider-show {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes can-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  80% {
+    transform: rotate(405deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes can-process {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes q-show {
+  0% {
+    opacity: 0;
+    left: -170%;
+  }
+  50% {
+    opacity: 0.8;
+    // left: -140%;
+  }
+  100% {
+    opacity: 1;
+    left: -20%;
+  }
+}
+@keyframes q-hide {
+  0% {
+    opacity: 1;
+    left: -20%;
+  }
+  50% {
+    opacity: 0.7;
+    // left: -140%;
+  }
+  100% {
+    opacity: 0;
+    left: -170%;
+  }
+}
+@keyframes q-hide-then-show {
+  0% {
+    opacity: 1;
+    left: -20%;
+  }
+  25% {
+    opacity: 0.7;
+    // left: -140%;
+  }
+  50% {
+    opacity: 0;
+    left: -170%;
+  }
+  75% {
+    opacity: 0.3;
+    // left: -140%;
+  }
+  100% {
+    opacity: 1;
+    left: -20%;
+  }
+}
+@keyframes a-top-show {
+  0% {
+    top: 120%;
+    opacity: 0;
+  }
+  // 20% {
+  //   top: 120%;
+  // }
+  100% {
+    top: 66%;
+    opacity: 1;
+  }
+}
+@keyframes a-top-hide {
+  0% {
+    top: 66%;
+    opacity: 1;
+  }
+  // 20% {
+  //   top: 66%;
+  // }
+  100% {
+    top: 120%;
+    opacity: 0;
+  }
+}
+@keyframes a-top-hide-then-show {
+  0% {
+    top: 66%;
+    opacity: 1;
+  }
+  // 20% {
+  //   top: 66%;
+  // }
+  60% {
+    top: 120%;
+    opacity: 0;
+  }
+  // 20% {
+  //   top: 120%;
+  // }
+  100% {
+    top: 66%;
+    opacity: 1;
+  }
+}
+@keyframes a-bottom-show {
+  0% {
+    top: 120%;
+    opacity: 0;
+  }
+  // 20% {
+  //   top: 120%;
+  // }
+  100% {
+    top: 77%;
+    opacity: 1;
+  }
+}
+@keyframes a-bottom-hide {
+  0% {
+    top: 77%;
+    opacity: 1;
+  }
+  // 20% {
+  //   top: 77%;
+  // }
+  100% {
+    top: 120%;
+    opacity: 0;
+  }
+}
+@keyframes a-bottom-hide-then-show {
+  0% {
+    top: 77%;
+    opacity: 1;
+  }
+  // 20% {
+  //   top: 77%;
+  // }
+  50% {
+    top: 120%;
+    opacity: 0;
+  }
+  100% {
+    top: 77%;
+    opacity: 1;
+  }
+}
+@keyframes btn-handle-click {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.quizend {
+  animation: result-up 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  .title {
+    animation: title-blank 1.2s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+}
+
+@keyframes result-up {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes title-blank {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.result {
+  .title {
+    animation: title-blank 1.2s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+  .license {
+    &-loading {
+      animation: loading 1s cubic-bezier(0.33, 1, 0.68, 1) 3;
+    }
+    &-reward {
+      animation: reward 6s cubic-bezier(0.25, 0.1, 0.25, 1);
+      &-name {
+        animation: reward-name 4s cubic-bezier(0.33, 1, 0.68, 1);
+      }
+    }
+    &-textbox {
+      animation: textbox 5s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    width: 50px;
+  }
+  60% {
+    width: 75px;
+  }
+  100% {
+    width: 87px;
+  }
+} 
+@keyframes reward-name {
+  0% {
+    opacity: 0;
+    top: 200%;
+  }
+  75% {
+    opacity: 0;
+    top: 100%;
+  }
+  100% {
+    opacity: 1;
+    top: 46%;
+  }
+} 
+@keyframes textbox {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} 
+@keyframes reward {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  90%{
+    transform: rotate(-15deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
