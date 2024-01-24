@@ -22,7 +22,7 @@ export default function Result({ progess, setProgess, score }) {
   }, [score]);
   useEffect(() => {
     totalScore &&
-      (totalScore < 65
+      (totalScore < 70
         ? setReward("copper")
         : totalScore < 85
         ? setReward("silver")

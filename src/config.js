@@ -1,11 +1,11 @@
 // status
-const status =
-  {
-    landing: 1,
-    startQuiz: 2,
-    quizEnd: 3,
-    result: 4,
-  }
+// const status =
+//   {
+//     landing: 1,
+//     startQuiz: 2,
+//     quizEnd: 3,
+//     result: 4,
+//   }
 
 // animation
 export const qAni = [
@@ -33,4 +33,3 @@ export const barAni = [
 // "q-hide-then-show 1.2s cubic-bezier(0.68, 1, 0.33, 1)",
 // "a-top-hide-then-show 1.3s cubic-bezier(0.35, 1, 0.65, 0)",
 // "a-bottom-hide-then-show 1.5s cubic-bezier(0.35, 1, 0.65, 0)",
-
