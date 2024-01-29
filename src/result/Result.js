@@ -8,6 +8,7 @@ import photo02 from "./images/img_02.jpg";
 import photo03 from "./images/img_03.jpg";
 import photo04 from "./images/img_04.jpg";
 import photo05 from "./images/img_05.jpg";
+import resultBg from "./images/result_bg.png";
 import copper from "./images/reward_copper.png";
 import silver from "./images/reward_silver.png";
 import gold from "./images/reward_gold.png";
@@ -21,9 +22,15 @@ import btnShare from "./images/btn_share_p.png";
 import btnQuestions from "./images/btn_question_p.png";
 import btnTryagain from "./images/btn_tryagain_p.png";
 
-export default function Result({ progess, setProgess, score }) {
+export default function Result({
+  progress,
+  setProgress,
+  score,
+  questions,
+  setQuestions,
+}) {
   const photoList = useMemo(
-    () => [photo00, photo01, photo02, photo03, photo04, photo05],
+    () => [photo00, photo01, photo02, photo03, photo04, photo05, resultBg],
     []
   );
   const [totalScore, setTotalScore] = useState(null);
@@ -84,11 +91,26 @@ export default function Result({ progess, setProgess, score }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setProgess("result");
+    setProgress("result");
     nickname === "" && setNickname(randomNickname);
   };
 
-  return progess === "quizEnd" ? (
+  const questionsA = useMemo(() => {
+    return questions.map((item, index) => ({
+      ...item,
+      score: score[index],
+      toggle: false,
+    }));
+  }, [questions, score]);
+
+  const handlequestions = () => {
+    setProgress("questions");
+    setQuestions(questionsA);
+  };
+  // const handleRestart = () => {
+  // };
+
+  return progress === "quizEnd" ? (
     <div className="quizend">
       <div className="title"></div>
       <form onSubmit={handleSubmit}>
@@ -157,7 +179,7 @@ export default function Result({ progess, setProgess, score }) {
       </form>
     </div>
   ) : (
-    progess === "result" && (
+    progress === "result" && (
       <div className="result">
         <div className="title"></div>
         <div className="license">
@@ -236,12 +258,13 @@ export default function Result({ progess, setProgess, score }) {
             <img src={btnShare} alt="分享好友"></img>
           </button>
           <button className="button-question">
-            <img src={btnQuestions} alt="題目解析"></img>
+            <img
+              src={btnQuestions}
+              alt="題目解析"
+              onClick={handlequestions}
+            ></img>
           </button>
-          <button
-            className="button-tryagain"
-            onClick={() => setProgess("landing")}
-          >
+          <button className="button-tryagain">
             <img src={btnTryagain} alt="再測一次"></img>
           </button>
         </div>

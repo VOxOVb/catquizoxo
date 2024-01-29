@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
 }
 
-.result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questions-list, .questions .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -20,7 +20,7 @@
   background-repeat: no-repeat;
 }
 
-.result, .quizend, .quiz, .landing {
+.questions, .result, .quizend, .quiz, .landing {
   position: relative;
   height: 100vh;
   padding: 10vh 0;
@@ -130,7 +130,7 @@ small {
   background-repeat: no-repeat;
 }
 
-.result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questions-list, .questions .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -139,7 +139,7 @@ small {
   background-repeat: no-repeat;
 }
 
-.result, .quizend, .quiz, .landing {
+.questions, .result, .quizend, .quiz, .landing {
   position: relative;
   height: 100vh;
   padding: 10vh 0;
@@ -578,9 +578,12 @@ small {
   font-family: FakePearl-Regular;
   src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff) format("woff");
 }
-.container {
+body {
   background-color: #fbf2e9;
   background-image: url(../public/images/bgline.png);
+}
+
+.container {
   height: 100vh;
 }
 
@@ -877,4 +880,33 @@ small {
 }
 .result .button-tryagain:active {
   background-image: url(../public/images/btn_highline_active.png);
+}
+
+.questions .title {
+  width: 193px;
+  height: 28px;
+  top: 10%;
+  background-image: url(./questions/images/title_questions.png);
+}
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  margin-top: 5vh;
+}
+.questions-box {
+  margin: 1.2vh 0;
+}
+.questions-box h3 {
+  text-align: left;
+  letter-spacing: 0.4rem;
+}
+.questions-box h3 img {
+  display: inline;
+  width: 40px;
+  height: 40px;
+}
+.questions-box p {
+  text-align: left;
+  letter-spacing: 0.3rem;
 }/*# sourceMappingURL=index.css.map */

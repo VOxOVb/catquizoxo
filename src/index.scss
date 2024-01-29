@@ -9,9 +9,11 @@
       format("woff");
 }
 
-.container {
+body {
   background-color: $bg-color;
   background-image: url(../public/images/bgline.png);
+}
+.container {
   height: 100vh;
 }
 
@@ -363,6 +365,40 @@
       &:active {
         background-image: url(../public/images/btn_highline_active.png);
       }
+    }
+  }
+}
+
+.questions {
+  @extend %section-default;
+  .title {
+    @extend %default;
+    width: 193px;
+    height: 28px;
+    top: 10%;
+    background-image: url(./questions/images/title_questions.png);
+  }
+  &-list {
+    @extend %default;
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    margin-top: 5vh;
+  }
+  &-box {
+    margin: 1.2vh 0;
+    h3 {
+      text-align: left;
+      letter-spacing: 0.4rem;
+      img {
+        display: inline;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    p {
+      text-align: left;
+      letter-spacing: 0.3rem;
     }
   }
 }
