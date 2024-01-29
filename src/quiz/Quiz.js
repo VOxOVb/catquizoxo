@@ -1,11 +1,21 @@
 import { useEffect, useState } from "react";
-import { qAni, aAni, barAni } from "./config";
-import { randomQuestionList } from "./question";
+import { qAni, aAni, barAni } from "../config";
+import { randomQuestionList } from "../question";
+import cat01 from "./images/cat-01.png";
+import cat02 from "./images/cat-02.png";
+import cat03 from "./images/cat-03.png";
 
 export default function Quiz({ progess, setProgess, setScore }) {
   const [step, setStep] = useState(0);
   const [text, setText] = useState(step);
   const [isActive, setIsActive] = useState("");
+
+  useEffect(() => {
+    const imgList = [cat01, cat02, cat03];
+    imgList.forEach((image) => {
+      new Image().src = image;
+    });
+  }, []);
 
   useEffect(() => {
     if (step !== randomQuestionList.length)
@@ -67,15 +77,15 @@ function Cat({ step, randomQuestionList }) {
   return (
     <main>
       {step < randomQuestionList.length / 3 - 1 && (
-        <img className="cat" src="images/cat-01.png" alt="貓"></img>
+        <img className="cat" src={cat01} alt="貓"></img>
       )}
       {step >= randomQuestionList.length / 3 - 1 &&
         step < (randomQuestionList.length / 3) * 2 - 1 && (
-          <img className="cat" src="images/cat-02.png" alt="貓"></img>
+          <img className="cat" src={cat02} alt="貓"></img>
         )}
       {step >= (randomQuestionList.length / 3) * 2 - 1 &&
         step <= randomQuestionList.length && (
-          <img className="cat" src="images/cat-03.png" alt="貓"></img>
+          <img className="cat" src={cat03} alt="貓"></img>
         )}
     </main>
   );

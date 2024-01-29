@@ -587,13 +587,13 @@ small {
 .landing .subtitle {
   width: 395px;
   height: 40px;
-  background-image: url(../public/images/subtitle_index.png);
+  background-image: url(./landing/images/subtitle_index.png);
   top: 10%;
 }
 .landing .title {
   width: 445px;
   height: 103px;
-  background-image: url(../public/images/title_index.png);
+  background-image: url(./landing/images/title_index.png);
   top: 17%;
 }
 .landing main {
@@ -607,7 +607,7 @@ small {
   display: inline-block;
   width: 234px;
   height: 79px;
-  background-image: url(../public/images/btn_bg_index.png);
+  background-image: url(./landing/images/btn_bg_index.png);
   top: 72%;
   cursor: pointer;
   transition: transform 200ms;
@@ -616,7 +616,7 @@ small {
   width: 240px;
   height: 82px;
   transform: translate(-3px, -3px);
-  background-image: url(../public/images/btn_index_shadow2.png);
+  background-image: url(./landing/images/btn_index_shadow2.png);
 }
 .landing .btn:hover img {
   width: 234px;
@@ -651,7 +651,7 @@ small {
   width: 65px;
   height: 56px;
   top: -180%;
-  background-image: url(../public/images/can.png);
+  background-image: url(./quiz/images/can.png);
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
@@ -693,7 +693,7 @@ small {
   width: 193px;
   height: 28px;
   top: 10%;
-  background-image: url(../public/images/title_quizend.png);
+  background-image: url(./result/images/title_quizend.png);
 }
 .quizend .photo {
   width: 270px;
@@ -715,22 +715,22 @@ small {
   top: 80%;
 }
 .quizend .btn-prev {
-  background-image: url(../public/images/btn_prev.png);
+  background-image: url(./result/images/btn_prev.png);
 }
 .quizend .btn-prev:hover {
-  background-image: url(../public/images/btn_prev_hover.png);
+  background-image: url(./result/images/btn_prev_hover.png);
 }
 .quizend .btn-prev:active {
-  background-image: url(../public/images/btn_prev_active.png);
+  background-image: url(./result/images/btn_prev_active.png);
 }
 .quizend .btn-next {
-  background-image: url(../public/images/btn_next.png);
+  background-image: url(./result/images/btn_next.png);
 }
 .quizend .btn-next:hover {
-  background-image: url(../public/images/btn_next_hover.png);
+  background-image: url(./result/images/btn_next_hover.png);
 }
 .quizend .btn-next:active {
-  background-image: url(../public/images/btn_next_active.png);
+  background-image: url(./result/images/btn_next_active.png);
 }
 .quizend .question {
   width: 410px;
@@ -773,13 +773,13 @@ small {
   width: 193px;
   height: 28px;
   top: 10%;
-  background-image: url(../public/images/title_result.png);
+  background-image: url(./result/images/title_result.png);
 }
 .result .license {
   top: 18%;
   width: 670px;
   height: 420px;
-  background-image: url(../public/images/result_bg.png);
+  background-image: url(./result/images/result_bg.png);
 }
 .result .license-nickname {
   top: 26%;
@@ -788,16 +788,16 @@ small {
   width: 246px;
   height: 56px;
   bottom: 0;
-  background-image: url(../public/images/result_title.png);
+  background-image: url(./result/images/result_title.png);
 }
 .result .license-name {
   width: 74px;
   height: 29px;
   top: 18%;
-  background-image: url(../public/images/result_name.png);
+  background-image: url(./result/images/result_name.png);
 }
 .result .license-star {
-  background-image: url(../public/images/result_star.png);
+  background-image: url(./result/images/result_star.png);
 }
 .result .license-reward {
   position: absolute;
@@ -829,7 +829,7 @@ small {
 .result .license-loading div {
   width: 87px;
   height: 29px;
-  background-image: url(../public/images/result_p.png);
+  background-image: url(./result/images/result_p.png);
 }
 .result .license-textbox {
   display: flex;

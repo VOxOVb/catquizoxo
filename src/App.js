@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Landing from "./Landing";
-import Quiz from "./Quiz";
-import Result from "./Result";
+import Landing from "./landing/Landing";
+import Quiz from "./quiz/Quiz";
+import Result from "./result/Result";
 
 export default function App() {
   // const [progess, setProgess] = useState("startQuiz");

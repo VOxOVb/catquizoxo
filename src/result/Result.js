@@ -1,6 +1,31 @@
-import { useEffect, useState } from "react";
-import { randomNickname } from "./randomNickname";
+import { useEffect, useMemo, useState } from "react";
+import { randomNickname } from "../randomNickname";
+import border from "./images/img_border.png";
+import result from "./images/btn_result_p.png";
+import photo00 from "./images/img_00.jpg";
+import photo01 from "./images/img_01.jpg";
+import photo02 from "./images/img_02.jpg";
+import photo03 from "./images/img_03.jpg";
+import photo04 from "./images/img_04.jpg";
+import photo05 from "./images/img_05.jpg";
+import copper from "./images/reward_copper.png";
+import silver from "./images/reward_silver.png";
+import gold from "./images/reward_gold.png";
+import copperP from "./images/result_copper_p.png";
+import silverP from "./images/result_silver_p.png";
+import goldP from "./images/result_gold_p.png";
+import copperBg from "./images/result_copper_bg.png";
+import silverBg from "./images/result_silver_bg.png";
+import goldBg from "./images/result_gold_bg.png";
+import btnShare from "./images/btn_share_p.png";
+import btnQuestions from "./images/btn_question_p.png";
+import btnTryagain from "./images/btn_tryagain_p.png";
+
 export default function Result({ progess, setProgess, score }) {
+  const photoList = useMemo(
+    () => [photo00, photo01, photo02, photo03, photo04, photo05],
+    []
+  );
   const [totalScore, setTotalScore] = useState(null);
   const [reward, setReward] = useState(null);
   const [imgPick, setImgPick] = useState(0);
@@ -16,6 +41,12 @@ export default function Result({ progess, setProgess, score }) {
   };
 
   useEffect(() => {
+    photoList.forEach((image) => {
+      new Image().src = image;
+    });
+  }, [photoList]);
+
+  useEffect(() => {
     if (score.length === 9) {
       setTotalScore(calcScore(score));
     }
@@ -23,10 +54,10 @@ export default function Result({ progess, setProgess, score }) {
   useEffect(() => {
     totalScore &&
       (totalScore < 70
-        ? setReward("copper")
+        ? setReward(copper)
         : totalScore < 85
-        ? setReward("silver")
-        : setReward("gold"));
+        ? setReward(silver)
+        : setReward(gold));
   }, [totalScore]);
 
   const handlePrevious = () => {
@@ -68,9 +99,9 @@ export default function Result({ progess, setProgess, score }) {
               (j !== 5 ? (
                 <img
                   key={`image-${j}`}
-                  src="images/img_border.png"
+                  src={border}
                   alt="選擇中的圖片"
-                  style={{ backgroundImage: `url(images/img_0${j}.jpg)` }}
+                  style={{ backgroundImage: `url(${photoList[j]})` }}
                 ></img>
               ) : (
                 <label
@@ -80,13 +111,13 @@ export default function Result({ progess, setProgess, score }) {
                 >
                   <img
                     key={`image-${j}`}
-                    src="images/img_border.png"
+                    src={border}
                     alt="上傳圖片"
                     style={{
                       backgroundImage:
                         imgUpload !== null
                           ? `url(${imgUpload})`
-                          : `url(images/img_0${j}.jpg)`,
+                          : `url(${photoList[j]})`,
                     }}
                   ></img>
                   <input
@@ -121,7 +152,7 @@ export default function Result({ progess, setProgess, score }) {
           onChange={handleInput}
         ></input>
         <button className="submit" type="submit">
-          <img src="images/btn_result_p.png" alt="看結果"></img>
+          <img src={result} alt="看結果"></img>
         </button>
       </form>
     </div>
@@ -139,43 +170,52 @@ export default function Result({ progess, setProgess, score }) {
           </div>
           <div
             className="license-reward"
-            style={{ backgroundImage: `url(images/reward_${reward}.png)` }}
+            style={{ backgroundImage: `url(${reward})` }}
           >
             <img
-              src="images/img_border.png"
+              src={border}
               alt="選擇中的圖片"
               style={{
                 backgroundImage:
                   imgUpload !== null
                     ? `url(${imgUpload})`
-                    : `url(images/img_0${imgPick}.jpg)`,
+                    : `url(${photoList[imgPick]})`,
               }}
             ></img>
           </div>
           <img
             className="license-reward-name"
-            src={`images/result_${reward}_p.png`}
+            src={
+              reward === copper ? copperP : reward === silver ? silverP : goldP
+            }
             alt="稱號"
-            style={{ backgroundImage: `url(images/result_${reward}_bg.png)` }}
+            style={{
+              backgroundImage:
+                reward === copper
+                  ? `url(${copperBg})`
+                  : reward === silver
+                  ? `url(${silverBg})`
+                  : `url(${goldBg})`,
+            }}
           ></img>
           <div className="license-score"></div>
           <div className="license-textbox">
             <small>你拿到了{totalScore}分!</small>
-            {reward === "copper" && (
+            {reward === copper && (
               <>
                 <small>差強人意...多多補充相關知識</small>
                 <small>和喵星人的相處能更融洽喔~</small>
                 <small>加油好嗎(=^-ω-^=)</small>
               </>
             )}
-            {reward === "silver" && (
+            {reward === silver && (
               <>
                 <small>還不錯的成績</small>
                 <small>獲取更多貓知識</small>
                 <small>提高喵星人好感度吧!(=^ΦωΦ^=)</small>
               </>
             )}
-            {reward === "gold" &&
+            {reward === gold &&
               (totalScore === 100 ? (
                 <>
                   <small>太厲害了!滿分!!</small>
@@ -193,16 +233,16 @@ export default function Result({ progess, setProgess, score }) {
         </div>
         <div className="button-box">
           <button className="button-share">
-            <img src="images/btn_share_p.png" alt="分享好友"></img>
+            <img src={btnShare} alt="分享好友"></img>
           </button>
           <button className="button-question">
-            <img src="images/btn_question_p.png" alt="題目解析"></img>
+            <img src={btnQuestions} alt="題目解析"></img>
           </button>
           <button
             className="button-tryagain"
             onClick={() => setProgess("landing")}
           >
-            <img src="images/btn_tryagain_p.png" alt="再測一次"></img>
+            <img src={btnTryagain} alt="再測一次"></img>
           </button>
         </div>
       </div>

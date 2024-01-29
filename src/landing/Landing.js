@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import cat00 from "./images/cat-00.png";
+import btnP from "./images/btn_p_index.png";
 export default function Landing({ progess, setProgess }) {
   const [btnClass, setBtnClass] = useState("btn btn-blank");
   const handleStartBtn = () => {
@@ -19,7 +21,7 @@ export default function Landing({ progess, setProgess }) {
           <div className="subtitle"></div>
           <div className="title"></div>
           <main>
-            <img className="cat" src="images/cat-00.png" alt="貓"></img>
+            <img className="cat" src={cat00} alt="貓"></img>
           </main>
           <p className="p">
             你自認是專業貓奴嗎？
@@ -27,7 +29,7 @@ export default function Landing({ progess, setProgess }) {
             貓奴檢定考，等你來挑戰！
           </p>
           <button className={btnClass} onClick={handleStartBtn}>
-            <img src="images/btn_p_index.png" alt="開始檢定"></img>
+            <img src={btnP} alt="開始檢定"></img>
           </button>
         </div>
       </>

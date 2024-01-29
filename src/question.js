@@ -54,7 +54,7 @@ const behaviorQ = [
     question: "喵星人露出水汪汪大眼...",
     options: [
       { id: 1, text: "裝可愛撒嬌，快賞我肉泥", isCorrect: false },
-      { id: 2, text: "興奮專注", isCorrect: true },
+      { id: 2, text: "在非常興奮專注的狀態", isCorrect: true },
     ],
     parse:
       "當貓貓露出水汪汪大眼的時候，就代表他們對眼前的東西很感興趣，才會露出專注、好奇的眼神！這些東西通常是裝著食物的罐頭或小鳥等獵物。吃東西時，看到貓主子使出水汪汪大眼誘惑，可別因此心軟投降而任意餵食唷。",
