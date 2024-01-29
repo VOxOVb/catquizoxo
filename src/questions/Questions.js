@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import cross from "./images/cross.png";
 export default function Questions({
   progress,
