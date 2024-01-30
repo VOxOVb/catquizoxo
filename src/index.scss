@@ -49,7 +49,6 @@ body {
     height: 79px;
     background-image: url(./landing/images/btn_bg_index.png);
     top: 72%;
-    cursor: pointer;
     transition: transform 200ms;
     &:hover {
       width: 240px;
@@ -123,7 +122,6 @@ body {
       width: 365px;
       height: 72px;
       border-radius: 2.5rem;
-      cursor: pointer;
       &:hover {
         transform: translate(-15px, -4px);
         background-color: rgba(225, 225, 225, 0.5);
@@ -219,7 +217,6 @@ body {
     height: 79px;
     background-image: url(../public/images/btn_result.png);
     top: 76%;
-    cursor: pointer;
     transition: transform 200ms;
     &:hover {
       // width: 223px;
@@ -325,7 +322,7 @@ body {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      top: 73%;
+      top: 69%;
     }
     &-share,
     &-question,
@@ -334,7 +331,6 @@ body {
       display: inline-block;
       width: 234px;
       height: 79px;
-      cursor: pointer;
       transition: transform 200ms;
       &:hover {
         width: 241px;
@@ -369,36 +365,114 @@ body {
   }
 }
 
-.questions {
+.answer {
   @extend %section-default;
   .title {
     @extend %default;
     width: 193px;
     height: 28px;
     top: 10%;
-    background-image: url(./questions/images/title_questions.png);
+    background-image: url(./answer/images/title_answer.png);
+  }
+  .scrollbox {
+    @extend %default;
+    display: block;
+    overflow: auto;
+    margin-top: 4vh;
+    height: 65vh;
   }
   &-list {
     @extend %default;
     display: flex;
     flex-direction: column;
-    width: 550px;
-    margin-top: 5vh;
+    width: 650px;
   }
   &-box {
     margin: 1.2vh 0;
     h3 {
+      display: flex;
+      position: relative;
       text-align: left;
       letter-spacing: 0.4rem;
       img {
-        display: inline;
-        width: 40px;
-        height: 40px;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
       }
     }
     p {
+      position: relative;
+      left: 4%;
       text-align: left;
       letter-spacing: 0.3rem;
+      text-align: justify;
     }
+  }
+  .button {
+    &-box {
+      @extend %default;
+      width: 520px;
+      display: flex;
+      justify-content: space-between;
+      bottom: 10%;
+    }
+    &-question-list,
+    &-tryagain {
+      @extend %default-bg;
+      display: inline-block;
+      width: 234px;
+      height: 79px;
+      transition: transform 200ms;
+      &:hover {
+        width: 241px;
+        height: 77px;
+      }
+      &:active {
+        width: 241px;
+        height: 77px;
+      }
+    }
+    &-question-list {
+      background-image: url(../public/images/btn_result.png);
+      &:hover {
+        background-image: url(../public/images/btn_result_hover.png);
+      }
+      &:active {
+        background-image: url(../public/images/btn_result_active.png);
+      }
+    }
+    &-tryagain {
+      background-image: url(../public/images/btn_highline.png);
+      &:hover {
+        background-image: url(../public/images/btn_highline_hover.png);
+      }
+      &:active {
+        background-image: url(../public/images/btn_highline_active.png);
+      }
+    }
+  }
+}
+
+.questionlist {
+  @extend %section-default;
+  .title {
+    @extend %default;
+    width: 193px;
+    height: 28px;
+    top: 10%;
+    background-image: url(./questionList/images/title_questionlist.png);
+  }
+  .tag {
+    &-box {
+      @extend %default-position;
+      display: flex;
+      justify-content: space-between;
+      width: 600px;
+      margin-top: 6vh;
+    }
+    @extend %default-bg;
+    width: 167px;
+    height: 53px;
+    background-image: url(../public/images/btn_result.png);
   }
 }

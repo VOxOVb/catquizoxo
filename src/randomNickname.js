@@ -14,7 +14,7 @@ const nicknameList = [
 ]
 
 const randomPick = (arr) => {
-    const random = Math.floor(Math.random() * arr.length);
+    const random = Math.round(Math.random() * arr.length);
     const randomNickname = arr[random];
     return randomNickname;
 }

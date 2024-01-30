@@ -20,7 +20,7 @@ import silverBg from "./images/result_silver_bg.png";
 import goldBg from "./images/result_gold_bg.png";
 import btnShare from "./images/btn_share_p.png";
 import btnQuestions from "./images/btn_question_p.png";
-import btnTryagain from "./images/btn_tryagain_p.png";
+import btnTryagain from "../shared/images/btn_tryagain_p.png";
 
 export default function Result({
   progress,
@@ -97,18 +97,17 @@ export default function Result({
 
   const questionsA = useMemo(() => {
     return questions.map((item, index) => ({
+      id: index,
       ...item,
       score: score[index],
-      toggle: false,
+      toggle: index === 0 ? true : false,
     }));
   }, [questions, score]);
 
   const handlequestions = () => {
-    setProgress("questions");
+    setProgress("answer");
     setQuestions(questionsA);
   };
-  // const handleRestart = () => {
-  // };
 
   return progress === "quizEnd" ? (
     <div className="quizend">

@@ -3,7 +3,8 @@ import { questionlist } from "./question";
 import Landing from "./landing/Landing";
 import Quiz from "./quiz/Quiz";
 import Result from "./result/Result";
-import Questions from "./questions/Questions";
+import Answer from "./answer/Answer";
+import QuestionList from "./questionList/QuestionList";
 
 export default function App() {
   // const [progress, setProgress] = useState("startQuiz");
@@ -12,7 +13,8 @@ export default function App() {
   const [progress, setProgress] = useState("landing");
   const [questions, setQuestions] = useState(questionlist);
   const [score, setScore] = useState([]);
-
+  // const handleRestart = () => {
+  // };
   return (
     <div className="container">
       <Landing progress={progress} setProgress={setProgress} />
@@ -30,12 +32,15 @@ export default function App() {
         questions={questions}
         setQuestions={setQuestions}
       />
-      <Questions
+      <Answer
         progress={progress}
         setProgress={setProgress}
         questions={questions}
+        setQuestions={setQuestions}
         score={score}
       />
+      <QuestionList
+        progress={progress} />
     </div>
   );
 }
