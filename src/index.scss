@@ -366,29 +366,25 @@ body {
 }
 
 .answer {
-  @extend %section-default;
+  position: relative;
+  padding: 10vh 0;
+  width: 100%;
   .title {
     @extend %default;
     width: 193px;
     height: 28px;
-    top: 10%;
     background-image: url(./answer/images/title_answer.png);
-  }
-  .scrollbox {
-    @extend %default;
-    display: block;
-    overflow: auto;
-    margin-top: 4vh;
-    height: 65vh;
   }
   &-list {
     @extend %default;
-    display: flex;
-    flex-direction: column;
+    position: static;
+    display: block;
     width: 650px;
+    margin: 5vh auto;
   }
   &-box {
     margin: 1.2vh 0;
+    display: block;
     h3 {
       display: flex;
       position: relative;
@@ -406,15 +402,16 @@ body {
       text-align: left;
       letter-spacing: 0.3rem;
       text-align: justify;
+      width: 96%;
     }
   }
   .button {
     &-box {
       @extend %default;
+      position: static;
       width: 520px;
       display: flex;
       justify-content: space-between;
-      bottom: 10%;
     }
     &-question-list,
     &-tryagain {
@@ -465,6 +462,7 @@ body {
   .tag {
     &-box {
       @extend %default-position;
+      position: static;
       display: flex;
       justify-content: space-between;
       width: 600px;
@@ -474,5 +472,93 @@ body {
     width: 167px;
     height: 53px;
     background-image: url(../public/images/btn_result.png);
+  }
+  .border {
+    &-top {
+      width: 800px;
+      height: 70px;
+      background-image: url(./questionList/images/border_top.png);
+      img {
+        @extend %default;
+        width: 234px;
+        height: 79px;
+        background-image: url(../public/images/btn_result.png);
+      }
+    }
+    &-middle {
+      width: 800px;
+      padding: 0 7%;
+      background-image: url(./questionList/images/border_middle.png);
+    }
+    &-bottom {
+      width: 800px;
+      height: 30px;
+      background-image: url(./questionList/images/border_bottom.png);
+    }
+  }
+  .question {
+    &-list {
+      @extend %default;
+      position: static;
+      display: block;
+      width: 800px;
+    }
+    &-container {
+      margin: 5vh auto;
+    }
+    &-box {
+      margin: 1.2vh 0;
+      display: block;
+      h3 {
+        display: flex;
+        position: relative;
+        text-align: left;
+        letter-spacing: 0.4rem;
+        img {
+          display: inline-block;
+          width: 36px;
+          height: 36px;
+        }
+      }
+      p {
+        position: relative;
+        left: 4%;
+        text-align: left;
+        letter-spacing: 0.3rem;
+        text-align: justify;
+        width: 96%;
+      }
+    }
+  }
+  .button {
+    &-box {
+      @extend %default;
+      position: static;
+      width: 234px;
+    }
+    &-tryagain {
+      @extend %default-bg;
+      display: inline-block;
+      width: 234px;
+      height: 79px;
+      transition: transform 200ms;
+      &:hover {
+        width: 241px;
+        height: 77px;
+      }
+      &:active {
+        width: 241px;
+        height: 77px;
+      }
+    }
+    &-tryagain {
+      background-image: url(../public/images/btn_highline.png);
+      &:hover {
+        background-image: url(../public/images/btn_highline_hover.png);
+      }
+      &:active {
+        background-image: url(../public/images/btn_highline_active.png);
+      }
+    }
   }
 }

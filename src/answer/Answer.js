@@ -6,7 +6,6 @@ export default function Answer({
   setProgress,
   questions,
   setQuestions,
-  score,
 }) {
   const handleToggle = (index) => {
     setQuestions((questions) =>
@@ -17,13 +16,12 @@ export default function Answer({
   };
   const handleQuestionList = () => {
     setProgress("questionList");
-  }
+  };
 
   return (
     progress === "answer" && (
       <div className="answer">
         <div className="title"></div>
-        <div className="scrollbox">
         <div className="answer-list">
           {questions.map((item, index) => (
             <div key={`q-${index}`} className="answer-box">
@@ -46,14 +44,9 @@ export default function Answer({
             </div>
           ))}
         </div>
-        </div>
         <div className="button-box">
-          <button onClick={handleQuestionList}>
-            <img
-              className="button-question-list"
-              src={btnQuestionList}
-              alt="檢定題庫"
-            ></img>
+          <button className="button-question-list" onClick={handleQuestionList}>
+            <img src={btnQuestionList} alt="檢定題庫"></img>
           </button>
           <button className="button-tryagain">
             <img src={btnTryagain} alt="再測一次"></img>

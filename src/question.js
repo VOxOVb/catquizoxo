@@ -1,4 +1,4 @@
-export const behaviorQ = [
+const behaviorQ = [
   {
     tag: "behavior",
     question: "喵星人喜歡在電腦上躺著...",
@@ -81,7 +81,7 @@ export const behaviorQ = [
   },
 ];
 
-export const foodQ = [
+const foodQ = [
   {
     tag: "food",
     question: "在喵星人的罐罐中加水...",
@@ -114,7 +114,7 @@ export const foodQ = [
   },
 ];
 
-export const itemQ = [
+const itemQ = [
   {
     tag: "item",
     question: "和喵星人玩雷射筆...",
@@ -196,7 +196,18 @@ export const itemQ = [
       "貓咪的指甲會不斷生長，如果不定期剪指甲，可能會導致指甲過長刺入肉裡，造成疼痛和感染。所以貓咪需要定期剪指甲。",
   },
 ];
+
 const questions = [...behaviorQ, ...foodQ, ...itemQ];
+
+const listQuestions = (questions) => {
+  return questions.map((item, index) => ({
+    id: index,
+    ...item,
+    toggle: false,
+  }));
+
+};
+export const allQuestions = listQuestions(questions);
 
 // 隨機取題
 const questionPick = (arr, count) => {

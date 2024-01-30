@@ -13,12 +13,12 @@
   margin: auto;
 }
 
-.questionlist .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-tryagain, .questionlist .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.questionlist .title, .answer .button-box, .answer-list, .answer .scrollbox, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .border-top img, .questionlist .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -27,7 +27,7 @@
   background-repeat: no-repeat;
 }
 
-.questionlist, .answer, .result, .quizend, .quiz, .landing {
+.questionlist, .result, .quizend, .quiz, .landing {
   position: relative;
   height: 100vh;
   padding: 10vh 0;
@@ -140,12 +140,12 @@ small {
   margin: auto;
 }
 
-.questionlist .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-tryagain, .questionlist .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.questionlist .title, .answer .button-box, .answer-list, .answer .scrollbox, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .border-top img, .questionlist .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -154,7 +154,7 @@ small {
   background-repeat: no-repeat;
 }
 
-.questionlist, .answer, .result, .quizend, .quiz, .landing {
+.questionlist, .result, .quizend, .quiz, .landing {
   position: relative;
   height: 100vh;
   padding: 10vh 0;
@@ -893,25 +893,25 @@ body {
   background-image: url(../public/images/btn_highline_active.png);
 }
 
+.answer {
+  position: relative;
+  padding: 10vh 0;
+  width: 100%;
+}
 .answer .title {
   width: 193px;
   height: 28px;
-  top: 10%;
   background-image: url(./answer/images/title_answer.png);
 }
-.answer .scrollbox {
-  display: block;
-  overflow: auto;
-  margin-top: 4vh;
-  height: 65vh;
-}
 .answer-list {
-  display: flex;
-  flex-direction: column;
+  position: static;
+  display: block;
   width: 650px;
+  margin: 5vh auto;
 }
 .answer-box {
   margin: 1.2vh 0;
+  display: block;
 }
 .answer-box h3 {
   display: flex;
@@ -930,12 +930,13 @@ body {
   text-align: left;
   letter-spacing: 0.3rem;
   text-align: justify;
+  width: 96%;
 }
 .answer .button-box {
+  position: static;
   width: 520px;
   display: flex;
   justify-content: space-between;
-  bottom: 10%;
 }
 .answer .button-question-list, .answer .button-tryagain {
   display: inline-block;
@@ -982,8 +983,87 @@ body {
   background-image: url(../public/images/btn_result.png);
 }
 .questionlist .tag-box {
+  position: static;
   display: flex;
   justify-content: space-between;
   width: 600px;
   margin-top: 6vh;
+}
+.questionlist .border-top {
+  width: 800px;
+  height: 70px;
+  background-image: url(./questionList/images/border_top.png);
+}
+.questionlist .border-top img {
+  width: 234px;
+  height: 79px;
+  background-image: url(../public/images/btn_result.png);
+}
+.questionlist .border-middle {
+  width: 800px;
+  padding: 0 7%;
+  background-image: url(./questionList/images/border_middle.png);
+}
+.questionlist .border-bottom {
+  width: 800px;
+  height: 30px;
+  background-image: url(./questionList/images/border_bottom.png);
+}
+.questionlist .question-list {
+  position: static;
+  display: block;
+  width: 800px;
+}
+.questionlist .question-container {
+  margin: 5vh auto;
+}
+.questionlist .question-box {
+  margin: 1.2vh 0;
+  display: block;
+}
+.questionlist .question-box h3 {
+  display: flex;
+  position: relative;
+  text-align: left;
+  letter-spacing: 0.4rem;
+}
+.questionlist .question-box h3 img {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+.questionlist .question-box p {
+  position: relative;
+  left: 4%;
+  text-align: left;
+  letter-spacing: 0.3rem;
+  text-align: justify;
+  width: 96%;
+}
+.questionlist .button-box {
+  position: static;
+  width: 234px;
+}
+.questionlist .button-tryagain {
+  display: inline-block;
+  width: 234px;
+  height: 79px;
+  transition: transform 200ms;
+}
+.questionlist .button-tryagain:hover {
+  width: 241px;
+  height: 77px;
+}
+.questionlist .button-tryagain:active {
+  width: 241px;
+  height: 77px;
+}
+.questionlist .button-tryagain {
+  background-image: url(../public/images/btn_highline.png);
+}
+.questionlist .button-tryagain:hover {
+  background-image: url(../public/images/btn_highline_hover.png);
+}
+.questionlist .button-tryagain:active {
+  background-image: url(../public/images/btn_highline_active.png);
 }/*# sourceMappingURL=index.css.map */
