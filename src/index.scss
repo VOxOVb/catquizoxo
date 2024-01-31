@@ -117,6 +117,8 @@ body {
       }
       .can {
         position: absolute;
+        width: 65px;
+        height: 56px;
         top: -180%;
         background-image: url(./quiz/images/can.png);
         background-size: contain;
@@ -163,9 +165,16 @@ body {
     nav {
       width: 227px;
       height: 13px;
-      .can {
-        width: 48px;
-        height: 41px;
+      .slider {
+        border: dashed 0.12rem $highline-color;
+        .process-bar {
+          left: -2%;
+          height: 14px;
+        }
+        .can {
+          width: 48px;
+          height: 41px;
+        }
       }
     }
     main {
@@ -195,10 +204,6 @@ body {
   @media only screen and ($mediaMdLg) {
     .device {
       display: none;
-    }
-    .can {
-      width: 65px;
-      height: 56px;
     }
   }
 }

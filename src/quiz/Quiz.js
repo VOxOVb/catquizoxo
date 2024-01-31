@@ -131,25 +131,22 @@ function QuestionItem({ questionList, handleClickAnswer, text, isActive }) {
         ))}
       </div>
       <div className="device">
-        <h3 key={text} className="question">
-          {questionList[text].question}
-        </h3>
-        {Array.from({ length: 2 }, (_, i) => i).map((_, j) => (
-          <button
-            key={`${text}${j}`}
-            className={
-              `${text}${j}` === isActive
-                ? `handle-click answer-${j} p`
-                : `answer-${j} p`
-            }
-            onClick={() =>
-              handleClickAnswer(qOption[j].isCorrect, `${text}${j}`)
-            }
-            style={{ animation: aAni.at(j)[0] }}
-          >
-            {qOption[j].text}
-          </button>
-        ))}
+        <ul>
+          <h3 key={text} className="question">
+            {questionList[text].question}
+          </h3>
+          {Array.from({ length: 2 }, (_, i) => i).map((_, j) => (
+            <li
+              key={`${text}${j}`}
+              className={`${text}${j}` === isActive ? "handle-click" : ""}
+              onClick={() =>
+                handleClickAnswer(qOption[j].isCorrect, `${text}${j}`)
+              }
+            >
+              <button className={`answer-${j} p`}>{qOption[j].text}</button>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

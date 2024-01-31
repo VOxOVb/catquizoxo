@@ -343,6 +343,11 @@ h3, .p, small {
 .quiz .answer-0:active, .quiz .answer-1:active {
   animation: btn-handle-click 0.66s cubic-bezier(0.33, 1, 0.68, 1);
 }
+@media only screen and (max-width: 576px) {
+  .quiz .answer-0 {
+    animation: m-a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+}
 @media only screen and (min-width: 577px) {
   .quiz .answer-0 {
     animation: a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
@@ -678,6 +683,8 @@ body {
 }
 .quiz nav .slider .can {
   position: absolute;
+  width: 65px;
+  height: 56px;
   top: -180%;
   background-image: url(./quiz/images/can.png);
   background-size: contain;
@@ -717,7 +724,14 @@ body {
     width: 227px;
     height: 13px;
   }
-  .quiz nav .can {
+  .quiz nav .slider {
+    border: dashed 0.12rem #3782b8;
+  }
+  .quiz nav .slider .process-bar {
+    left: -2%;
+    height: 14px;
+  }
+  .quiz nav .slider .can {
     width: 48px;
     height: 41px;
   }
@@ -745,10 +759,6 @@ body {
 @media only screen and (min-width: 577px) {
   .quiz .device {
     display: none;
-  }
-  .quiz .can {
-    width: 65px;
-    height: 56px;
   }
 }
 
