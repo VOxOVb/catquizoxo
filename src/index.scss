@@ -205,6 +205,17 @@ body {
     .device {
       display: none;
     }
+    .answer {
+      &-0,
+      &-1 {
+        &:hover {
+          transform: translate(-15px, -4px);
+          background-color: rgba(225, 225, 225, 0.5);
+          background-blend-mode: lighten;
+          font-size: 1.35rem;
+        }
+      }
+    }
   }
 }
 
@@ -471,6 +482,46 @@ body {
       }
       &:active {
         background-image: url(../public/images/btn_highline_active.png);
+      }
+    }
+  }
+  @media only screen and ($mediaSm) {
+    .license {
+      width: 320px;
+      height: 202px;
+      &-nickname {
+        top: 22%;
+      }
+      &-title {
+        width: 118px;
+        height: 27px;
+      }
+      &-name {
+        width: 36px;
+        height: 14px;
+      }
+      &-reward {
+        width: 100px;
+        height: 119px;
+        img {
+          top: 10%;
+          right: 11%;
+          width: 77px;
+          height: 77px;
+        }
+        &-name {
+          width: 108px;
+          height: 17px;
+        }
+      }
+      &-loading {
+        @extend %default-bg;
+        width: 42px;
+        height: 14px;
+        div {
+          width: 42px;
+          height: 14px;
+        }
       }
     }
   }

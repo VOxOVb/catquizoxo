@@ -96,7 +96,9 @@ input {
 }
 
 /* 共用樣式 */
-h3, .p, small {
+h3,
+.p,
+small {
   text-align: center;
   font-weight: 400;
   color: #444;
@@ -105,7 +107,7 @@ h3, .p, small {
 
 @media only screen and (max-width: 576px) {
   h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2.2rem;
     letter-spacing: 0.12rem;
   }
@@ -115,8 +117,8 @@ h3, .p, small {
     letter-spacing: 0.1rem;
   }
   small {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 0.6rem;
+    line-height: 0.8rem;
     letter-spacing: 0.2rem;
   }
 }
@@ -760,6 +762,12 @@ body {
   .quiz .device {
     display: none;
   }
+  .quiz .answer-0:hover, .quiz .answer-1:hover {
+    transform: translate(-15px, -4px);
+    background-color: rgba(225, 225, 225, 0.5);
+    background-blend-mode: lighten;
+    font-size: 1.35rem;
+  }
 }
 
 .quizend .title {
@@ -993,6 +1001,45 @@ body {
 }
 .result .button-tryagain:active {
   background-image: url(../public/images/btn_highline_active.png);
+}
+@media only screen and (max-width: 576px) {
+  .result .license {
+    width: 320px;
+    height: 202px;
+  }
+  .result .license-nickname {
+    top: 22%;
+  }
+  .result .license-title {
+    width: 118px;
+    height: 27px;
+  }
+  .result .license-name {
+    width: 36px;
+    height: 14px;
+  }
+  .result .license-reward {
+    width: 100px;
+    height: 119px;
+  }
+  .result .license-reward img {
+    top: 10%;
+    right: 11%;
+    width: 77px;
+    height: 77px;
+  }
+  .result .license-reward-name {
+    width: 108px;
+    height: 17px;
+  }
+  .result .license-loading {
+    width: 42px;
+    height: 14px;
+  }
+  .result .license-loading div {
+    width: 42px;
+    height: 14px;
+  }
 }
 
 .answer {
