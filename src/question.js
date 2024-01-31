@@ -150,7 +150,7 @@ const itemQ = [
     question: "喵星人的廁所...",
     options: [
       { id: 1, text: "安靜隱蔽的角落", isCorrect: true },
-      { id: 2, text: "人來人往的走廊，通風避免臭臭", isCorrect: false },
+      { id: 2, text: "走廊通風避免臭臭", isCorrect: false },
     ],
     parse:
       "貓咪在如廁時會感到脆弱，所以貓砂盆應該放在安靜且隱蔽的地方，讓貓咪感到安全。",
@@ -160,7 +160,7 @@ const itemQ = [
     question: "喵星人洗澡...",
     options: [
       { id: 1, text: "我自己會洗澡", isCorrect: true },
-      { id: 2, text: "梳毛都是口水，應該要幫我洗", isCorrect: false },
+      { id: 2, text: "口水臭臭要幫我洗", isCorrect: false },
     ],
     parse:
       "貓咪自己會用舔舐身體達到清潔效果，除非在特殊情況下（例如貓咪身上沾染了有毒物質），否則通常不需要人為幫助貓咪洗澡。",
@@ -169,7 +169,7 @@ const itemQ = [
     tag: "item",
     question: "幫喵星人穿衣服...",
     options: [
-      { id: 1, text: "我的皮毛就很好看了", isCorrect: true },
+      { id: 1, text: "我的毛就夠好看", isCorrect: true },
       { id: 2, text: "我超喜歡", isCorrect: false },
     ],
     parse:

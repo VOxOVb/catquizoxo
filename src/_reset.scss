@@ -51,32 +51,48 @@ input {
 }
 
 /* 共用樣式 */
-h3 {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.12rem;
-  text-align: center;
-  font-weight: 400;
-  color: $gray;
-  font-family: FakePearl-Regular;
-}
+  h3,.p,small {
+    text-align: center;
+    font-weight: 400;
+    color: $gray;
+    font-family: FakePearl-Regular;
+  }
+  @media only screen and ($mediaSm) {
+    h3 {
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+      letter-spacing: 0.12rem;
+    }
+    
+    .p {
+      font-size: 0.95rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.1rem;
+    }
+    
+    small {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+  @media only screen and ($mediaMdLg) {
+    h3 {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      letter-spacing: 0.12rem;
+    }
+    
+    .p {
+      font-size: 1.25rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.1rem;
+    }
+    
+    small {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.2rem;
+    }
+  }
 
-.p {
-  font-size: 1.25rem;
-  line-height: 1.8rem;
-  letter-spacing: 0.1rem;
-  text-align: center;
-  font-weight: 400;
-  color: $gray;
-  font-family: FakePearl-Regular;
-}
-
-small {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.2rem;
-  text-align: center;
-  font-weight: 400;
-  color: $gray;
-  font-family: FakePearl-Regular;
-}

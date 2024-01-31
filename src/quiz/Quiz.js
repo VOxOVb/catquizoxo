@@ -6,6 +6,7 @@ import cat03 from "./images/cat-03.png";
 
 export default function Quiz({ progress, setProgress, questions, setScore }) {
   const [step, setStep] = useState(0);
+  const [aniQ, setAniQ] = useState("aniQ")
   const [text, setText] = useState(step);
   const [isActive, setIsActive] = useState("");
   const questionList = useMemo(() => {
@@ -108,24 +109,19 @@ function QuestionItem({ questionList, handleClickAnswer, text, isActive }) {
   return text === questionList.length - 1 ? (
     ""
   ) : (
-    <ul>
-      <h3 key={text} className="question" style={{ animation: `${qAni[0]}` }}>
+    <>
+      <h3 key={text} className="question">
         {questionList[text].question}
       </h3>
       {Array.from({ length: 2 }, (_, i) => i).map((_, j) => (
-        <li
-          key={`${text}${j}`}
-          className={`${text}${j}` === isActive ? "handle-click" : ""}
-          onClick={() => handleClickAnswer(qOption[j].isCorrect, `${text}${j}`)}
-        >
           <button
-            className={`answer-${j} p`}
-            style={{ animation: aAni.at(j)[0] }}
+          key={`${text}${j}`}
+          className={`${text}${j}` === isActive ? `handle-click answer-${j} p` : `answer-${j} p`}
+          onClick={() => handleClickAnswer(qOption[j].isCorrect, `${text}${j}`)}
           >
             {qOption[j].text}
           </button>
-        </li>
       ))}
-    </ul>
+    </>
   );
 }
