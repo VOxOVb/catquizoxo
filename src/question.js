@@ -106,7 +106,7 @@ const foodQ = [
     tag: "food",
     question: "喵星人喝牛奶...",
     options: [
-      { id: 1, text: "動畫裡的喵星人都喜歡喝牛奶", isCorrect: false },
+      { id: 1, text: "動畫裡都喜歡喝牛奶", isCorrect: false },
       { id: 2, text: "我不可以喝", isCorrect: true },
     ],
     parse:
@@ -205,7 +205,6 @@ const listQuestions = (questions) => {
     ...item,
     toggle: false,
   }));
-
 };
 export const allQuestions = listQuestions(questions);
 

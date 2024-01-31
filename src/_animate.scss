@@ -169,9 +169,9 @@
       }
     }
     &-0 {
-      @media only screen and ($mediaSm) {
-        animation: m-a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
-      }
+      // @media only screen and ($mediaSm) {
+      //   animation: m-a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+      // }
       @media only screen and ($mediaMdLg) {
         animation: a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
       }
@@ -332,7 +332,6 @@
   }
 }
 
-
 .result {
   .title {
     animation: title-blank 1.2s cubic-bezier(0.33, 1, 0.68, 1);
@@ -408,5 +407,5 @@
       opacity: 1;
       transform: rotate(0deg);
     }
-  }  
+  }
 }
