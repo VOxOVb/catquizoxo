@@ -14,6 +14,7 @@ body {
   background-image: url(../public/images/bgline.png);
 }
 .container {
+  width: 100%;
   height: 100vh;
 }
 
@@ -21,21 +22,16 @@ body {
   @extend %section-default;
   .subtitle {
     @extend %default;
-    width: 395px;
-    height: 40px;
     background-image: url(./landing/images/subtitle_index.png);
     top: 10%;
   }
   .title {
     @extend %default;
-    width: 445px;
-    height: 103px;
     background-image: url(./landing/images/title_index.png);
     top: 17%;
   }
   main {
     @extend %default;
-    width: 512px;
     top: 28%;
   }
   p {
@@ -45,20 +41,63 @@ body {
   .btn {
     @extend %default;
     display: inline-block;
-    width: 234px;
-    height: 79px;
     background-image: url(./landing/images/btn_bg_index.png);
     top: 72%;
-    transition: transform 200ms;
-    &:hover {
-      width: 240px;
-      height: 82px;
-      img {
-        width: 234px;
-        transform: translate(-2px, -2px);
+  }
+  @media only screen and ($mediaSm) {
+    .subtitle {
+      width: 220px;
+      height: 22px;
+    }
+    .title {
+      width: 445px;
+      height: 103px;
+    }
+    main {
+      width: 512px;
+    }
+    .btn {
+      width: 234px;
+      height: 79px;
+      transition: transform 200ms;
+      &:hover {
+        width: 240px;
+        height: 82px;
+        img {
+          width: 234px;
+          transform: translate(-2px, -2px);
+        }
+        transform: translate(-3px, -3px);
+        background-image: url(./landing/images/btn_index_shadow2.png);
       }
-      transform: translate(-3px, -3px);
-      background-image: url(./landing/images/btn_index_shadow2.png);
+    }
+  }
+  @media only screen and ($mediaLg) {
+    .subtitle {
+      width: 395px;
+      height: 40px;
+    }
+    .title {
+      width: 445px;
+      height: 103px;
+    }
+    main {
+      width: 512px;
+    }
+    .btn {
+      width: 234px;
+      height: 79px;
+      transition: transform 200ms;
+      &:hover {
+        width: 240px;
+        height: 82px;
+        img {
+          width: 234px;
+          transform: translate(-2px, -2px);
+        }
+        transform: translate(-3px, -3px);
+        background-image: url(./landing/images/btn_index_shadow2.png);
+      }
     }
   }
 }
@@ -451,27 +490,39 @@ body {
 }
 
 .questionlist {
-  @extend %section-default;
-  .title {
-    @extend %default;
-    width: 193px;
-    height: 28px;
-    top: 10%;
-    background-image: url(./questionList/images/title_questionlist.png);
-  }
-  .tag {
-    &-box {
-      @extend %default-position;
-      position: static;
-      display: flex;
-      justify-content: space-between;
-      width: 600px;
-      margin-top: 6vh;
+  position: relative;
+  padding: 10vh 0;
+  width: 100%;
+  .nav {
+    position: fixed;
+    padding: 10vh 0 3vh 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    background-color: $bg-color;
+    background-image: url(../public/images/bgline.png);
+    z-index: 1;
+    .title {
+      @extend %default;
+      width: 193px;
+      height: 28px;
+      background-image: url(./questionList/images/title_questionlist.png);
     }
-    @extend %default-bg;
-    width: 167px;
-    height: 53px;
-    background-image: url(../public/images/btn_result.png);
+    .tag {
+      &-box {
+        @extend %default-position;
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        width: 600px;
+        margin-top: 6vh;
+      }
+      @extend %default-bg;
+      width: 167px;
+      height: 53px;
+      background-image: url(../public/images/btn_result.png);
+    }
   }
   .border {
     &-top {
@@ -500,7 +551,9 @@ body {
     &-list {
       @extend %default;
       position: static;
+      margin: 0 auto;
       display: block;
+      margin-top: 15vh;
       width: 800px;
     }
     &-container {

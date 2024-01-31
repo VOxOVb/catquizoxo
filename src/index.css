@@ -6,19 +6,19 @@
   margin: auto;
 }
 
-.questionlist .tag-box {
+.questionlist .nav .tag-box {
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .border-top img, .questionlist .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .border-top img, .questionlist .nav .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -27,7 +27,7 @@
   background-repeat: no-repeat;
 }
 
-.questionlist, .result, .quizend, .quiz, .landing {
+.result, .quizend, .quiz, .landing {
   position: relative;
   height: 100vh;
   padding: 10vh 0;
@@ -133,19 +133,19 @@ small {
   margin: auto;
 }
 
-.questionlist .tag-box {
+.questionlist .nav .tag-box {
   position: absolute;
   left: 0;
   right: 0;
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .border-top img, .questionlist .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .border-top img, .questionlist .nav .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -154,7 +154,7 @@ small {
   background-repeat: no-repeat;
 }
 
-.questionlist, .result, .quizend, .quiz, .landing {
+.result, .quizend, .quiz, .landing {
   position: relative;
   height: 100vh;
   padding: 10vh 0;
@@ -599,23 +599,19 @@ body {
 }
 
 .container {
+  width: 100%;
   height: 100vh;
 }
 
 .landing .subtitle {
-  width: 395px;
-  height: 40px;
   background-image: url(./landing/images/subtitle_index.png);
   top: 10%;
 }
 .landing .title {
-  width: 445px;
-  height: 103px;
   background-image: url(./landing/images/title_index.png);
   top: 17%;
 }
 .landing main {
-  width: 512px;
   top: 28%;
 }
 .landing p {
@@ -623,21 +619,64 @@ body {
 }
 .landing .btn {
   display: inline-block;
-  width: 234px;
-  height: 79px;
   background-image: url(./landing/images/btn_bg_index.png);
   top: 72%;
-  transition: transform 200ms;
 }
-.landing .btn:hover {
-  width: 240px;
-  height: 82px;
-  transform: translate(-3px, -3px);
-  background-image: url(./landing/images/btn_index_shadow2.png);
+@media only screen and (max-width: 576px) {
+  .landing .subtitle {
+    width: 220px;
+    height: 22px;
+  }
+  .landing .title {
+    width: 445px;
+    height: 103px;
+  }
+  .landing main {
+    width: 512px;
+  }
+  .landing .btn {
+    width: 234px;
+    height: 79px;
+    transition: transform 200ms;
+  }
+  .landing .btn:hover {
+    width: 240px;
+    height: 82px;
+    transform: translate(-3px, -3px);
+    background-image: url(./landing/images/btn_index_shadow2.png);
+  }
+  .landing .btn:hover img {
+    width: 234px;
+    transform: translate(-2px, -2px);
+  }
 }
-.landing .btn:hover img {
-  width: 234px;
-  transform: translate(-2px, -2px);
+@media only screen and (min-width: 769px) {
+  .landing .subtitle {
+    width: 395px;
+    height: 40px;
+  }
+  .landing .title {
+    width: 445px;
+    height: 103px;
+  }
+  .landing main {
+    width: 512px;
+  }
+  .landing .btn {
+    width: 234px;
+    height: 79px;
+    transition: transform 200ms;
+  }
+  .landing .btn:hover {
+    width: 240px;
+    height: 82px;
+    transform: translate(-3px, -3px);
+    background-image: url(./landing/images/btn_index_shadow2.png);
+  }
+  .landing .btn:hover img {
+    width: 234px;
+    transform: translate(-2px, -2px);
+  }
 }
 
 .quiz nav {
@@ -971,18 +1010,33 @@ body {
   background-image: url(../public/images/btn_highline_active.png);
 }
 
-.questionlist .title {
+.questionlist {
+  position: relative;
+  padding: 10vh 0;
+  width: 100%;
+}
+.questionlist .nav {
+  position: fixed;
+  padding: 10vh 0 3vh 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  background-color: #fbf2e9;
+  background-image: url(../public/images/bgline.png);
+  z-index: 1;
+}
+.questionlist .nav .title {
   width: 193px;
   height: 28px;
-  top: 10%;
   background-image: url(./questionList/images/title_questionlist.png);
 }
-.questionlist .tag {
+.questionlist .nav .tag {
   width: 167px;
   height: 53px;
   background-image: url(../public/images/btn_result.png);
 }
-.questionlist .tag-box {
+.questionlist .nav .tag-box {
   position: static;
   display: flex;
   justify-content: space-between;
@@ -1011,7 +1065,9 @@ body {
 }
 .questionlist .question-list {
   position: static;
+  margin: 0 auto;
   display: block;
+  margin-top: 15vh;
   width: 800px;
 }
 .questionlist .question-container {

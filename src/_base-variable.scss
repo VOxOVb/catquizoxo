@@ -15,6 +15,11 @@ $light_gray: #ccc;
 $gray: #444;
 $deep_gray: #222;
 
+//螢幕尺寸
+$mediaSm : "max-width: 576px";
+$mediaMd: "max-width: 768px";
+$mediaLg: "min-width: 769px";
+
 
 // 位置設定
 %position {
