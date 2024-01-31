@@ -479,7 +479,6 @@ h3, .p, small {
 .quizend .title {
   animation: title-blank 1.2s cubic-bezier(0.33, 1, 0.68, 1);
 }
-
 @keyframes result-up {
   0% {
     top: 100%;
@@ -508,6 +507,7 @@ h3, .p, small {
     opacity: 1;
   }
 }
+
 .result .title {
   animation: title-blank 1.2s cubic-bezier(0.33, 1, 0.68, 1);
 }
@@ -523,7 +523,6 @@ h3, .p, small {
 .result .license-textbox {
   animation: textbox 5s cubic-bezier(0.33, 1, 0.68, 1);
 }
-
 @keyframes loading {
   0% {
     width: 50px;
@@ -582,6 +581,7 @@ h3, .p, small {
     transform: rotate(0deg);
   }
 }
+
 @font-face {
   font-family: FakePearl-Regular;
   src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff) format("woff");
@@ -731,7 +731,7 @@ body {
     width: 305px;
     height: 57px;
     line-height: 3.5rem;
-    top: 22%;
+    top: 25%;
   }
   .quiz .answer-0, .quiz .answer-1 {
     width: 246px;

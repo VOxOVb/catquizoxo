@@ -117,6 +117,7 @@ function QuestionItem({ questionList, handleClickAnswer, text, isActive }) {
           key={`${text}${j}`}
           className={`${text}${j}` === isActive ? `handle-click answer-${j} p` : `answer-${j} p`}
           onClick={() => handleClickAnswer(qOption[j].isCorrect, `${text}${j}`)}
+          style={{cursor: "pointer"}}
           >
             {qOption[j].text}
           </button>
