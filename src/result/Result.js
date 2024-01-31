@@ -232,8 +232,8 @@ export default function Result({
             {reward === silver && (
               <>
                 <small>還不錯的成績</small>
-                <small>獲取更多貓知識</small>
-                <small>提高喵星人好感度吧!(=^ΦωΦ^=)</small>
+                <small>獲取更多貓知識與喵星人</small>
+                <small>提高好感度吧!(=^ΦωΦ^=)</small>
               </>
             )}
             {reward === gold &&

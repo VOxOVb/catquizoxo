@@ -296,6 +296,11 @@ body {
     height: 79px;
     background-image: url(../public/images/btn_result.png);
     top: 76%;
+    &:active {
+      width: 241px;
+      height: 77px;
+      background-image: url(../public/images/btn_result_active.png);
+    }
   }
   @media only screen and ($mediaSm) {
     .photo {
@@ -334,7 +339,8 @@ body {
       height: 46px;
       top: 70%;
       &:active {
-        background-image: url(../public/images/btn_result_active.png);
+        width: 145px;
+        height: 44px;
       }
     }
   }
@@ -345,11 +351,6 @@ body {
         width: 223px;
         height: 71px;
         background-image: url(../public/images/btn_result_hover.png);
-      }
-      &:active {
-        width: 241px;
-        height: 77px;
-        background-image: url(../public/images/btn_result_active.png);
       }
     }
   }
@@ -444,7 +445,7 @@ body {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      top: 69%;
+      top: 72%;
     }
     &-share,
     &-question,
@@ -453,15 +454,6 @@ body {
       display: inline-block;
       width: 234px;
       height: 79px;
-      transition: transform 200ms;
-      &:hover {
-        width: 241px;
-        height: 77px;
-      }
-      &:active {
-        width: 241px;
-        height: 77px;
-      }
     }
     &-share,
     &-question {
@@ -510,8 +502,9 @@ body {
           height: 77px;
         }
         &-name {
-          width: 108px;
-          height: 17px;
+          width: 150px;
+          height: 24px;
+          top: 45%;
         }
       }
       &-loading {
@@ -521,6 +514,50 @@ body {
         div {
           width: 42px;
           height: 14px;
+        }
+      }
+    }
+    .button {
+      &-box {
+        width: 300px;
+        top: 50%;
+      }
+      &-share,
+      &-question,
+      &-tryagain {
+        width: 147px;
+        height: 46px;
+        &:active {
+          width: 145px;
+          height: 44px;
+        }
+      }
+    }
+  }
+  @media only screen and ($mediaMdLg) {
+    .button {
+      &-share,
+      &-question,
+      &-tryagain {
+        transition: transform 200ms;
+        &:hover {
+          width: 224px;
+          height: 70px;
+        }
+        &:active {
+          width: 224px;
+          height: 70px;
+        }
+      }
+      &-share,
+      &-question {
+        &:hover {
+          background-image: url(../public/images/btn_result_hover.png);
+        }
+      }
+      &-tryagain {
+        &:hover {
+          background-image: url(../public/images/btn_highline_hover.png);
         }
       }
     }
@@ -582,31 +619,72 @@ body {
       width: 234px;
       height: 79px;
       transition: transform 200ms;
-      &:hover {
-        width: 241px;
-        height: 77px;
-      }
       &:active {
-        width: 241px;
-        height: 77px;
+        width: 224px;
+        height: 70px;
       }
     }
     &-question-list {
       background-image: url(../public/images/btn_result.png);
-      &:hover {
-        background-image: url(../public/images/btn_result_hover.png);
-      }
       &:active {
         background-image: url(../public/images/btn_result_active.png);
       }
     }
     &-tryagain {
       background-image: url(../public/images/btn_highline.png);
-      &:hover {
-        background-image: url(../public/images/btn_highline_hover.png);
-      }
       &:active {
         background-image: url(../public/images/btn_highline_active.png);
+      }
+    }
+  }
+  @media only screen and ($mediaMd) {
+    h3 {
+      font-size: 1rem;
+      line-height: 2.2rem;
+      letter-spacing: 0.12rem;
+    }
+
+    .p {
+      font-size: 0.95rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.1rem;
+    }
+    &-list {
+      width: 300px;
+    }
+    .button {
+      &-box {
+        width: 300px;
+      }
+      &-question-list,
+      &-tryagain {
+        width: 147px;
+        height: 46px;
+        &:active {
+          width: 145px;
+          height: 44px;
+        }
+      }
+    }
+  }
+  @media only screen and ($mediaLg) {
+    .button {
+      &-question-list,
+      &-tryagain {
+        &:hover {
+          width: 224px;
+          height: 70px;
+        }
+      }
+      &-question-list {
+        &:hover {
+          background-image: url(../public/images/btn_result_hover.png);
+        }
+      }
+      &-tryagain {
+        &:hover {
+          background-image: url(../public/images/btn_highline_hover.png);
+        }
       }
     }
   }
@@ -645,6 +723,12 @@ body {
       width: 167px;
       height: 53px;
       background-image: url(../public/images/btn_result.png);
+      transition: transform 200ms;
+      &:active {
+        width: 170px;
+        height: 56px;
+        background-image: url(../public/images/btn_result_active.png);
+      }
     }
   }
   .border {
@@ -676,7 +760,7 @@ body {
       position: static;
       margin: 0 auto;
       display: block;
-      margin-top: 15vh;
+      margin-top: 16vh;
       width: 800px;
     }
     &-container {
@@ -734,6 +818,59 @@ body {
       }
       &:active {
         background-image: url(../public/images/btn_highline_active.png);
+      }
+    }
+  }
+  @media only screen and ($mediaMd) {
+    h3 {
+      font-size: 1rem;
+      line-height: 2.2rem;
+      letter-spacing: 0.12rem;
+    }
+
+    .p {
+      font-size: 0.95rem;
+      line-height: 1.8rem;
+      letter-spacing: 0.1rem;
+    }
+    &-list {
+      width: 300px;
+    }
+    .nav {
+      .tag {
+        &-box {
+          width: 270px;
+        }
+        width: 85px;
+        height: 26px;
+        &:active {
+          width: 85px;
+          height: 26px;
+        }
+      }
+    }
+    .border {
+      &-top {
+        width: 250px;
+        height: 25px;
+        img {
+          width: 147px;
+          height: 46px;
+        }
+      }
+    }
+    .question {
+      &-list {
+        width: 300px;
+      }
+    }
+  }
+  @media only screen and ($mediaLg) {
+    .tag {
+      &:hover {
+        width: 170px;
+        height: 56px;
+        background-image: url(../public/images/btn_result_hover.png);
       }
     }
   }

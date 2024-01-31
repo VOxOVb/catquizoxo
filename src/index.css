@@ -855,6 +855,11 @@ body {
   background-image: url(../public/images/btn_result.png);
   top: 76%;
 }
+.quizend .submit:active {
+  width: 241px;
+  height: 77px;
+  background-image: url(../public/images/btn_result_active.png);
+}
 @media only screen and (max-width: 576px) {
   .quizend .photo {
     width: 240px;
@@ -893,7 +898,8 @@ body {
     top: 70%;
   }
   .quizend .submit:active {
-    background-image: url(../public/images/btn_result_active.png);
+    width: 145px;
+    height: 44px;
   }
 }
 @media only screen and (min-width: 577px) {
@@ -904,11 +910,6 @@ body {
     width: 223px;
     height: 71px;
     background-image: url(../public/images/btn_result_hover.png);
-  }
-  .quizend .submit:active {
-    width: 241px;
-    height: 77px;
-    background-image: url(../public/images/btn_result_active.png);
   }
 }
 
@@ -984,21 +985,12 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  top: 69%;
+  top: 72%;
 }
 .result .button-share, .result .button-question, .result .button-tryagain {
   display: inline-block;
   width: 234px;
   height: 79px;
-  transition: transform 200ms;
-}
-.result .button-share:hover, .result .button-question:hover, .result .button-tryagain:hover {
-  width: 241px;
-  height: 77px;
-}
-.result .button-share:active, .result .button-question:active, .result .button-tryagain:active {
-  width: 241px;
-  height: 77px;
 }
 .result .button-share, .result .button-question {
   margin-bottom: 1rem;
@@ -1047,8 +1039,9 @@ body {
     height: 77px;
   }
   .result .license-reward-name {
-    width: 108px;
-    height: 17px;
+    width: 150px;
+    height: 24px;
+    top: 45%;
   }
   .result .license-loading {
     width: 42px;
@@ -1057,6 +1050,37 @@ body {
   .result .license-loading div {
     width: 42px;
     height: 14px;
+  }
+  .result .button-box {
+    width: 300px;
+    top: 50%;
+  }
+  .result .button-share, .result .button-question, .result .button-tryagain {
+    width: 147px;
+    height: 46px;
+  }
+  .result .button-share:active, .result .button-question:active, .result .button-tryagain:active {
+    width: 145px;
+    height: 44px;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .result .button-share, .result .button-question, .result .button-tryagain {
+    transition: transform 200ms;
+  }
+  .result .button-share:hover, .result .button-question:hover, .result .button-tryagain:hover {
+    width: 224px;
+    height: 70px;
+  }
+  .result .button-share:active, .result .button-question:active, .result .button-tryagain:active {
+    width: 224px;
+    height: 70px;
+  }
+  .result .button-share:hover, .result .button-question:hover {
+    background-image: url(../public/images/btn_result_hover.png);
+  }
+  .result .button-tryagain:hover {
+    background-image: url(../public/images/btn_highline_hover.png);
   }
 }
 
@@ -1111,19 +1135,12 @@ body {
   height: 79px;
   transition: transform 200ms;
 }
-.answer .button-question-list:hover, .answer .button-tryagain:hover {
-  width: 241px;
-  height: 77px;
-}
 .answer .button-question-list:active, .answer .button-tryagain:active {
-  width: 241px;
-  height: 77px;
+  width: 224px;
+  height: 70px;
 }
 .answer .button-question-list {
   background-image: url(../public/images/btn_result.png);
-}
-.answer .button-question-list:hover {
-  background-image: url(../public/images/btn_result_hover.png);
 }
 .answer .button-question-list:active {
   background-image: url(../public/images/btn_result_active.png);
@@ -1131,11 +1148,46 @@ body {
 .answer .button-tryagain {
   background-image: url(../public/images/btn_highline.png);
 }
-.answer .button-tryagain:hover {
-  background-image: url(../public/images/btn_highline_hover.png);
-}
 .answer .button-tryagain:active {
   background-image: url(../public/images/btn_highline_active.png);
+}
+@media only screen and (max-width: 768px) {
+  .answer h3 {
+    font-size: 1rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.12rem;
+  }
+  .answer .p {
+    font-size: 0.95rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
+  .answer-list {
+    width: 300px;
+  }
+  .answer .button-box {
+    width: 300px;
+  }
+  .answer .button-question-list, .answer .button-tryagain {
+    width: 147px;
+    height: 46px;
+  }
+  .answer .button-question-list:active, .answer .button-tryagain:active {
+    width: 145px;
+    height: 44px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .answer .button-question-list:hover, .answer .button-tryagain:hover {
+    width: 224px;
+    height: 70px;
+  }
+  .answer .button-question-list:hover {
+    background-image: url(../public/images/btn_result_hover.png);
+  }
+  .answer .button-tryagain:hover {
+    background-image: url(../public/images/btn_highline_hover.png);
+  }
 }
 
 .questionlist {
@@ -1163,6 +1215,7 @@ body {
   width: 167px;
   height: 53px;
   background-image: url(../public/images/btn_result.png);
+  transition: transform 200ms;
 }
 .questionlist .nav .tag-box {
   position: static;
@@ -1170,6 +1223,11 @@ body {
   justify-content: space-between;
   width: 600px;
   margin-top: 6vh;
+}
+.questionlist .nav .tag:active {
+  width: 170px;
+  height: 56px;
+  background-image: url(../public/images/btn_result_active.png);
 }
 .questionlist .border-top {
   width: 800px;
@@ -1195,7 +1253,7 @@ body {
   position: static;
   margin: 0 auto;
   display: block;
-  margin-top: 15vh;
+  margin-top: 16vh;
   width: 800px;
 }
 .questionlist .question-container {
@@ -1250,4 +1308,48 @@ body {
 }
 .questionlist .button-tryagain:active {
   background-image: url(../public/images/btn_highline_active.png);
+}
+@media only screen and (max-width: 768px) {
+  .questionlist h3 {
+    font-size: 1rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.12rem;
+  }
+  .questionlist .p {
+    font-size: 0.95rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
+  .questionlist-list {
+    width: 300px;
+  }
+  .questionlist .nav .tag {
+    width: 85px;
+    height: 26px;
+  }
+  .questionlist .nav .tag-box {
+    width: 270px;
+  }
+  .questionlist .nav .tag:active {
+    width: 85px;
+    height: 26px;
+  }
+  .questionlist .border-top {
+    width: 250px;
+    height: 25px;
+  }
+  .questionlist .border-top img {
+    width: 147px;
+    height: 46px;
+  }
+  .questionlist .question-list {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .questionlist .tag:hover {
+    width: 170px;
+    height: 56px;
+    background-image: url(../public/images/btn_result_hover.png);
+  }
 }/*# sourceMappingURL=index.css.map */
