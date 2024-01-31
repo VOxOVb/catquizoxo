@@ -14,13 +14,15 @@ export const qAni = [
 ];
 export const aAni = [
   [
-    "a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1)",
-    "a-top-hide 1s cubic-bezier(0.35, 1, 0.65, 0)",
+    "m-a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1)",
+    // "a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1)",
+    // "a-top-hide 1s cubic-bezier(0.35, 1, 0.65, 0)",
   ],
 
   [
-    "a-bottom-show 1s cubic-bezier(0.65, 0, 0.35, 1)",
-    "a-bottom-hide 0.8s cubic-bezier(0.35, 1, 0.65, 0)",
+    "m-a-bottom-show 1s cubic-bezier(0.65, 0, 0.35, 1)",
+    // "a-bottom-show 1s cubic-bezier(0.65, 0, 0.35, 1)",
+    // "a-bottom-hide 0.8s cubic-bezier(0.35, 1, 0.65, 0)",
   ],
 ];
 export const barAni = [

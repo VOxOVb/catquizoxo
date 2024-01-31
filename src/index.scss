@@ -157,6 +157,9 @@ body {
     }
   }
   @media only screen and ($mediaSm) {
+    .desktop {
+      display: none;
+    }
     nav {
       width: 227px;
       height: 13px;
@@ -190,6 +193,9 @@ body {
     }
   }
   @media only screen and ($mediaMdLg) {
+    .device {
+      display: none;
+    }
     .can {
       width: 65px;
       height: 56px;
