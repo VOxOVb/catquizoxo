@@ -22,16 +22,21 @@ body {
   @extend %section-default;
   .subtitle {
     @extend %default;
+    width: 395px;
+    height: 40px;
     background-image: url(./landing/images/subtitle_index.png);
     top: 10%;
   }
   .title {
     @extend %default;
+    width: 445px;
+    height: 103px;
     background-image: url(./landing/images/title_index.png);
     top: 17%;
   }
   main {
     @extend %default;
+    width: 512px;
     top: 28%;
   }
   p {
@@ -43,6 +48,19 @@ body {
     display: inline-block;
     background-image: url(./landing/images/btn_bg_index.png);
     top: 72%;
+    width: 234px;
+    height: 79px;
+    transition: transform 200ms;
+    &:hover {
+      width: 240px;
+      height: 82px;
+      img {
+        width: 234px;
+        transform: translate(-2px, -2px);
+      }
+      transform: translate(-3px, -3px);
+      background-image: url(./landing/images/btn_index_shadow2.png);
+    }
   }
   @media only screen and ($mediaSm) {
     .subtitle {
@@ -56,48 +74,14 @@ body {
     main {
       width: 390px;
     }
+    p {
+      top: 58%;
+    }
     .btn {
       width: 195px;
       height: 65px;
       transition: transform 200ms;
-      &:hover {
-        width: 201px;
-        height: 68px;
-        img {
-          width: 195px;
-          transform: translate(-2px, -2px);
-        }
-        transform: translate(-3px, -3px);
-        background-image: url(./landing/images/btn_index_shadow2.png);
-      }
-    }
-  }
-  @media only screen and ($mediaLg) {
-    .subtitle {
-      width: 395px;
-      height: 40px;
-    }
-    .title {
-      width: 445px;
-      height: 103px;
-    }
-    main {
-      width: 512px;
-    }
-    .btn {
-      width: 234px;
-      height: 79px;
-      transition: transform 200ms;
-      &:hover {
-        width: 240px;
-        height: 82px;
-        img {
-          width: 234px;
-          transform: translate(-2px, -2px);
-        }
-        transform: translate(-3px, -3px);
-        background-image: url(./landing/images/btn_index_shadow2.png);
-      }
+      top: 68%;
     }
   }
 }

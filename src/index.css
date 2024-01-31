@@ -604,14 +604,19 @@ body {
 }
 
 .landing .subtitle {
+  width: 395px;
+  height: 40px;
   background-image: url(./landing/images/subtitle_index.png);
   top: 10%;
 }
 .landing .title {
+  width: 445px;
+  height: 103px;
   background-image: url(./landing/images/title_index.png);
   top: 17%;
 }
 .landing main {
+  width: 512px;
   top: 28%;
 }
 .landing p {
@@ -621,6 +626,19 @@ body {
   display: inline-block;
   background-image: url(./landing/images/btn_bg_index.png);
   top: 72%;
+  width: 234px;
+  height: 79px;
+  transition: transform 200ms;
+}
+.landing .btn:hover {
+  width: 240px;
+  height: 82px;
+  transform: translate(-3px, -3px);
+  background-image: url(./landing/images/btn_index_shadow2.png);
+}
+.landing .btn:hover img {
+  width: 234px;
+  transform: translate(-2px, -2px);
 }
 @media only screen and (max-width: 576px) {
   .landing .subtitle {
@@ -634,48 +652,14 @@ body {
   .landing main {
     width: 390px;
   }
+  .landing p {
+    top: 58%;
+  }
   .landing .btn {
     width: 195px;
     height: 65px;
     transition: transform 200ms;
-  }
-  .landing .btn:hover {
-    width: 201px;
-    height: 68px;
-    transform: translate(-3px, -3px);
-    background-image: url(./landing/images/btn_index_shadow2.png);
-  }
-  .landing .btn:hover img {
-    width: 195px;
-    transform: translate(-2px, -2px);
-  }
-}
-@media only screen and (min-width: 769px) {
-  .landing .subtitle {
-    width: 395px;
-    height: 40px;
-  }
-  .landing .title {
-    width: 445px;
-    height: 103px;
-  }
-  .landing main {
-    width: 512px;
-  }
-  .landing .btn {
-    width: 234px;
-    height: 79px;
-    transition: transform 200ms;
-  }
-  .landing .btn:hover {
-    width: 240px;
-    height: 82px;
-    transform: translate(-3px, -3px);
-    background-image: url(./landing/images/btn_index_shadow2.png);
-  }
-  .landing .btn:hover img {
-    width: 234px;
-    transform: translate(-2px, -2px);
+    top: 68%;
   }
 }
 
