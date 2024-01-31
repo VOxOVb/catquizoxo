@@ -3,6 +3,7 @@ import { allQuestions } from "../question";
 import tagBehavior from "./images/tag_p_behavior.png";
 import tagFood from "./images/tag_p_food.png";
 import tagItem from "./images/tag_p_item.png";
+import btnShare from "../shared/images/btn_share_p.png";
 import btnTryagain from "../shared/images/btn_tryagain_p.png";
 export default function QuestionList({ progress }) {
   const [all, setAll] = useState(allQuestions);
@@ -14,7 +15,7 @@ export default function QuestionList({ progress }) {
   useEffect(() => {
     const scrollView = (e) => {
       const element = document.getElementById(e);
-      if (element) element.scrollIntoView({  behavior: "smooth" });
+      if (element) element.scrollIntoView({ behavior: "smooth" });
     };
     if (tag !== "") {
       scrollView(tag);
@@ -143,6 +144,9 @@ export default function QuestionList({ progress }) {
           </div>
         </div>
         <div className="button-box">
+          <button className="button-share">
+            <img src={btnShare} alt="分享好友"></img>
+          </button>
           <button className="button-tryagain">
             <img src={btnTryagain} alt="再測一次"></img>
           </button>

@@ -13,7 +13,7 @@
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-share, .questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -153,7 +153,7 @@ small {
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-share, .questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1274,6 +1274,9 @@ body {
   width: 36px;
   height: 36px;
 }
+.questionlist .question-box h3 button {
+  font-size: 25px;
+}
 .questionlist .question-box p {
   position: relative;
   left: 4%;
@@ -1283,22 +1286,32 @@ body {
   width: 96%;
 }
 .questionlist .button-box {
-  position: static;
-  width: 234px;
+  width: 520px;
+  display: flex;
+  justify-content: space-between;
 }
-.questionlist .button-tryagain {
+.questionlist .button-share, .questionlist .button-tryagain {
   display: inline-block;
   width: 234px;
   height: 79px;
   transition: transform 200ms;
 }
-.questionlist .button-tryagain:hover {
+.questionlist .button-share:hover, .questionlist .button-tryagain:hover {
   width: 241px;
   height: 77px;
 }
-.questionlist .button-tryagain:active {
+.questionlist .button-share:active, .questionlist .button-tryagain:active {
   width: 241px;
   height: 77px;
+}
+.questionlist .button-share {
+  background-image: url(../public/images/btn_result.png);
+}
+.questionlist .button-share:hover {
+  background-image: url(../public/images/btn_result_hover.png);
+}
+.questionlist .button-share:active {
+  background-image: url(../public/images/btn_result_active.png);
 }
 .questionlist .button-tryagain {
   background-image: url(../public/images/btn_highline.png);
@@ -1309,15 +1322,15 @@ body {
 .questionlist .button-tryagain:active {
   background-image: url(../public/images/btn_highline_active.png);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   .questionlist h3 {
     font-size: 1rem;
     line-height: 2.2rem;
-    letter-spacing: 0.12rem;
+    letter-spacing: 0.1rem;
   }
   .questionlist .p {
     font-size: 0.95rem;
-    line-height: 1.8rem;
+    line-height: 1.2rem;
     letter-spacing: 0.1rem;
   }
   .questionlist-list {
@@ -1335,15 +1348,31 @@ body {
     height: 26px;
   }
   .questionlist .border-top {
-    width: 250px;
+    width: 280px;
     height: 25px;
+    background-image: url(./questionList/images/m_border_top.png);
   }
   .questionlist .border-top img {
-    width: 147px;
-    height: 46px;
+    width: 111px;
+    height: 35px;
+  }
+  .questionlist .border-middle {
+    width: 280px;
+    background-image: url(./questionList/images/m_border_middle.png);
+  }
+  .questionlist .border-bottom {
+    width: 280px;
+    height: 11px;
+    background-image: url(./questionList/images/m_border_bottom.png);
   }
   .questionlist .question-list {
     width: 300px;
+  }
+  .questionlist .question-box h3 {
+    letter-spacing: 0.05rem;
+  }
+  .questionlist .question-box h3 button {
+    font-size: 12px;
   }
 }
 @media only screen and (min-width: 769px) {

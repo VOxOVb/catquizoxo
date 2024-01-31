@@ -18,7 +18,7 @@ import goldP from "./images/result_gold_p.png";
 import copperBg from "./images/result_copper_bg.png";
 import silverBg from "./images/result_silver_bg.png";
 import goldBg from "./images/result_gold_bg.png";
-import btnShare from "./images/btn_share_p.png";
+import btnShare from "../shared/images/btn_share_p.png";
 import btnQuestions from "./images/btn_question_p.png";
 import btnTryagain from "../shared/images/btn_tryagain_p.png";
 

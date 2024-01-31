@@ -779,6 +779,9 @@ body {
           width: 36px;
           height: 36px;
         }
+        button {
+          font-size: 25px;
+        }
       }
       p {
         position: relative;
@@ -793,9 +796,11 @@ body {
   .button {
     &-box {
       @extend %default;
-      position: static;
-      width: 234px;
+      width: 520px;
+      display: flex;
+      justify-content: space-between;
     }
+    &-share,
     &-tryagain {
       @extend %default-bg;
       display: inline-block;
@@ -811,6 +816,15 @@ body {
         height: 77px;
       }
     }
+    &-share {
+      background-image: url(../public/images/btn_result.png);
+      &:hover {
+        background-image: url(../public/images/btn_result_hover.png);
+      }
+      &:active {
+        background-image: url(../public/images/btn_result_active.png);
+      }
+    }
     &-tryagain {
       background-image: url(../public/images/btn_highline.png);
       &:hover {
@@ -821,16 +835,15 @@ body {
       }
     }
   }
-  @media only screen and ($mediaMd) {
+  @media only screen and ($mediaSm) {
     h3 {
       font-size: 1rem;
       line-height: 2.2rem;
-      letter-spacing: 0.12rem;
+      letter-spacing: 0.1rem;
     }
-
     .p {
       font-size: 0.95rem;
-      line-height: 1.8rem;
+      line-height: 1.2rem;
       letter-spacing: 0.1rem;
     }
     &-list {
@@ -851,17 +864,35 @@ body {
     }
     .border {
       &-top {
-        width: 250px;
+        width: 280px;
         height: 25px;
+        background-image: url(./questionList/images/m_border_top.png);
         img {
-          width: 147px;
-          height: 46px;
+          width: 111px;
+          height: 35px;
         }
+      }
+      &-middle {
+        width: 280px;
+        background-image: url(./questionList/images/m_border_middle.png);
+      }
+      &-bottom {
+        width: 280px;
+        height: 11px;
+        background-image: url(./questionList/images/m_border_bottom.png);
       }
     }
     .question {
       &-list {
         width: 300px;
+      }
+      &-box {
+        h3 {
+          letter-spacing: 0.05rem;
+          button {
+            font-size: 12px;
+          }
+        }
       }
     }
   }
