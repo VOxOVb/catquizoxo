@@ -628,25 +628,25 @@ body {
     height: 22px;
   }
   .landing .title {
-    width: 445px;
-    height: 103px;
+    width: 247px;
+    height: 57px;
   }
   .landing main {
-    width: 512px;
+    width: 390px;
   }
   .landing .btn {
-    width: 234px;
-    height: 79px;
+    width: 195px;
+    height: 65px;
     transition: transform 200ms;
   }
   .landing .btn:hover {
-    width: 240px;
-    height: 82px;
+    width: 201px;
+    height: 68px;
     transform: translate(-3px, -3px);
     background-image: url(./landing/images/btn_index_shadow2.png);
   }
   .landing .btn:hover img {
-    width: 234px;
+    width: 195px;
     transform: translate(-2px, -2px);
   }
 }
