@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { aAni, barAni } from "../config";
+import { barAni } from "../config";
 import cat01 from "./images/cat-01.png";
 import cat02 from "./images/cat-02.png";
 import cat03 from "./images/cat-03.png";
