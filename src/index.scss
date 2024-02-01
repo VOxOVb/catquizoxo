@@ -899,6 +899,32 @@ body {
         }
       }
     }
+    .button {
+      &-box {
+        width: 300px;
+      }
+      &-share,
+      &-tryagain {
+        width: 147px;
+        height: 46px;
+        transition: transform 200ms;
+        &:active {
+          width: 145px;
+          height: 44px;
+        }
+      }
+      &-share {
+        background-image: url(../public/images/btn_result.png);
+        &:active {
+          background-image: url(../public/images/btn_result_active.png);
+        }
+      }
+      &-tryagain {
+        background-image: url(../public/images/btn_highline.png);
+        &:active {
+          background-image: url(../public/images/btn_highline_active.png);
+        }
+      }
   }
   @media only screen and ($mediaLg) {
     .tag {
@@ -908,7 +934,6 @@ body {
         background-image: url(../public/images/btn_result_hover.png);
       }
     }
-    
   .border {
     &-top {
       width: 800px;
@@ -938,4 +963,5 @@ body {
     }
   }
   }
+}
 }

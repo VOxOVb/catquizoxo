@@ -1365,8 +1365,32 @@ body {
   .questionlist .question-box h3 button {
     font-size: 12px;
   }
+  .questionlist .button-box {
+    width: 300px;
+  }
+  .questionlist .button-share, .questionlist .button-tryagain {
+    width: 147px;
+    height: 46px;
+    transition: transform 200ms;
+  }
+  .questionlist .button-share:active, .questionlist .button-tryagain:active {
+    width: 145px;
+    height: 44px;
+  }
+  .questionlist .button-share {
+    background-image: url(../public/images/btn_result.png);
+  }
+  .questionlist .button-share:active {
+    background-image: url(../public/images/btn_result_active.png);
+  }
+  .questionlist .button-tryagain {
+    background-image: url(../public/images/btn_highline.png);
+  }
+  .questionlist .button-tryagain:active {
+    background-image: url(../public/images/btn_highline_active.png);
+  }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (max-width: 576px) and (min-width: 769px) {
   .questionlist .tag:hover {
     width: 170px;
     height: 56px;
