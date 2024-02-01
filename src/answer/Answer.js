@@ -27,13 +27,14 @@ export default function Answer({
             <div key={`q-${index}`} className="answer-box">
               <h3>
                 Q.{item.question}
+                <span>
                 <button
                   key={index}
                   onClick={() => handleToggle(index)}
-                  style={{ fontSize: "25px", color: "#444" }}
                 >
-                  {item.toggle === false ? "⯈" : "⯆"}
+                  {item.toggle === false ? "\u2BC8" : "\u2BC6"}
                 </button>
+                </span>
                 {item.score === false ? (
                   <img src={cross} alt="錯誤標示"></img>
                 ) : (

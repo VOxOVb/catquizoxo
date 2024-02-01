@@ -589,6 +589,10 @@ body {
       position: relative;
       text-align: left;
       letter-spacing: 0.4rem;
+      button {
+        height: 100%;
+        color: $gray;
+      }
       img {
         display: inline-block;
         width: 36px;

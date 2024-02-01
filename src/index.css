@@ -1110,6 +1110,10 @@ body {
   text-align: left;
   letter-spacing: 0.4rem;
 }
+.answer-box h3 button {
+  height: 100%;
+  color: #444;
+}
 .answer-box h3 img {
   display: inline-block;
   width: 36px;
