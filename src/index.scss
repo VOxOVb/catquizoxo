@@ -593,7 +593,8 @@ body {
         font-size: 1.5rem;
         height: 100%;
         color: $gray;
-        font-family: Arial;
+        font-family: "Microsoft JhengHei", "微軟正黑體", "PingFang",
+        "LiHei Pro", "黑體-繁", sans-serif;
       }
       img {
         display: inline-block;
@@ -852,6 +853,13 @@ body {
       font-size: 1rem;
       line-height: 2.2rem;
       letter-spacing: 0.1rem;
+      button {
+        font-size: 1.5rem;
+        height: 100%;
+        color: $gray;
+        font-family: "Microsoft JhengHei", "微軟正黑體", "PingFang",
+        "LiHei Pro", "黑體-繁", sans-serif;
+      }
     }
     .p {
       font-size: 0.95rem;
