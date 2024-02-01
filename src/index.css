@@ -18,7 +18,7 @@
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .border-top img, .questionlist .nav .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -158,7 +158,7 @@ small {
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .border-top img, .questionlist .nav .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -1241,26 +1241,6 @@ body {
   height: 56px;
   background-image: url(../public/images/btn_result_active.png);
 }
-.questionlist .border-top {
-  width: 800px;
-  height: 70px;
-  background-image: url(./questionList/images/border_top.png);
-}
-.questionlist .border-top img {
-  width: 234px;
-  height: 79px;
-  background-image: url(../public/images/btn_result.png);
-}
-.questionlist .border-middle {
-  width: 800px;
-  padding: 0 7%;
-  background-image: url(./questionList/images/border_middle.png);
-}
-.questionlist .border-bottom {
-  width: 800px;
-  height: 30px;
-  background-image: url(./questionList/images/border_bottom.png);
-}
 .questionlist .question-list {
   position: static;
   margin: 0 auto;
@@ -1365,23 +1345,16 @@ body {
     width: 85px;
     height: 26px;
   }
-  .questionlist .border-top {
-    width: 280px;
-    height: 25px;
-    background-image: url(./questionList/images/m_border_top.png);
-  }
   .questionlist .border-top img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: -4vh auto;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 111px;
     height: 35px;
-  }
-  .questionlist .border-middle {
-    width: 280px;
-    background-image: url(./questionList/images/m_border_middle.png);
-  }
-  .questionlist .border-bottom {
-    width: 280px;
-    height: 11px;
-    background-image: url(./questionList/images/m_border_bottom.png);
+    background-image: url(../public/images/btn_result.png);
   }
   .questionlist .question-list {
     width: 300px;
@@ -1398,5 +1371,31 @@ body {
     width: 170px;
     height: 56px;
     background-image: url(../public/images/btn_result_hover.png);
+  }
+  .questionlist .border-top {
+    width: 800px;
+    height: 70px;
+    background-image: url(./questionList/images/border_top.png);
+  }
+  .questionlist .border-top img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 234px;
+    height: 79px;
+    background-image: url(../public/images/btn_result.png);
+  }
+  .questionlist .border-middle {
+    width: 800px;
+    padding: 0 7%;
+    background-image: url(./questionList/images/border_middle.png);
+  }
+  .questionlist .border-bottom {
+    width: 800px;
+    height: 30px;
+    background-image: url(./questionList/images/border_bottom.png);
   }
 }/*# sourceMappingURL=index.css.map */
