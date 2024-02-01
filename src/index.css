@@ -1241,6 +1241,32 @@ body {
   height: 56px;
   background-image: url(../public/images/btn_result_active.png);
 }
+.questionlist .border-top {
+  width: 800px;
+  height: 70px;
+  background-image: url(./questionList/images/border_top.png);
+}
+.questionlist .border-top img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 234px;
+  height: 79px;
+  background-image: url(../public/images/btn_result.png);
+}
+.questionlist .border-middle {
+  width: 800px;
+  padding: 0 7%;
+  background-image: url(./questionList/images/border_middle.png);
+}
+.questionlist .border-bottom {
+  width: 800px;
+  height: 30px;
+  background-image: url(./questionList/images/border_bottom.png);
+}
 .questionlist .question-list {
   position: static;
   margin: 0 auto;
