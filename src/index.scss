@@ -18,77 +18,86 @@ body {
   height: 100vh;
 }
 
-.landing {
-  @extend %section-default;
-  .subtitle {
-    @extend %default;
-    width: 395px;
-    height: 40px;
-    background-image: url(./landing/images/subtitle_index.png);
-    top: 10%;
-  }
-  .title {
-    @extend %default;
-    width: 445px;
-    height: 103px;
-    background-image: url(./landing/images/title_index.png);
-    top: 17%;
-  }
-  main {
-    @extend %default;
-    width: 512px;
-    top: 28%;
-  }
-  p {
-    @extend %default;
-    top: 62%;
-  }
-  .btn {
-    @extend %default;
-    display: inline-block;
-    background-image: url(./landing/images/btn_bg_index.png);
-    top: 72%;
-    width: 234px;
-    height: 79px;
-    transition: transform 200ms;
-  }
-  @media only screen and ($mediaSm) {
-    .subtitle {
-      width: 220px;
-      height: 22px;
-    }
-    .title {
-      width: 247px;
-      height: 57px;
-    }
-    main {
-      width: 390px;
-    }
-    p {
-      top: 58%;
-    }
-    .btn {
-      width: 195px;
-      height: 65px;
-      transition: transform 200ms;
-      top: 68%;
-    }
-  }
-  @media only screen and ($mediaMdLg) {
-    .btn {
-      &:hover {
-        width: 240px;
-        height: 82px;
-        img {
-          width: 234px;
-          transform: translate(-2px, -2px);
-        }
-        transform: translate(-3px, -3px);
-        background-image: url(./landing/images/btn_index_shadow2.png);
-      }
-    }
-  }
-}
+// .landing {
+//   @extend %section-default;
+//   .subtitle {
+//     @extend %default;
+//     background-image: url(./landing/images/subtitle_index.png);
+//   }
+//   .title {
+//     @extend %default;
+//     background-image: url(./landing/images/title_index.png);
+//   }
+//   main {
+//     @extend %default;
+//   }
+//   p {
+//     @extend %default;
+//   }
+//   .btn {
+//     @extend %default;
+//     display: inline-block;
+//     background-image: url(./landing/images/btn_bg_index.png);
+//     transition: transform 200ms;
+//   }
+//   @media only screen and ($mediaSm) {
+//     .subtitle {
+//       width: 220px;
+//       height: 22px;
+//       top: 10%;
+//     }
+//     .title {
+//       width: 247px;
+//       height: 57px;
+//       top: 17%;
+//     }
+//     main {
+//       width: 390px;
+//       top: 28%;
+//     }
+//     p {
+//       top: 57%;
+//     }
+//     .btn {
+//       width: 195px;
+//       height: 65px;
+//       top: 67%;
+//     }
+//   }
+//   @media only screen and ($mediaMdLg) {
+//     .subtitle {
+//       width: 395px;
+//       height: 40px;
+//       top: 10%;
+//     }
+//     .title {
+//       width: 445px;
+//       height: 103px;
+//       top: 17%;
+//     }
+//     main {
+//       width: 512px;
+//       top: 28%;
+//     }
+//     p {
+//       top: 62%;
+//     }
+//     .btn {
+//       top: 72%;
+//       width: 234px;
+//       height: 79px;
+//       &:hover {
+//         width: 240px;
+//         height: 82px;
+//         img {
+//           width: 234px;
+//           transform: translate(-2px, -2px);
+//         }
+//         transform: translate(-3px, -3px);
+//       }
+//     }
+//   }
+// }
 
 .quiz {
   @extend %section-default;
@@ -223,39 +232,24 @@ body {
   @extend %section-default;
   .title {
     @extend %default;
-    width: 193px;
-    height: 28px;
-    top: 10%;
     background-image: url(./result/images/title_quizend.png);
   }
   .photo {
     @extend %default;
-    width: 270px;
-    height: 270px;
-    top: 17%;
     img {
       @extend %default-bg;
-      border-radius: 50%;
     }
   }
   .btn {
     @extend %default;
-    top: 35%;
-    width: 450px;
     display: flex;
     justify-content: space-between;
     &-prev,
     &-next {
       @extend %default-bg;
-      width: 48px;
-      height: 48px;
-      top: 80%;
     }
     &-prev {
       background-image: url(./result/images/btn_prev.png);
-      &:hover {
-        background-image: url(./result/images/btn_prev_hover.png);
-      }
       &:active {
         background-image: url(./result/images/btn_prev_active.png);
       }
@@ -265,40 +259,21 @@ body {
       &:hover {
         background-image: url(./result/images/btn_next_hover.png);
       }
-      &:active {
-        background-image: url(./result/images/btn_next_active.png);
-      }
     }
   }
   .question {
     @extend %default;
-    width: 410px;
-    height: 81px;
-    padding-left: 30px;
-    top: 53%;
-    left: -20%;
-    line-height: 81px;
     background-image: url(../public/images/question.png);
   }
   .int {
     @extend %default;
-    width: 365px;
-    height: 72px;
-    border-radius: 2.5rem;
-    top: 65%;
     background-image: url(../public/images/answer-top.png);
     cursor: pointer;
   }
   .submit {
     @extend %default;
-    display: inline-block;
-    width: 234px;
-    height: 79px;
     background-image: url(../public/images/btn_result.png);
-    top: 76%;
     &:active {
-      width: 241px;
-      height: 77px;
       background-image: url(../public/images/btn_result_active.png);
     }
   }
@@ -345,12 +320,66 @@ body {
     }
   }
   @media only screen and ($mediaMdLg) {
+    .title {
+      width: 193px;
+      height: 28px;
+      top: 10%;
+    }
+    .photo {
+      width: 270px;
+      height: 270px;
+      top: 17%;
+      img {
+        border-radius: 50%;
+      }
+    }
+    .btn {
+      top: 35%;
+      width: 450px;
+      &-prev,
+      &-next {
+        width: 48px;
+        height: 48px;
+        top: 80%;
+      }
+      &-prev {
+        &:hover {
+          background-image: url(./result/images/btn_prev_hover.png);
+        }
+      }
+      &-next {
+        &:hover {
+          background-image: url(./result/images/btn_next_hover.png);
+        }
+      }
+    }
+    .question {
+      width: 410px;
+      height: 81px;
+      padding-left: 30px;
+      top: 53%;
+      left: -20%;
+      line-height: 81px;
+    }
+    .int {
+      width: 365px;
+      height: 72px;
+      border-radius: 2.5rem;
+      top: 65%;
+    }
     .submit {
+      width: 234px;
+      height: 79px;
+      top: 76%;
       transition: transform 200ms;
       &:hover {
         width: 223px;
         height: 71px;
         background-image: url(../public/images/btn_result_hover.png);
+      }
+      &:active {
+        width: 241px;
+        height: 77px;
       }
     }
   }
@@ -360,33 +389,20 @@ body {
   @extend %section-default;
   .title {
     @extend %default;
-    width: 193px;
-    height: 28px;
-    top: 10%;
     background-image: url(./result/images/title_result.png);
   }
   .license {
     @extend %default;
-    top: 18%;
-    width: 670px;
-    height: 420px;
     background-image: url(./result/images/result_bg.png);
     &-nickname {
       @extend %position;
-      top: 26%;
     }
     &-title {
       @extend %default;
-      width: 246px;
-      height: 56px;
-      bottom: 0;
       background-image: url(./result/images/result_title.png);
     }
     &-name {
       @extend %default;
-      width: 74px;
-      height: 29px;
-      top: 18%;
       background-image: url(./result/images/result_name.png);
     }
     &-star {
@@ -396,38 +412,20 @@ body {
     &-reward {
       @extend %default-bg;
       position: absolute;
-      width: 155px;
-      height: 184px;
-      right: -1rem;
-      bottom: -3rem;
       img {
         @extend %default-bg;
         position: absolute;
-        top: 9%;
-        right: 9%;
-        width: 125px;
-        height: 125px;
-        border-radius: 50%;
       }
       &-name {
         @extend %default;
-        width: 254px;
-        height: 42px;
-        top: 46%;
       }
     }
     &-loading {
       @extend %default-bg;
       position: absolute;
-      // width: 87px;  // 60, 72, 87
-      height: 29px;
-      top: 36%;
-      left: 26%;
       overflow: hidden;
       div {
         @extend %default-bg;
-        width: 87px;
-        height: 29px;
         background-image: url(./result/images/result_p.png);
       }
     }
@@ -435,29 +433,24 @@ body {
       @extend %position;
       display: flex;
       flex-direction: column;
-      top: 60%;
     }
   }
   .button {
     &-box {
       @extend %default;
-      width: 520px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      top: 72%;
     }
     &-share,
     &-question,
     &-tryagain {
       @extend %default-bg;
       display: inline-block;
-      width: 234px;
-      height: 79px;
     }
     &-share,
     &-question {
-      margin-bottom: 1rem;
+      transition: transform 200ms;
       background-image: url(../public/images/btn_result.png);
       &:hover {
         background-image: url(../public/images/btn_result_hover.png);
@@ -535,11 +528,70 @@ body {
     }
   }
   @media only screen and ($mediaMdLg) {
+    .title {
+      width: 193px;
+      height: 28px;
+      top: 10%;
+    }
+    .license {
+      top: 18%;
+      width: 600px;
+      height: 378px;
+      &-nickname {
+        top: 26%;
+      }
+      &-title {
+        width: 246px;
+        height: 56px;
+        bottom: 0;
+      }
+      &-name {
+        width: 74px;
+        height: 29px;
+        top: 18%;
+      }
+      &-reward {
+        width: 155px;
+        height: 184px;
+        right: -1rem;
+        bottom: -3rem;
+        img {
+          top: 9%;
+          right: 9%;
+          width: 125px;
+          height: 125px;
+          border-radius: 50%;
+        }
+        &-name {
+          width: 254px;
+          height: 42px;
+          top: 46%;
+        }
+      }
+      &-loading {
+        // width: 87px;  // 60, 72, 87
+        height: 29px;
+        top: 36%;
+        left: 26%;
+        div {
+          width: 87px;
+          height: 29px;
+        }
+      }
+      &-textbox {
+        top: 60%;
+      }
+    }
     .button {
+      &-box {
+        width: 520px;
+        top: 72%;
+      }
       &-share,
       &-question,
       &-tryagain {
-        transition: transform 200ms;
+        width: 234px;
+        height: 79px;
         &:hover {
           width: 224px;
           height: 70px;
@@ -551,6 +603,7 @@ body {
       }
       &-share,
       &-question {
+        margin-bottom: 1rem;
         &:hover {
           background-image: url(../public/images/btn_result_hover.png);
         }
@@ -570,52 +623,36 @@ body {
   width: 100%;
   .title {
     @extend %default;
-    width: 193px;
-    height: 28px;
     background-image: url(./answer/images/title_answer.png);
   }
   &-list {
     @extend %default;
     position: static;
     display: block;
-    width: 650px;
-    margin: 5vh auto;
   }
   &-box {
-    margin: 1.2vh 0;
     display: block;
     h3 {
       display: flex;
       position: relative;
       text-align: left;
-      letter-spacing: 0.4rem;
       button {
-        font-size: 1.5rem;
-        height: 100%;
-        color: $gray;
-        font-family: "Microsoft JhengHei", "微軟正黑體", "PingFang",
-        "LiHei Pro", "黑體-繁", sans-serif;
+        width: 3rem;
       }
       img {
         display: inline-block;
-        width: 36px;
-        height: 36px;
       }
     }
     p {
       position: relative;
-      left: 4%;
       text-align: left;
-      letter-spacing: 0.3rem;
       text-align: justify;
-      width: 96%;
     }
   }
   .button {
     &-box {
       @extend %default;
       position: static;
-      width: 520px;
       display: flex;
       justify-content: space-between;
     }
@@ -623,8 +660,6 @@ body {
     &-tryagain {
       @extend %default-bg;
       display: inline-block;
-      width: 234px;
-      height: 79px;
       transition: transform 200ms;
       &:active {
         width: 224px;
@@ -681,10 +716,42 @@ body {
     }
   }
   @media only screen and ($mediaLg) {
+    .title {
+      width: 193px;
+      height: 28px;
+    }
+    &-list {
+      width: 650px;
+      margin: 5vh auto;
+    }
+    &-box {
+      margin: 1.2vh 0;
+      h3 {
+        letter-spacing: 0.4rem;
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      p {
+        left: 4%;
+        letter-spacing: 0.3rem;
+        width: 96%;
+      }
+    }
     .button {
+      &-box {
+        width: 520px;
+      }
       &-question-list,
       &-tryagain {
+        width: 234px;
+        height: 79px;
         &:hover {
+          width: 224px;
+          height: 70px;
+        }
+        &:active {
           width: 224px;
           height: 70px;
         }
@@ -756,8 +823,8 @@ body {
         margin: auto;
         background-size: contain;
         background-repeat: no-repeat;
-        width: 234px;
-        height: 79px;
+        width: 200px;
+        height: 64px;
         background-image: url(../public/images/btn_result.png);
       }
     }
@@ -798,14 +865,15 @@ body {
           height: 36px;
         }
         button {
-          font-size: 25px;
+          width: 3rem;
         }
       }
       p {
         position: relative;
         left: 4%;
         text-align: left;
-        letter-spacing: 0.3rem;
+        letter-spacing: 0.2rem;
+        line-height: 2rem;
         text-align: justify;
         width: 96%;
       }
@@ -862,8 +930,8 @@ body {
         font-size: 1.5rem;
         height: 100%;
         color: $gray;
-        font-family: "Microsoft JhengHei", "微軟正黑體", "PingFang",
-        "LiHei Pro", "黑體-繁", sans-serif;
+        font-family: "Microsoft JhengHei", "微軟正黑體", "PingFang", "LiHei Pro",
+          "黑體-繁", sans-serif;
       }
     }
     .p {
@@ -953,43 +1021,107 @@ body {
           background-image: url(../public/images/btn_highline_active.png);
         }
       }
-  }
-  @media only screen and ($mediaLg) {
-    .tag {
-      &:hover {
-        width: 170px;
-        height: 56px;
-        background-image: url(../public/images/btn_result_hover.png);
+    }
+    @media only screen and ($mediaLg) {
+      .nav {
+        padding: 10vh 0 3vh 0;
+        .title {
+          width: 193px;
+          height: 28px;
+        }
+        .tag {
+          &-box {
+            width: 600px;
+            margin-top: 6vh;
+          }
+          width: 167px;
+          height: 53px;
+          &:hover {
+            width: 170px;
+            height: 56px;
+            background-image: url(../public/images/btn_result_hover.png);
+          }
+          &:active {
+            width: 170px;
+            height: 56px;
+          }
+        }
+      }
+      .border {
+        &-top {
+          width: 800px;
+          height: 70px;
+          background-image: url(./questionList/images/border_top.png);
+          img {
+            width: 200px;
+            height: 64px;
+          }
+        }
+        &-middle {
+          width: 800px;
+          padding: 0 7%;
+          background-image: url(./questionList/images/border_middle.png);
+        }
+        &-bottom {
+          width: 800px;
+          height: 30px;
+          background-image: url(./questionList/images/border_bottom.png);
+        }
+      }
+      .question {
+        &-list {
+          margin-top: 16vh;
+          width: 800px;
+        }
+        &-container {
+          margin: 5vh auto;
+        }
+        &-box {
+          margin: 1.2vh 0;
+          h3 {
+            letter-spacing: 0.4rem;
+            img {
+              width: 36px;
+              height: 36px;
+            }
+            button {
+              width: 3rem;
+            }
+          }
+          p {
+            letter-spacing: 0.2rem;
+            line-height: 2rem;
+          }
+        }
+      }
+      .button {
+        &-box {
+          width: 520px;
+        }
+        &-share,
+        &-tryagain {
+          width: 234px;
+          height: 79px;
+          &:hover {
+            width: 241px;
+            height: 77px;
+          }
+          &:active {
+            width: 241px;
+            height: 77px;
+          }
+        }
+        &-share {
+          &:hover {
+            background-image: url(../public/images/btn_result_hover.png);
+          }
+        }
+        &-tryagain {
+          &:hover {
+            background-image: url(../public/images/btn_highline_hover.png);
+          }
+        }
       }
     }
-  .border {
-    &-top {
-      width: 800px;
-      height: 70px;
-      background-image: url(./questionList/images/border_top.png);
-      img {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 234px;
-        height: 79px;
-        background-image: url(../public/images/btn_result.png);
-      }
-    }
-    &-middle {
-      width: 800px;
-      padding: 0 7%;
-      background-image: url(./questionList/images/border_middle.png);
-    }
-    &-bottom {
-      width: 800px;
-      height: 30px;
-      background-image: url(./questionList/images/border_bottom.png);
-    }
   }
-  }
-}
 }

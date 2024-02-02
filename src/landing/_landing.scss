@@ -1,0 +1,90 @@
+@import "reset";
+@import "base-variable";
+@import "animate";
+@font-face {
+  font-family: FakePearl-Regular;
+  src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff)
+      format("woff");
+}
+.landing {
+    @extend %section-default;
+    .subtitle {
+      @extend %default;
+      background-image: url(./landing/images/subtitle_index.png);
+    }
+    .title {
+      @extend %default;
+      background-image: url(./landing/images/title_index.png);
+    }
+    main {
+      @extend %default;
+    }
+    p {
+      @extend %default;
+    }
+    .btn {
+      @extend %default;
+      display: inline-block;
+      background-image: url(./landing/images/btn_bg_index.png);
+      transition: transform 200ms;
+    }
+    @media only screen and ($mediaSm) {
+      .subtitle {
+        width: 220px;
+        height: 22px;
+        top: 10%;
+      }
+      .title {
+        width: 247px;
+        height: 57px;
+        top: 17%;
+      }
+      main {
+        width: 390px;
+        top: 28%;
+      }
+      p {
+        top: 57%;
+      }
+      .btn {
+        width: 195px;
+        height: 65px;
+        top: 67%;
+      }
+    }
+    @media only screen and ($mediaMdLg) {
+      .subtitle {
+        width: 395px;
+        height: 40px;
+        top: 10%;
+      }
+      .title {
+        width: 445px;
+        height: 103px;
+        top: 17%;
+      }
+      main {
+        width: 512px;
+        top: 28%;
+      }
+      p {
+        top: 62%;
+      }
+      .btn {
+        top: 72%;
+        width: 234px;
+        height: 79px;
+        &:hover {
+          width: 240px;
+          height: 82px;
+          img {
+            width: 234px;
+            transform: translate(-2px, -2px);
+          }
+          transform: translate(-3px, -3px);
+        }
+      }
+    }
+  }
