@@ -377,10 +377,10 @@ small {
     height: 47px;
   }
   .quiz .answer-0 {
-    top: 55%;
+    top: 60%;
   }
   .quiz .answer-1 {
-    top: 62%;
+    top: 70%;
   }
 }
 
@@ -691,7 +691,7 @@ small {
   }
   .result .button-box {
     width: 300px;
-    top: 45%;
+    top: 50%;
   }
   .result .button-share, .result .button-question, .result .button-tryagain {
     width: 147px;
@@ -781,9 +781,6 @@ small {
   .answer-box h3 img {
     width: 36px;
     height: 36px;
-  }
-  .answer-box h3 button {
-    width: 2rem;
   }
   .answer-box p {
     font-size: 0.95rem;
@@ -1250,7 +1247,7 @@ small {
     top: 100%;
   }
   100% {
-    top: 58%;
+    top: 62%;
     opacity: 1;
   }
 }
@@ -1395,7 +1392,7 @@ small {
     opacity: 0;
   }
   100% {
-    top: 55%;
+    top: 60%;
     opacity: 1;
   }
 }
@@ -1415,7 +1412,7 @@ small {
     opacity: 0;
   }
   100% {
-    top: 62%;
+    top: 70%;
     opacity: 1;
   }
 }
