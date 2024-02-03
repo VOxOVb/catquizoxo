@@ -2,32 +2,19 @@
   @extend %section-default;
   nav {
     @extend %default;
-    top: 15%;
-    width: 454px;
-    height: 16px;
     .slider {
       @extend %default;
       position: relative;
       width: 100%;
       height: 100%;
       background-color: $highline-color-40;
-      border-radius: 1rem;
-      border: dashed 0.15rem $highline-color;
       .process-bar {
         position: relative;
-        top: -45%;
-        left: -1%;
         box-sizing: content-box;
-        height: 18px;
         background-color: $highline-color;
-        border-radius: 1rem 0 0 1rem;
-        border: solid 0.2rem $highline-color-40;
       }
       .can {
         position: absolute;
-        width: 65px;
-        height: 56px;
-        top: -180%;
         background-image: url(./quiz/images/can.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -37,51 +24,100 @@
   }
   main {
     @extend %default;
-    width: 512px;
-    top: 20%;
   }
   .question {
     @extend %default;
-    width: 458px;
-    height: 81px;
-    background-image: url(../public/images/question.png);
-    top: 52%;
-    left: -20%;
-    line-height: 81px;
+    background-image: url(./shared/images/question.png);
   }
   .answer {
     &-0,
     &-1 {
       @extend %default;
-      width: 365px;
-      height: 72px;
       border-radius: 2.5rem;
     }
     &-0 {
-      top: 66%;
-      background-image: url(../public/images/answer-top.png);
+      background-image: url(./shared/images/answer-top.png);
     }
     &-1 {
-      top: 77%;
-      background-image: url(../public/images/answer-bottom.png);
+      background-image: url(./shared/images/answer-bottom.png);
+    }
+  }
+  @media only screen and ($mediaMdLg) {
+    nav {
+      top: 15%;
+      width: 454px;
+      height: 16px;
+      .slider {
+        border-radius: 1rem;
+        border: dashed 0.15rem $highline-color;
+        .process-bar {
+          top: -45%;
+          left: -1%;
+          height: 18px;
+          border-radius: 1rem 0 0 1rem;
+          border: solid 0.2rem $highline-color-40;
+        }
+        .can {
+          width: 65px;
+          height: 56px;
+          top: -180%;
+        }
+      }
+    }
+    main {
+      width: 512px;
+      top: 20%;
+    }
+    .question {
+      width: 458px;
+      height: 81px;
+      top: 52%;
+      left: -20%;
+      line-height: 81px;
+    }
+    .answer {
+      &-0,
+      &-1 {
+        width: 365px;
+        height: 72px;
+        border-radius: 2.5rem;
+        &:hover {
+          transform: translate(-15px, -4px);
+          background-color: rgba(225, 225, 225, 0.5);
+          background-blend-mode: lighten;
+          font-size: 1.35rem;
+        }
+      }
+      &-0 {
+        top: 66%;
+      }
+      &-1 {
+        top: 77%;
+      }
+    }
+    .device {
+      display: none;
     }
   }
   @media only screen and ($mediaSm) {
-    .desktop {
-      display: none;
-    }
     nav {
       width: 227px;
       height: 13px;
+      top: 15%;
       .slider {
+        border-radius: 1rem;
         border: dashed 0.12rem $highline-color;
         .process-bar {
           left: -2%;
           height: 14px;
+          top: -45%;
+          border-radius: 1rem 0 0 1rem;
+          border: solid 0.2rem $highline-color-40;
         }
         .can {
           width: 48px;
           height: 41px;
+          top: -180%;
         }
       }
     }
@@ -92,8 +128,9 @@
     .question {
       width: 305px;
       height: 57px;
-      line-height: 3.5rem;
       top: 25%;
+      left: -20%;
+      line-height: 3.5rem;
     }
     .answer {
       &-0,
@@ -102,26 +139,10 @@
         height: 47px;
       }
       &-0 {
-        top: 60%;
+        top: 55%;
       }
       &-1 {
-        top: 69%;
-      }
-    }
-  }
-  @media only screen and ($mediaMdLg) {
-    .device {
-      display: none;
-    }
-    .answer {
-      &-0,
-      &-1 {
-        &:hover {
-          transform: translate(-15px, -4px);
-          background-color: rgba(225, 225, 225, 0.5);
-          background-blend-mode: lighten;
-          font-size: 1.35rem;
-        }
+        top: 62%;
       }
     }
   }

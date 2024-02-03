@@ -1,0 +1,355 @@
+.questionlist {
+  position: relative;
+  padding: 10vh 0;
+  width: 100%;
+  .nav {
+    position: fixed;
+    padding: 10vh 0 3vh 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    background-color: $bg-color;
+    background-image: url(./shared/images/bgline.png);
+    z-index: 1;
+    .title {
+      @extend %default;
+      width: 193px;
+      height: 28px;
+      background-image: url(./questionList/images/title_questionlist.png);
+    }
+    .tag {
+      &-box {
+        @extend %default-position;
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        width: 600px;
+        margin-top: 6vh;
+      }
+      @extend %default-bg;
+      width: 167px;
+      height: 53px;
+      background-image: url(./shared/images/btn_result.png);
+      transition: transform 200ms;
+      &:active {
+        width: 170px;
+        height: 56px;
+        background-image: url(./shared/images/btn_result_active.png);
+      }
+    }
+  }
+  .border {
+    &-top {
+      width: 800px;
+      height: 70px;
+      background-image: url(./questionList/images/border_top.png);
+      img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 64px;
+        background-image: url(./shared/images/btn_result.png);
+      }
+    }
+    &-middle {
+      width: 800px;
+      padding: 0 7%;
+      background-image: url(./questionList/images/border_middle.png);
+    }
+    &-bottom {
+      width: 800px;
+      height: 30px;
+      background-image: url(./questionList/images/border_bottom.png);
+    }
+  }
+  .question {
+    &-list {
+      @extend %default;
+      position: static;
+      margin: 0 auto;
+      display: block;
+      margin-top: 16vh;
+      width: 800px;
+    }
+    &-container {
+      margin: 5vh auto;
+    }
+    &-box {
+      margin: 1.2vh 0;
+      display: block;
+      h3 {
+        display: flex;
+        position: relative;
+        text-align: left;
+        letter-spacing: 0.4rem;
+        img {
+          display: inline-block;
+          width: 36px;
+          height: 36px;
+        }
+        button {
+          width: 3rem;
+        }
+      }
+      p {
+        position: relative;
+        left: 4%;
+        text-align: left;
+        letter-spacing: 0.2rem;
+        line-height: 2rem;
+        text-align: justify;
+        width: 96%;
+      }
+    }
+  }
+  .button {
+    &-box {
+      @extend %default;
+      width: 520px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-share,
+    &-tryagain {
+      @extend %default-bg;
+      display: inline-block;
+      width: 234px;
+      height: 79px;
+      transition: transform 200ms;
+      &:hover {
+        width: 241px;
+        height: 77px;
+      }
+      &:active {
+        width: 241px;
+        height: 77px;
+      }
+    }
+    &-share {
+      background-image: url(./shared/images/btn_result.png);
+      &:hover {
+        background-image: url(./shared/images/btn_result_hover.png);
+      }
+      &:active {
+        background-image: url(./shared/images/btn_result_active.png);
+      }
+    }
+    &-tryagain {
+      background-image: url(./shared/images/btn_highline.png);
+      &:hover {
+        background-image: url(./shared/images/btn_highline_hover.png);
+      }
+      &:active {
+        background-image: url(./shared/images/btn_highline_active.png);
+      }
+    }
+  }
+  @media only screen and ($mediaSm) {
+    h3 {
+      font-size: 1rem;
+      line-height: 2.2rem;
+      letter-spacing: 0.1rem;
+      button {
+        font-size: 1.5rem;
+        height: 100%;
+        color: $gray;
+        font-family: "Microsoft JhengHei", "微軟正黑體", "PingFang", "LiHei Pro",
+          "黑體-繁", sans-serif;
+      }
+    }
+    .p {
+      font-size: 0.95rem;
+      line-height: 1.2rem;
+      letter-spacing: 0.1rem;
+    }
+    &-list {
+      width: 300px;
+    }
+    .nav {
+      .tag {
+        &-box {
+          width: 270px;
+        }
+        width: 85px;
+        height: 26px;
+        &:active {
+          width: 85px;
+          height: 26px;
+        }
+      }
+    }
+    .border {
+      &-top {
+        // width: 280px;
+        // height: 25px;
+        // background-image: url(./questionList/images/m_border_top.png);
+        img {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: -4vh auto;
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 111px;
+          height: 35px;
+          background-image: url(./shared/images/btn_result.png);
+        }
+      }
+      // &-middle {
+      //   width: 280px;
+      //   background-image: url(./questionList/images/m_border_middle.png);
+      // }
+      // &-bottom {
+      //   width: 280px;
+      //   height: 11px;
+      //   background-image: url(./questionList/images/m_border_bottom.png);
+      // }
+    }
+    .question {
+      &-list {
+        width: 300px;
+      }
+      &-box {
+        h3 {
+          letter-spacing: 0.05rem;
+          button {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .button {
+      &-box {
+        width: 300px;
+      }
+      &-share,
+      &-tryagain {
+        width: 147px;
+        height: 46px;
+        transition: transform 200ms;
+        &:active {
+          width: 145px;
+          height: 44px;
+        }
+      }
+      &-share {
+        background-image: url(./shared/images/btn_result.png);
+        &:active {
+          background-image: url(./shared/images/btn_result_active.png);
+        }
+      }
+      &-tryagain {
+        background-image: url(./shared/images/btn_highline.png);
+        &:active {
+          background-image: url(./shared/images/btn_highline_active.png);
+        }
+      }
+    }
+    @media only screen and ($mediaLg) {
+      .nav {
+        padding: 10vh 0 3vh 0;
+        .title {
+          width: 193px;
+          height: 28px;
+        }
+        .tag {
+          &-box {
+            width: 600px;
+            margin-top: 6vh;
+          }
+          width: 167px;
+          height: 53px;
+          &:hover {
+            width: 170px;
+            height: 56px;
+            background-image: url(./shared/images/btn_result_hover.png);
+          }
+          &:active {
+            width: 170px;
+            height: 56px;
+          }
+        }
+      }
+      .border {
+        &-top {
+          width: 800px;
+          height: 70px;
+          background-image: url(./questionList/images/border_top.png);
+          img {
+            width: 200px;
+            height: 64px;
+          }
+        }
+        &-middle {
+          width: 800px;
+          padding: 0 7%;
+          background-image: url(./questionList/images/border_middle.png);
+        }
+        &-bottom {
+          width: 800px;
+          height: 30px;
+          background-image: url(./questionList/images/border_bottom.png);
+        }
+      }
+      .question {
+        &-list {
+          margin-top: 16vh;
+          width: 800px;
+        }
+        &-container {
+          margin: 5vh auto;
+        }
+        &-box {
+          margin: 1.2vh 0;
+          h3 {
+            letter-spacing: 0.4rem;
+            img {
+              width: 36px;
+              height: 36px;
+            }
+            button {
+              width: 3rem;
+            }
+          }
+          p {
+            letter-spacing: 0.2rem;
+            line-height: 2rem;
+          }
+        }
+      }
+      .button {
+        &-box {
+          width: 520px;
+        }
+        &-share,
+        &-tryagain {
+          width: 234px;
+          height: 79px;
+          &:hover {
+            width: 241px;
+            height: 77px;
+          }
+          &:active {
+            width: 241px;
+            height: 77px;
+          }
+        }
+        &-share {
+          &:hover {
+            background-image: url(./shared/images/btn_result_hover.png);
+          }
+        }
+        &-tryagain {
+          &:hover {
+            background-image: url(./shared/images/btn_highline_hover.png);
+          }
+        }
+      }
+    }
+  }
+}
