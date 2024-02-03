@@ -990,10 +990,7 @@ small {
     letter-spacing: 0.1rem;
   }
   .questionlist h3 button {
-    font-size: 1.5rem;
-    height: 100%;
-    color: #444;
-    font-family: "Microsoft JhengHei", "微軟正黑體", "PingFang", "LiHei Pro", "黑體-繁", sans-serif;
+    width: 3rem;
   }
   .questionlist .p {
     font-size: 0.95rem;
@@ -1247,7 +1244,7 @@ small {
     top: 100%;
   }
   100% {
-    top: 62%;
+    top: 57%;
     opacity: 1;
   }
 }
