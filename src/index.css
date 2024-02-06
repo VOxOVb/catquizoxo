@@ -779,6 +779,8 @@ small {
     font-size: 1rem;
     line-height: 2.2rem;
     letter-spacing: 0.12rem;
+    text-align: left;
+    white-space: nowrap;
   }
   .answer-box h3 img {
     width: 36px;
@@ -917,12 +919,10 @@ small {
   width: 2rem;
   display: inline-block;
 }
-.questionlist .question-box p {
+.questionlist .question-box .p {
   position: relative;
   left: 4%;
   text-align: left;
-  letter-spacing: 0.2rem;
-  line-height: 2rem;
   text-align: justify;
   width: 96%;
 }
@@ -968,13 +968,15 @@ small {
     font-size: 1rem;
     line-height: 2.2rem;
     letter-spacing: 0.1rem;
+    text-align: left;
+    white-space: nowrap;
   }
   .questionlist h3 button {
     width: 3rem;
   }
   .questionlist .p {
     font-size: 0.95rem;
-    line-height: 1.2rem;
+    line-height: 1rem;
     letter-spacing: 0.1rem;
   }
   .questionlist-list {
@@ -1012,7 +1014,11 @@ small {
     letter-spacing: 0.05rem;
   }
   .questionlist .question-box h3 button {
-    font-size: 12px;
+    width: 3rem;
+  }
+  .questionlist .question-box .p {
+    letter-spacing: 0.2rem;
+    line-height: 1rem;
   }
   .questionlist .button-box {
     width: 300px;
@@ -1096,14 +1102,10 @@ small {
   .questionlist .question-box h3 {
     letter-spacing: 0.4rem;
   }
-  .questionlist .question-box h3 img {
-    width: 36px;
-    height: 36px;
-  }
   .questionlist .question-box h3 button {
     width: 3rem;
   }
-  .questionlist .question-box p {
+  .questionlist .question-box .p {
     letter-spacing: 0.2rem;
     line-height: 2rem;
   }

@@ -100,7 +100,10 @@ export default function Result({
       id: index,
       ...item,
       score: score[index],
-      toggle: index === 0 ? true : false,
+      toggle: 
+      score.includes(false) ? (score[index] === false ? true : false) : (
+        index === 0 ? true: false 
+      ),
     }));
   }, [questions, score]);
 
