@@ -8,6 +8,7 @@ import photo02 from "./images/img_02.jpg";
 import photo03 from "./images/img_03.jpg";
 import photo04 from "./images/img_04.jpg";
 import photo05 from "./images/img_05.jpg";
+import photoDefault from "./images/img_default.png";
 import resultBg from "./images/result_bg.png";
 import copper from "./images/reward_copper.png";
 import silver from "./images/reward_silver.png";
@@ -30,7 +31,16 @@ export default function Result({
   setQuestions,
 }) {
   const photoList = useMemo(
-    () => [photo00, photo01, photo02, photo03, photo04, photo05, resultBg],
+    () => [
+      photo00,
+      photo01,
+      photo02,
+      photo03,
+      photo04,
+      photo05,
+      photoDefault,
+      resultBg,
+    ],
     []
   );
   const [totalScore, setTotalScore] = useState(null);
@@ -100,10 +110,13 @@ export default function Result({
       id: index,
       ...item,
       score: score[index],
-      toggle: 
-      score.includes(false) ? (score[index] === false ? true : false) : (
-        index === 0 ? true: false 
-      ),
+      toggle: score.includes(false)
+        ? score[index] === false
+          ? true
+          : false
+        : index === 0
+        ? true
+        : false,
     }));
   }, [questions, score]);
 
@@ -201,8 +214,10 @@ export default function Result({
               alt="選擇中的圖片"
               style={{
                 backgroundImage:
-                  imgUpload !== null
-                    ? `url(${imgUpload})`
+                  imgPick === 5
+                    ? imgUpload !== null
+                      ? `url(${imgUpload})`
+                      : `url(${photoList[6]})`
                     : `url(${photoList[imgPick]})`,
               }}
             ></img>
