@@ -13,17 +13,20 @@
   }
   &-box {
     display: block;
-    h3 {
-      display: flex;
-      position: relative;
-      text-align: left;
       button {
-        width: 3rem;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        text-align: left;
+        svg {
+          width: 2rem;
+        }
+        .cross {
+          width: 2rem;
+          display: inline-block;
+        }
       }
-      img {
-        display: inline-block;
-      }
-    }
+    
     p {
       position: relative;
       text-align: left;

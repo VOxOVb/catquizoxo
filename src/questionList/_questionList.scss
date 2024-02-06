@@ -4,7 +4,6 @@
   width: 100%;
   .nav {
     position: fixed;
-    padding: 10vh 0 3vh 0;
     left: 0;
     right: 0;
     margin: auto;
@@ -41,9 +40,6 @@
   }
   .border {
     &-top {
-      width: 800px;
-      height: 70px;
-      background-image: url(./questionList/images/border_top.png);
       img {
         position: absolute;
         left: 0;
@@ -51,20 +47,8 @@
         margin: auto;
         background-size: contain;
         background-repeat: no-repeat;
-        width: 200px;
-        height: 64px;
         background-image: url(./shared/images/btn_result.png);
       }
-    }
-    &-middle {
-      width: 800px;
-      padding: 0 7%;
-      background-image: url(./questionList/images/border_middle.png);
-    }
-    &-bottom {
-      width: 800px;
-      height: 30px;
-      background-image: url(./questionList/images/border_bottom.png);
     }
   }
   .question {
@@ -76,24 +60,20 @@
       margin-top: 16vh;
       width: 800px;
     }
-    &-container {
-      margin: 5vh auto;
-    }
     &-box {
       margin: 1.2vh 0;
       display: block;
-      h3 {
+      button {
         display: flex;
+        flex-direction: row;
         position: relative;
         text-align: left;
-        letter-spacing: 0.4rem;
-        img {
-          display: inline-block;
-          width: 36px;
-          height: 36px;
+        svg {
+          width: 2rem;
         }
-        button {
-          width: 3rem;
+        .cross {
+          width: 2rem;
+          display: inline-block;
         }
       }
       p {
@@ -167,6 +147,7 @@
       width: 300px;
     }
     .nav {
+      padding: 10vh 0 0;
       .tag {
         &-box {
           width: 270px;
@@ -181,14 +162,8 @@
     }
     .border {
       &-top {
-        // width: 280px;
-        // height: 25px;
-        // background-image: url(./questionList/images/m_border_top.png);
         img {
-          position: absolute;
-          left: 0;
-          right: 0;
-          margin: -4vh auto;
+          margin: -5vh auto;
           background-size: contain;
           background-repeat: no-repeat;
           width: 111px;
@@ -196,19 +171,13 @@
           background-image: url(./shared/images/btn_result.png);
         }
       }
-      // &-middle {
-      //   width: 280px;
-      //   background-image: url(./questionList/images/m_border_middle.png);
-      // }
-      // &-bottom {
-      //   width: 280px;
-      //   height: 11px;
-      //   background-image: url(./questionList/images/m_border_bottom.png);
-      // }
     }
     .question {
       &-list {
         width: 300px;
+      }
+      &-container {
+        margin: 10vh auto;
       }
       &-box {
         h3 {
@@ -246,104 +215,104 @@
         }
       }
     }
-    @media only screen and ($mediaLg) {
-      .nav {
-        padding: 10vh 0 3vh 0;
-        .title {
-          width: 193px;
-          height: 28px;
+  }
+  @media only screen and ($mediaLg) {
+    .nav {
+      padding: 10vh 0 3vh 0;
+      .title {
+        width: 193px;
+        height: 28px;
+      }
+      .tag {
+        &-box {
+          width: 600px;
+          margin-top: 6vh;
         }
-        .tag {
-          &-box {
-            width: 600px;
-            margin-top: 6vh;
-          }
-          width: 167px;
-          height: 53px;
-          &:hover {
-            width: 170px;
-            height: 56px;
-            background-image: url(./shared/images/btn_result_hover.png);
-          }
-          &:active {
-            width: 170px;
-            height: 56px;
-          }
+        width: 167px;
+        height: 53px;
+        &:hover {
+          width: 170px;
+          height: 56px;
+          background-image: url(./shared/images/btn_result_hover.png);
+        }
+        &:active {
+          width: 170px;
+          height: 56px;
         }
       }
-      .border {
-        &-top {
-          width: 800px;
-          height: 70px;
-          background-image: url(./questionList/images/border_top.png);
+    }
+    .border {
+      &-top {
+        width: 800px;
+        height: 70px;
+        background-image: url(./questionList/images/border_top.png);
+        img {
+          width: 200px;
+          height: 64px;
+        }
+      }
+      &-middle {
+        width: 800px;
+        padding: 0 7%;
+        background-image: url(./questionList/images/border_middle.png);
+      }
+      &-bottom {
+        width: 800px;
+        height: 30px;
+        background-image: url(./questionList/images/border_bottom.png);
+      }
+    }
+    .question {
+      &-list {
+        margin-top: 16vh;
+        width: 800px;
+      }
+      &-container {
+        margin: 5vh auto;
+      }
+      &-box {
+        margin: 1.2vh 0;
+        h3 {
+          letter-spacing: 0.4rem;
           img {
-            width: 200px;
-            height: 64px;
+            width: 36px;
+            height: 36px;
+          }
+          button {
+            width: 3rem;
           }
         }
-        &-middle {
-          width: 800px;
-          padding: 0 7%;
-          background-image: url(./questionList/images/border_middle.png);
-        }
-        &-bottom {
-          width: 800px;
-          height: 30px;
-          background-image: url(./questionList/images/border_bottom.png);
+        p {
+          letter-spacing: 0.2rem;
+          line-height: 2rem;
         }
       }
-      .question {
-        &-list {
-          margin-top: 16vh;
-          width: 800px;
+    }
+    .button {
+      &-box {
+        width: 520px;
+      }
+      &-share,
+      &-tryagain {
+        width: 234px;
+        height: 79px;
+        &:hover {
+          width: 241px;
+          height: 77px;
         }
-        &-container {
-          margin: 5vh auto;
-        }
-        &-box {
-          margin: 1.2vh 0;
-          h3 {
-            letter-spacing: 0.4rem;
-            img {
-              width: 36px;
-              height: 36px;
-            }
-            button {
-              width: 3rem;
-            }
-          }
-          p {
-            letter-spacing: 0.2rem;
-            line-height: 2rem;
-          }
+        &:active {
+          width: 241px;
+          height: 77px;
         }
       }
-      .button {
-        &-box {
-          width: 520px;
+      &-share {
+        &:hover {
+          background-image: url(./shared/images/btn_result_hover.png);
         }
-        &-share,
-        &-tryagain {
-          width: 234px;
-          height: 79px;
-          &:hover {
-            width: 241px;
-            height: 77px;
-          }
-          &:active {
-            width: 241px;
-            height: 77px;
-          }
-        }
-        &-share {
-          &:hover {
-            background-image: url(./shared/images/btn_result_hover.png);
-          }
-        }
-        &-tryagain {
-          &:hover {
-            background-image: url(./shared/images/btn_highline_hover.png);
-          }
+      }
+      &-tryagain {
+        &:hover {
+          background-image: url(./shared/images/btn_highline_hover.png);
         }
       }
     }

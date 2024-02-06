@@ -718,15 +718,17 @@ small {
 .answer-box {
   display: block;
 }
-.answer-box h3 {
+.answer-box button {
   display: flex;
+  flex-direction: row;
   position: relative;
   text-align: left;
 }
-.answer-box h3 button {
-  width: 3rem;
+.answer-box button svg {
+  width: 2rem;
 }
-.answer-box h3 img {
+.answer-box button .cross {
+  width: 2rem;
   display: inline-block;
 }
 .answer-box p {
@@ -851,7 +853,6 @@ small {
 }
 .questionlist .nav {
   position: fixed;
-  padding: 10vh 0 3vh 0;
   left: 0;
   right: 0;
   margin: auto;
@@ -883,11 +884,6 @@ small {
   height: 56px;
   background-image: url(./shared/images/btn_result_active.png);
 }
-.questionlist .border-top {
-  width: 800px;
-  height: 70px;
-  background-image: url(./questionList/images/border_top.png);
-}
 .questionlist .border-top img {
   position: absolute;
   left: 0;
@@ -895,19 +891,7 @@ small {
   margin: auto;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 200px;
-  height: 64px;
   background-image: url(./shared/images/btn_result.png);
-}
-.questionlist .border-middle {
-  width: 800px;
-  padding: 0 7%;
-  background-image: url(./questionList/images/border_middle.png);
-}
-.questionlist .border-bottom {
-  width: 800px;
-  height: 30px;
-  background-image: url(./questionList/images/border_bottom.png);
 }
 .questionlist .question-list {
   position: static;
@@ -916,26 +900,22 @@ small {
   margin-top: 16vh;
   width: 800px;
 }
-.questionlist .question-container {
-  margin: 5vh auto;
-}
 .questionlist .question-box {
   margin: 1.2vh 0;
   display: block;
 }
-.questionlist .question-box h3 {
+.questionlist .question-box button {
   display: flex;
+  flex-direction: row;
   position: relative;
   text-align: left;
-  letter-spacing: 0.4rem;
 }
-.questionlist .question-box h3 img {
+.questionlist .question-box button svg {
+  width: 2rem;
+}
+.questionlist .question-box button .cross {
+  width: 2rem;
   display: inline-block;
-  width: 36px;
-  height: 36px;
-}
-.questionlist .question-box h3 button {
-  width: 3rem;
 }
 .questionlist .question-box p {
   position: relative;
@@ -1000,6 +980,9 @@ small {
   .questionlist-list {
     width: 300px;
   }
+  .questionlist .nav {
+    padding: 10vh 0 0;
+  }
   .questionlist .nav .tag {
     width: 85px;
     height: 26px;
@@ -1012,10 +995,7 @@ small {
     height: 26px;
   }
   .questionlist .border-top img {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: -4vh auto;
+    margin: -5vh auto;
     background-size: contain;
     background-repeat: no-repeat;
     width: 111px;
@@ -1024,6 +1004,9 @@ small {
   }
   .questionlist .question-list {
     width: 300px;
+  }
+  .questionlist .question-container {
+    margin: 10vh auto;
   }
   .questionlist .question-box h3 {
     letter-spacing: 0.05rem;
@@ -1056,7 +1039,7 @@ small {
     background-image: url(./shared/images/btn_highline_active.png);
   }
 }
-@media only screen and (max-width: 576px) and (min-width: 769px) {
+@media only screen and (min-width: 769px) {
   .questionlist .nav {
     padding: 10vh 0 3vh 0;
   }
