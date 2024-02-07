@@ -22,6 +22,7 @@ import goldBg from "./images/result_gold_bg.png";
 import btnShare from "../shared/images/btn_share_p.png";
 import btnQuestions from "./images/btn_question_p.png";
 import btnTryagain from "../shared/images/btn_tryagain_p.png";
+import html2canvas from "html2canvas";
 
 export default function Result({
   progress,
@@ -125,6 +126,14 @@ export default function Result({
     setQuestions(questionsA);
   };
 
+  const handleImgDownload = async() => {
+    const element = document.getElementById("imgDownload");
+    const canvas = await html2canvas(element);
+    const data = canvas.toDataURL("image/jpg");
+    const newWindow = window.open();
+    if (newWindow) newWindow.document.write(`<img src=${data} />`);
+  }
+
   return progress === "quizEnd" ? (
     <div className="quizend">
       <div className="title"></div>
@@ -197,7 +206,7 @@ export default function Result({
     progress === "result" && (
       <div className="result">
         <div className="title"></div>
-        <div className="license">
+        <div id="imgDownload" className="license">
           <h3 className="license-nickname">{nickname}</h3>
           <div className="license-title"></div>
           <div className="license-name"></div>
@@ -271,7 +280,7 @@ export default function Result({
           </div>
         </div>
         <div className="button-box">
-          <button className="button-share">
+          <button className="button-share" onClick={handleImgDownload}>
             <img src={btnShare} alt="分享好友"></img>
           </button>
           <button className="button-question"
