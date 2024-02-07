@@ -129,7 +129,11 @@ export default function Result({
   const handleImgDownload = async() => {
     const element = document.getElementById("imgDownload");
     const canvas = await html2canvas(element);
-    const data = canvas.toDataURL("image/jpg");
+    canvas.width = 600;
+    canvas.height = 400;
+    const data = canvas.toDataURL("image/png");
+    console.log(data);
+
     const newWindow = window.open();
     if (newWindow) newWindow.document.write(`<img src=${data} />`);
   }

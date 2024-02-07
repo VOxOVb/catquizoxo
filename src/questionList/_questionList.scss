@@ -41,7 +41,7 @@
   .border {
     &-top {
       img {
-        position: absolute;
+        // position: absolute;
         left: 0;
         right: 0;
         margin: auto;
@@ -88,7 +88,6 @@
   .button {
     &-box {
       @extend %default;
-      width: 520px;
       display: flex;
       justify-content: space-between;
     }
@@ -220,20 +219,21 @@
       }
     }
   }
-  @media only screen and ($mediaLg) {
+  @media only screen and ($mediaMdLg) {
     .nav {
-      padding: 10vh 0 3vh 0;
+      padding: 10vh 0 1vh 0;
       .title {
         width: 193px;
         height: 28px;
       }
       .tag {
         &-box {
-          width: 600px;
+          width: 500px;
           margin-top: 6vh;
         }
         width: 167px;
         height: 53px;
+        scale: .8;
         &:hover {
           width: 170px;
           height: 56px;
@@ -253,6 +253,7 @@
         img {
           width: 200px;
           height: 64px;
+          scale: .8;
         }
       }
       &-middle {
@@ -270,13 +271,16 @@
       &-list {
         margin-top: 16vh;
         width: 800px;
+        height: 57vh;
+        overflow-y: scroll;
       }
-      &-container {
-        margin: 5vh auto;
-      }
+      // &-container {
+      //   margin: 5vh auto;
+      // }
       &-box {
-        margin: 1.2vh 0;
+        margin: .5rem 0;
         h3 {
+          font-size: 1.2rem;
           letter-spacing: 0.4rem;
           button {
             width: 3rem;
@@ -290,19 +294,22 @@
     }
     .button {
       &-box {
-        width: 520px;
+        width: 480px;
       }
       &-share,
       &-tryagain {
         width: 234px;
         height: 79px;
+        scale: .8;
         &:hover {
           width: 241px;
           height: 77px;
+          scale: .8;
         }
         &:active {
           width: 241px;
           height: 77px;
+          scale: .8;
         }
       }
       &-share {

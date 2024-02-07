@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { allQuestions } from "../question";
 import tagBehavior from "./images/tag_p_behavior.png";
 import tagFood from "./images/tag_p_food.png";
@@ -7,21 +7,6 @@ import btnShare from "../shared/images/btn_share_p.png";
 import btnTryagain from "../shared/images/btn_tryagain_p.png";
 export default function QuestionList({ progress }) {
   const [all, setAll] = useState(allQuestions);
-  const [tag, setTag] = useState("");
-
-  const handleTag = (e) => {
-    setTag(e);
-  };
-  useEffect(() => {
-    const scrollView = (e) => {
-      const element = document.getElementById(e);
-      if (element) element.scrollIntoView({ behavior: "smooth" });
-    };
-    if (tag !== "") {
-      scrollView(tag);
-      setTag("");
-    }
-  }, [tag]);
 
   const handleToggle = (index) => {
     setAll((all) =>
@@ -37,15 +22,19 @@ export default function QuestionList({ progress }) {
         <div className="nav">
           <div className="title"></div>
           <div className="tag-box">
-            <button className="tag" onClick={() => handleTag("behavior")}>
-              <img src={tagBehavior} alt="標籤_貓行為"></img>
-            </button>
-            <button className="tag" onClick={() => handleTag("food")}>
+            <a href="#behavior">
+              <button className="tag">
+                <img src={tagBehavior} alt="標籤_貓行為"></img>
+              </button>
+            </a>
+            <a href="#food">
+            <button className="tag">
               <img src={tagFood} alt="標籤_貓飲食"></img>
-            </button>
-            <button className="tag" onClick={() => handleTag("item")}>
+            </button></a>
+            <a href="#item">
+            <button className="tag">
               <img src={tagItem} alt="標籤_貓用品"></img>
-            </button>
+            </button></a>
           </div>
         </div>
         <div className="question-list">
