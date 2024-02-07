@@ -120,7 +120,7 @@ export default function Result({
     }));
   }, [questions, score]);
 
-  const handlequestions = () => {
+  const handleQuestions = () => {
     setProgress("answer");
     setQuestions(questionsA);
   };
@@ -274,11 +274,11 @@ export default function Result({
           <button className="button-share">
             <img src={btnShare} alt="分享好友"></img>
           </button>
-          <button className="button-question">
+          <button className="button-question"
+              onClick={handleQuestions}>
             <img
               src={btnQuestions}
               alt="題目解析"
-              onClick={handlequestions}
             ></img>
           </button>
           <button className="button-tryagain">
