@@ -27,15 +27,9 @@
     }
     &-prev {
       background-image: url(./result/images/btn_prev.png);
-      &:active {
-        background-image: url(./result/images/btn_prev_active.png);
-      }
     }
     &-next {
       background-image: url(./result/images/btn_next.png);
-      &:hover {
-        background-image: url(./result/images/btn_next_hover.png);
-      }
     }
   }
   .question {
@@ -69,10 +63,16 @@
         &:hover {
           background-image: url(./result/images/btn_prev_hover.png);
         }
+        &:active {
+          background-image: url(./result/images/btn_prev_active.png);
+        }
       }
       &-next {
         &:hover {
           background-image: url(./result/images/btn_next_hover.png);
+        }
+        &:active {
+          background-image: url(./result/images/btn_next_active.png);
         }
       }
     }

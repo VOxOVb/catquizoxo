@@ -132,7 +132,7 @@
       line-height: 2.2rem;
       letter-spacing: 0.1rem;
       text-align: left;
-      white-space:nowrap;
+      white-space: nowrap;
       button {
         width: 3rem;
       }
@@ -233,7 +233,7 @@
         }
         width: 167px;
         height: 53px;
-        scale: .8;
+        scale: 0.8;
         &:hover {
           width: 170px;
           height: 56px;
@@ -253,7 +253,7 @@
         img {
           width: 200px;
           height: 64px;
-          scale: .8;
+          scale: 0.8;
         }
       }
       &-middle {
@@ -269,7 +269,7 @@
     }
     .question {
       &-list {
-        margin-top: 16vh;
+        margin-top: 13vh;
         width: 800px;
         height: 57vh;
         overflow-y: scroll;
@@ -278,9 +278,9 @@
       //   margin: 5vh auto;
       // }
       &-box {
-        margin: .5rem 0;
+        margin: 0.5rem 0;
         h3 {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
           letter-spacing: 0.4rem;
           button {
             width: 3rem;
@@ -300,16 +300,16 @@
       &-tryagain {
         width: 234px;
         height: 79px;
-        scale: .8;
+        scale: 0.8;
         &:hover {
           width: 241px;
           height: 77px;
-          scale: .8;
+          scale: 0.8;
         }
         &:active {
           width: 241px;
           height: 77px;
-          scale: .8;
+          scale: 0.8;
         }
       }
       &-share {

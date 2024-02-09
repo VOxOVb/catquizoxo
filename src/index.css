@@ -405,14 +405,8 @@ small {
 .quizend .btn-prev {
   background-image: url(./result/images/btn_prev.png);
 }
-.quizend .btn-prev:active {
-  background-image: url(./result/images/btn_prev_active.png);
-}
 .quizend .btn-next {
   background-image: url(./result/images/btn_next.png);
-}
-.quizend .btn-next:hover {
-  background-image: url(./result/images/btn_next_hover.png);
 }
 .quizend .question {
   background-image: url(./shared/images/question.png);
@@ -442,8 +436,14 @@ small {
   .quizend .btn-prev:hover {
     background-image: url(./result/images/btn_prev_hover.png);
   }
+  .quizend .btn-prev:active {
+    background-image: url(./result/images/btn_prev_active.png);
+  }
   .quizend .btn-next:hover {
     background-image: url(./result/images/btn_next_hover.png);
+  }
+  .quizend .btn-next:active {
+    background-image: url(./result/images/btn_next_active.png);
   }
   .quizend .question {
     width: 410px;
@@ -1090,7 +1090,7 @@ small {
     background-image: url(./questionList/images/border_bottom.png);
   }
   .questionlist .question-list {
-    margin-top: 16vh;
+    margin-top: 13vh;
     width: 800px;
     height: 57vh;
     overflow-y: scroll;
@@ -1099,7 +1099,7 @@ small {
     margin: 0.5rem 0;
   }
   .questionlist .question-box h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: 0.4rem;
   }
   .questionlist .question-box h3 button {
