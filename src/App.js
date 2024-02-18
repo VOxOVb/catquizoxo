@@ -20,7 +20,7 @@ export default function App() {
       setQuestions(questionlist);
       setScore([]);
     }
-  }, [progress]);
+  }, [progress, questionlist]);
 
   return (
     <div className="container">

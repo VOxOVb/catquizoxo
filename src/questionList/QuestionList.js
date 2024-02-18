@@ -3,7 +3,6 @@ import { allQuestions } from "../question";
 import tagBehavior from "./images/tag_p_behavior.png";
 import tagFood from "./images/tag_p_food.png";
 import tagItem from "./images/tag_p_item.png";
-import btnShare from "../shared/images/btn_share_p.png";
 import btnTryagain from "../shared/images/btn_tryagain_p.png";
 export default function QuestionList({ progress, handleTryAgain }) {
   const [all, setAll] = useState(allQuestions);
