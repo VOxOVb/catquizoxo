@@ -4,12 +4,23 @@
   margin: 0;
   font-family: FakePearl-Regular, "Microsoft JhengHei", "微軟正黑體", "PingFang",
     "LiHei Pro", "黑體-繁", sans-serif;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar,
 ::-webkit-scrollbar {
-  display: none;
+  width: 15px;
+  &-track {
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px transparent;
+  }
+  &-thumb {
+    background: transparent;
+    border-radius: 10px;
+    &:hover {
+      background: transparent;
+    }
+  }
 }
 
 ul,
@@ -27,6 +38,8 @@ img {
   display: block;
   width: 100%;
   height: auto;
+  pointer-events: none;
+  user-select: none;
 }
 
 button {

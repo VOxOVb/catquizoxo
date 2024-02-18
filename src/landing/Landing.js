@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import cat00 from "./images/cat-00.png";
 import btnP from "./images/btn_p_index.png";
 export default function Landing({ progress, setProgress }) {
@@ -9,9 +9,12 @@ export default function Landing({ progress, setProgress }) {
       setProgress("startQuiz");
     }, 850);
   };
+  useEffect(() => {
+    progress === "landing" && setBtnClass("btn btn-blank");
+  }, [progress]);
 
   return (
-    progress === "landing" && (
+    (progress === "landing" || progress === null) && (
       <div className="landing">
         <div className="subtitle"></div>
         <div className="title"></div>

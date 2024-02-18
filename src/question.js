@@ -197,19 +197,9 @@ const itemQ = [
   },
 ];
 
-const questions = [...behaviorQ, ...foodQ, ...itemQ];
-
-const listQuestions = (questions) => {
-  return questions.map((item, index) => ({
-    id: index,
-    ...item,
-    toggle: false,
-  }));
-};
-export const allQuestions = listQuestions(questions);
-
+export const questionMerge = [...behaviorQ, ...foodQ, ...itemQ];
 // 隨機取題
-const questionPick = (arr, count) => {
+export const questionPick = (arr, count) => {
   let result = [];
   let questions = arr.slice();
   for (let i = 0; i < count; i++) {
@@ -219,4 +209,12 @@ const questionPick = (arr, count) => {
   }
   return result;
 };
-export const questionlist = questionPick(questions, 9);
+
+const listQuestions = (questions) => {
+  return questions.map((item, index) => ({
+    id: index,
+    ...item,
+    toggle: false,
+  }));
+};
+export const allQuestions = listQuestions(questionMerge);

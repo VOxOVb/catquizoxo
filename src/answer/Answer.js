@@ -6,6 +6,7 @@ export default function Answer({
   setProgress,
   questions,
   setQuestions,
+  handleTryAgain,
 }) {
   const handleToggle = (index) => {
     setQuestions((questions) =>
@@ -72,7 +73,7 @@ export default function Answer({
           <button className="button-question-list" onClick={handleQuestionList}>
             <img src={btnQuestionList} alt="檢定題庫"></img>
           </button>
-          <button className="button-tryagain">
+          <button className="button-tryagain" onClick={handleTryAgain}>
             <img src={btnTryagain} alt="再測一次"></img>
           </button>
         </div>

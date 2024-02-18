@@ -42,6 +42,14 @@ export default function Quiz({ progress, setProgress, questions, setScore }) {
     setIsActive((isActive) => key);
   };
 
+  useEffect(() => {
+    if (progress === "landing") {
+      setStep(0);
+      setText(step);
+      setIsActive("");
+    }
+  }, [progress, step]);
+
   return (
     progress === "startQuiz" && (
       <div className="quiz">

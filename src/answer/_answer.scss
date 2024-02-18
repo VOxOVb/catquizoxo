@@ -13,20 +13,20 @@
   }
   &-box {
     display: block;
-      button {
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        text-align: left;
-        svg {
-          width: 2rem;
-        }
-        .cross {
-          width: 2rem;
-          display: inline-block;
-        }
+    button {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      text-align: left;
+      svg {
+        width: 2rem;
       }
-    
+      .cross {
+        width: 2rem;
+        display: inline-block;
+      }
+    }
+
     p {
       position: relative;
       text-align: left;
@@ -81,7 +81,7 @@
         line-height: 2.2rem;
         letter-spacing: 0.12rem;
         text-align: left;
-        white-space:nowrap;
+        white-space: nowrap;
         img {
           width: 36px;
           height: 36px;
@@ -114,8 +114,25 @@
       height: 28px;
     }
     &-list {
-      width: 650px;
-      margin: 5vh auto;
+      margin: 5vh 10vh 0 0;
+      padding: 0 35vh 0 40vh;
+      height: 65vh;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 15px;
+        &-track {
+          border-radius: 15px;
+          background: $highline-color-40;
+          box-shadow: inset 0 0 5px $highline-color-40;
+        }
+        &-thumb {
+          background: $highline-color;
+          border-radius: 10px;
+          &:hover {
+            background: $primary-color;
+          }
+        }
+      }
     }
     &-box {
       margin: 1.2vh 0;

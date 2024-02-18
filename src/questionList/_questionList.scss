@@ -89,9 +89,8 @@
     &-box {
       @extend %default;
       display: flex;
-      justify-content: space-between;
+      place-content: center;
     }
-    &-share,
     &-tryagain {
       @extend %default-bg;
       display: inline-block;
@@ -105,15 +104,6 @@
       &:active {
         width: 241px;
         height: 77px;
-      }
-    }
-    &-share {
-      background-image: url(./shared/images/btn_result.png);
-      &:hover {
-        background-image: url(./shared/images/btn_result_hover.png);
-      }
-      &:active {
-        background-image: url(./shared/images/btn_result_active.png);
       }
     }
     &-tryagain {
@@ -269,10 +259,25 @@
     }
     .question {
       &-list {
-        margin-top: 13vh;
-        width: 800px;
-        height: 57vh;
-        overflow-y: scroll;
+        margin: 13vh 10vh auto 51vh;
+        width: 900px;
+        height: 60vh;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 15px;
+          &-track {
+            border-radius: 15px;
+            background: $highline-color-40;
+            box-shadow: inset 0 0 5px $highline-color-40;
+          }
+          &-thumb {
+            background: $highline-color;
+            border-radius: 10px;
+            &:hover {
+              background: $primary-color;
+            }
+          }
+        }
       }
       // &-container {
       //   margin: 5vh auto;

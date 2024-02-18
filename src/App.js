@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { questionlist } from "./question";
+import { useEffect, useState } from "react";
+import { questionMerge, questionPick } from "./question";
 import Landing from "./landing/Landing";
 import Quiz from "./quiz/Quiz";
 import Result from "./result/Result";
@@ -7,12 +7,21 @@ import Answer from "./answer/Answer";
 import QuestionList from "./questionList/QuestionList";
 
 export default function App() {
-  const [progress, setProgress] = useState("landing");
+  const [progress, setProgress] = useState(null);
+  const questionlist = questionPick(questionMerge, 9);
   const [questions, setQuestions] = useState(questionlist);
   const [score, setScore] = useState([]);
-  // const handleRestart = () => {
-  // };
-  
+
+  const handleTryAgain = () => {
+    setProgress("landing");
+  };
+  useEffect(() => {
+    if (progress === "landing") {
+      setQuestions(questionlist);
+      setScore([]);
+    }
+  }, [progress]);
+
   return (
     <div className="container">
       <Landing progress={progress} setProgress={setProgress} />
@@ -29,15 +38,16 @@ export default function App() {
         setScore={setScore}
         questions={questions}
         setQuestions={setQuestions}
+        handleTryAgain={handleTryAgain}
       />
       <Answer
         progress={progress}
         setProgress={setProgress}
         questions={questions}
         setQuestions={setQuestions}
+        handleTryAgain={handleTryAgain}
       />
-      <QuestionList
-        progress={progress} />
+      <QuestionList progress={progress} handleTryAgain={handleTryAgain} />
     </div>
   );
 }

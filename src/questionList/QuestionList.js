@@ -5,7 +5,7 @@ import tagFood from "./images/tag_p_food.png";
 import tagItem from "./images/tag_p_item.png";
 import btnShare from "../shared/images/btn_share_p.png";
 import btnTryagain from "../shared/images/btn_tryagain_p.png";
-export default function QuestionList({ progress }) {
+export default function QuestionList({ progress, handleTryAgain }) {
   const [all, setAll] = useState(allQuestions);
 
   const handleToggle = (index) => {
@@ -28,13 +28,15 @@ export default function QuestionList({ progress }) {
               </button>
             </a>
             <a href="#food">
-            <button className="tag">
-              <img src={tagFood} alt="標籤_貓飲食"></img>
-            </button></a>
+              <button className="tag">
+                <img src={tagFood} alt="標籤_貓飲食"></img>
+              </button>
+            </a>
             <a href="#item">
-            <button className="tag">
-              <img src={tagItem} alt="標籤_貓用品"></img>
-            </button></a>
+              <button className="tag">
+                <img src={tagItem} alt="標籤_貓用品"></img>
+              </button>
+            </a>
           </div>
         </div>
         <div className="question-list">
@@ -196,10 +198,7 @@ export default function QuestionList({ progress }) {
           </div>
         </div>
         <div className="button-box">
-          <button className="button-share">
-            <img src={btnShare} alt="分享好友"></img>
-          </button>
-          <button className="button-tryagain">
+          <button className="button-tryagain" onClick={handleTryAgain}>
             <img src={btnTryagain} alt="再測一次"></img>
           </button>
         </div>

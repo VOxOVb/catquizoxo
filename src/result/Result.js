@@ -29,6 +29,7 @@ export default function Result({
   score,
   questions,
   setQuestions,
+  handleTryAgain,
 }) {
   const photoList = useMemo(
     () => [
@@ -126,6 +127,16 @@ export default function Result({
   };
 
   const handleImgDownload = async () => {};
+
+  useEffect(() => {
+    if (progress === "landing") {
+      setTotalScore(null);
+      setReward(null);
+      setImgPick(0);
+      setImgUpload(null);
+      setNickname("");
+    }
+  }, [progress]);
 
   return progress === "quizEnd" ? (
     <div className="quizend">
@@ -279,7 +290,7 @@ export default function Result({
           <button className="button-question" onClick={handleQuestions}>
             <img src={btnQuestions} alt="題目解析"></img>
           </button>
-          <button className="button-tryagain">
+          <button className="button-tryagain" onClick={handleTryAgain}>
             <img src={btnTryagain} alt="再測一次"></img>
           </button>
         </div>
