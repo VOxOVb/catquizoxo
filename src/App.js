@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { questionMerge, questionPick } from "./question";
 import Landing from "./landing/Landing";
 import Quiz from "./quiz/Quiz";

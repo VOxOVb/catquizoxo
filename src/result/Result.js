@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { randomNickname } from "../randomNickname";
 import border from "./images/img_border.png";
 import result from "./images/btn_result_p.png";
@@ -72,7 +72,7 @@ export default function Result({
     if (score.length === 9) {
       setTotalScore(calcScore(score));
     }
-  }, [score]);
+  }, [score, setTotalScore]);
   useEffect(() => {
     totalScore &&
       (totalScore < 70
@@ -80,7 +80,7 @@ export default function Result({
         : totalScore < 85
         ? setReward(silver)
         : setReward(gold));
-  }, [totalScore]);
+  }, [totalScore, setReward]);
 
   const handlePrevious = () => {
     if (imgPick > 0) setImgPick((imgPick) => imgPick - 1);
