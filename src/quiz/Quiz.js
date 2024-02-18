@@ -4,10 +4,17 @@ import cat01 from "./images/cat-01.png";
 import cat02 from "./images/cat-02.png";
 import cat03 from "./images/cat-03.png";
 
-export default function Quiz({ progress, setProgress, questions, setScore }) {
-  const [step, setStep] = useState(0);
+export default function Quiz({
+  progress,
+  setProgress,
+  questions,
+  setScore,
+  step,
+  setStep,
+  isActive,
+  setIsActive,
+}) {
   const [text, setText] = useState(step);
-  const [isActive, setIsActive] = useState("");
   const questionList = useMemo(() => {
     return [
       ...questions,
@@ -41,14 +48,6 @@ export default function Quiz({ progress, setProgress, questions, setScore }) {
     setStep((step) => step + 1);
     setIsActive((isActive) => key);
   };
-
-  useEffect(() => {
-    if (progress === "landing") {
-      setStep(0);
-      setText(step);
-      setIsActive("");
-    }
-  }, [progress, step]);
 
   return (
     progress === "startQuiz" && (

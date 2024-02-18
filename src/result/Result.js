@@ -30,6 +30,16 @@ export default function Result({
   questions,
   setQuestions,
   handleTryAgain,
+  totalScore,
+  setTotalScore,
+  reward,
+  setReward,
+  imgPick,
+  setImgPick,
+  imgUpload,
+  setImgUpload,
+  nickname,
+  setNickname,
 }) {
   const photoList = useMemo(
     () => [
@@ -44,12 +54,6 @@ export default function Result({
     ],
     []
   );
-  const [totalScore, setTotalScore] = useState(null);
-  const [reward, setReward] = useState(null);
-  const [imgPick, setImgPick] = useState(0);
-  const [imgUpload, setImgUpload] = useState(null);
-  const [nickname, setNickname] = useState("");
-
   const calcScore = (score) => {
     let points = score.filter((i) => i === false);
     points.length === 0
@@ -127,16 +131,6 @@ export default function Result({
   };
 
   const handleImgDownload = async () => {};
-
-  useEffect(() => {
-    if (progress === "landing") {
-      setTotalScore(null);
-      setReward(null);
-      setImgPick(0);
-      setImgUpload(null);
-      setNickname("");
-    }
-  }, [progress]);
 
   return progress === "quizEnd" ? (
     <div className="quizend">

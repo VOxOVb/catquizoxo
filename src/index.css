@@ -1234,7 +1234,7 @@ small {
   }
   100% {
     left: 0;
-    top: 17%;
+    top: 22%;
     opacity: 1;
   }
 }
@@ -1271,7 +1271,7 @@ small {
     top: 100%;
   }
   100% {
-    top: 57%;
+    top: 72%;
     opacity: 1;
   }
 }
@@ -1406,7 +1406,7 @@ small {
     opacity: 0;
   }
   100% {
-    top: 66%;
+    top: 64%;
     opacity: 1;
   }
 }
@@ -1426,7 +1426,7 @@ small {
     opacity: 0;
   }
   100% {
-    top: 77%;
+    top: 75%;
     opacity: 1;
   }
 }
