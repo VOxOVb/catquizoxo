@@ -180,11 +180,13 @@ export default function Result({
             type="button"
             className="btn-prev"
             onClick={handlePrevious}
+            style={{ opacity: imgPick === 0 ? "0" : "1" }}
           ></button>
           <button
             type="button"
             className="btn-next"
             onClick={handleNext}
+            style={{ opacity: imgPick === 5 ? "0" : "1" }}
           ></button>
         </div>
         <h3 className="question">輸入暱稱並決定證書照片吧!</h3>
