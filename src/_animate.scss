@@ -3,7 +3,12 @@
     animation: sub-blank 2.4s cubic-bezier(0.33, 1, 0.68, 1);
   }
   .title {
-    animation: title 2s cubic-bezier(0.65, 0, 0.35, 1);
+    @media only screen and ($mediaSm) {
+      animation: m-title 3.2s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+    @media only screen and ($mediaMdLg) {
+      animation: title 2s cubic-bezier(0.65, 0, 0.35, 1);
+    }
   }
   .cat {
     animation: cat-opacity 3.3s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -63,6 +68,22 @@
       opacity: 1;
     }
   }
+  @keyframes m-title {
+    0% {
+      left: -100%;
+      top: 45%;
+      opacity: 0;
+    }
+    50% {
+      left: 0;
+      top: 45%;
+    }
+    100% {
+      left: 0;
+      top: 17%;
+      opacity: 1;
+    }
+  }
 
   @keyframes cat-opacity {
     0% {
@@ -98,7 +119,7 @@
       top: 100%;
     }
     100% {
-      top: 72%;
+      top: 57%;
       opacity: 1;
     }
   }
