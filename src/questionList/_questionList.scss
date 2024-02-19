@@ -138,6 +138,13 @@
       .tag {
         &-box {
           width: 270px;
+          height: 26px;
+          overflow: hidden;
+        }
+        img {
+          width: 127px;
+          height: 39px;
+          transform: translate(-28px, -6px);
         }
         width: 85px;
         height: 26px;
@@ -150,7 +157,6 @@
     .border {
       &-top {
         img {
-          margin: -5vh auto;
           background-size: contain;
           background-repeat: no-repeat;
           width: 111px;
@@ -159,12 +165,15 @@
         }
       }
     }
+    &-scrollbox {
+      margin-top: 10vh;
+    }
     .question {
       &-list {
         width: 300px;
       }
       &-container {
-        margin: 10vh auto;
+        margin: 3vh auto;
       }
       &-box {
         h3 {
