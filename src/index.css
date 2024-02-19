@@ -811,6 +811,7 @@ small {
     letter-spacing: 0.2rem;
   }
   .answer .button-box {
+    position: relative;
     width: 300px;
   }
   .answer .button-question-list, .answer .button-tryagain {

@@ -98,6 +98,7 @@
     }
     .button {
       &-box {
+        position: relative;
         width: 300px;
       }
       &-question-list,
