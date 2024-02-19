@@ -786,11 +786,11 @@ small {
     height: 28px;
   }
   .answer-scrollbox {
-    overflow-y: auto;
+    height: 80vh;
+    overflow-y: scroll;
   }
   .answer-list {
     width: 300px;
-    margin: 5vh auto;
   }
   .answer-box {
     margin: 1.2vh 0;

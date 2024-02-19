@@ -72,11 +72,11 @@
       height: 28px;
     }
     &-scrollbox {
-      overflow-y: auto;
+      height: 80vh;
+      overflow-y: scroll;
     }
     &-list {
       width: 300px;
-      margin: 5vh auto;
     }
     &-box {
       margin: 1.2vh 0;
