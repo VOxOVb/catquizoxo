@@ -756,7 +756,6 @@ small {
   width: 96%;
 }
 .answer .button-box {
-  position: static;
   display: flex;
   justify-content: space-between;
 }
@@ -826,6 +825,7 @@ small {
 @media only screen and (min-width: 577px) {
   .answer-scrollbox {
     overflow-y: auto;
+    height: 80vh;
   }
   .answer-scrollbox::-webkit-scrollbar {
     width: 15px;
@@ -846,6 +846,27 @@ small {
     width: 193px;
     height: 28px;
   }
+  .answer-scrollbox .button-box {
+    width: 520px;
+  }
+  .answer-scrollbox .button-question-list, .answer-scrollbox .button-tryagain {
+    width: 234px;
+    height: 79px;
+  }
+  .answer-scrollbox .button-question-list:hover, .answer-scrollbox .button-tryagain:hover {
+    width: 224px;
+    height: 70px;
+  }
+  .answer-scrollbox .button-question-list:active, .answer-scrollbox .button-tryagain:active {
+    width: 224px;
+    height: 70px;
+  }
+  .answer-scrollbox .button-question-list:hover {
+    background-image: url(./shared/images/btn_result_hover.png);
+  }
+  .answer-scrollbox .button-tryagain:hover {
+    background-image: url(./shared/images/btn_highline_hover.png);
+  }
   .answer-list {
     margin-top: 2vh;
     padding: 0 25vh;
@@ -863,27 +884,6 @@ small {
   }
   .answer-box p {
     letter-spacing: 0.3rem;
-  }
-  .answer .button-box {
-    width: 520px;
-  }
-  .answer .button-question-list, .answer .button-tryagain {
-    width: 234px;
-    height: 79px;
-  }
-  .answer .button-question-list:hover, .answer .button-tryagain:hover {
-    width: 224px;
-    height: 70px;
-  }
-  .answer .button-question-list:active, .answer .button-tryagain:active {
-    width: 224px;
-    height: 70px;
-  }
-  .answer .button-question-list:hover {
-    background-image: url(./shared/images/btn_result_hover.png);
-  }
-  .answer .button-tryagain:hover {
-    background-image: url(./shared/images/btn_highline_hover.png);
   }
 }
 

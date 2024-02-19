@@ -74,14 +74,17 @@ export default function Answer({
               </div>
             ))}
           </div>
-        </div>
-        <div className="button-box">
-          <button className="button-question-list" onClick={handleQuestionList}>
-            <img src={btnQuestionList} alt="檢定題庫"></img>
-          </button>
-          <button className="button-tryagain" onClick={handleTryAgain}>
-            <img src={btnTryagain} alt="再測一次"></img>
-          </button>
+          <div className="button-box">
+            <button
+              className="button-question-list"
+              onClick={handleQuestionList}
+            >
+              <img src={btnQuestionList} alt="檢定題庫"></img>
+            </button>
+            <button className="button-tryagain" onClick={handleTryAgain}>
+              <img src={btnTryagain} alt="再測一次"></img>
+            </button>
+          </div>
         </div>
       </div>
     )
