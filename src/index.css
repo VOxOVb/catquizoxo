@@ -813,6 +813,7 @@ small {
   .answer .button-box {
     position: relative;
     width: 300px;
+    margin-bottom: 1rem;
   }
   .answer .button-question-list, .answer .button-tryagain {
     width: 147px;
@@ -1018,24 +1019,33 @@ small {
   }
   .questionlist .nav .tag-box {
     width: 270px;
+    height: 26px;
+    overflow: hidden;
+  }
+  .questionlist .nav .tag img {
+    width: 127px;
+    height: 39px;
+    transform: translate(-28px, -6px);
   }
   .questionlist .nav .tag:active {
     width: 85px;
     height: 26px;
   }
   .questionlist .border-top img {
-    margin: -5vh auto;
     background-size: contain;
     background-repeat: no-repeat;
     width: 111px;
     height: 35px;
     background-image: url(./shared/images/btn_result.png);
   }
+  .questionlist-scrollbox {
+    margin-top: 10vh;
+  }
   .questionlist .question-list {
     width: 300px;
   }
   .questionlist .question-container {
-    margin: 10vh auto;
+    margin: 3vh auto;
   }
   .questionlist .question-box h3 {
     letter-spacing: 0.05rem;
