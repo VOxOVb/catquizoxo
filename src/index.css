@@ -13,12 +13,12 @@
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -169,12 +169,12 @@ small {
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .answer .title, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -443,7 +443,7 @@ small {
   .quizend .photo {
     width: 270px;
     height: 270px;
-    top: 17%;
+    top: 20%;
   }
   .quizend .btn {
     top: 35%;
@@ -635,7 +635,7 @@ small {
   }
   .result .button-box {
     width: 520px;
-    top: 62%;
+    top: 68%;
   }
   .result .button-share, .result .button-question, .result .button-tryagain {
     width: 234px;
@@ -725,6 +725,7 @@ small {
   width: 100%;
 }
 .answer .title {
+  margin: auto;
   background-image: url(./answer/images/title_answer.png);
 }
 .answer-list {
@@ -779,10 +780,13 @@ small {
 .answer .button-tryagain:active {
   background-image: url(./shared/images/btn_highline_active.png);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   .answer .title {
     width: 193px;
     height: 28px;
+  }
+  .answer-scrollbox {
+    overflow-y: auto;
   }
   .answer-list {
     width: 300px;
@@ -819,31 +823,33 @@ small {
     height: 44px;
   }
 }
-@media only screen and (min-width: 769px) {
-  .answer .title {
-    width: 193px;
-    height: 28px;
-  }
-  .answer-list {
-    margin: 5vh 10vh 0 0;
-    padding: 0 35vh 0 40vh;
-    height: 65vh;
+@media only screen and (min-width: 577px) {
+  .answer-scrollbox {
     overflow-y: auto;
   }
-  .answer-list::-webkit-scrollbar {
+  .answer-scrollbox::-webkit-scrollbar {
     width: 15px;
   }
-  .answer-list::-webkit-scrollbar-track {
+  .answer-scrollbox::-webkit-scrollbar-track {
     border-radius: 15px;
     background: #afcde2;
     box-shadow: inset 0 0 5px #afcde2;
   }
-  .answer-list::-webkit-scrollbar-thumb {
+  .answer-scrollbox::-webkit-scrollbar-thumb {
     background: #3782b8;
     border-radius: 10px;
   }
-  .answer-list::-webkit-scrollbar-thumb:hover {
+  .answer-scrollbox::-webkit-scrollbar-thumb:hover {
     background: #fff3b8;
+  }
+  .answer-scrollbox .title {
+    width: 193px;
+    height: 28px;
+  }
+  .answer-list {
+    margin-top: 2vh;
+    padding: 0 25vh;
+    height: 74vh;
   }
   .answer-box {
     margin: 1.2vh 0;
@@ -931,8 +937,6 @@ small {
   position: static;
   margin: 0 auto;
   display: block;
-  margin-top: 16vh;
-  width: 800px;
 }
 .questionlist .question-box {
   margin: 1.2vh 0;
@@ -1069,7 +1073,7 @@ small {
 }
 @media only screen and (min-width: 577px) {
   .questionlist .nav {
-    padding: 10vh 0 1vh 0;
+    padding-top: 10vh;
   }
   .questionlist .nav .title {
     width: 193px;
@@ -1113,38 +1117,40 @@ small {
     height: 30px;
     background-image: url(./questionList/images/border_bottom.png);
   }
-  .questionlist .question-list {
-    margin: 13vh 10vh auto 51vh;
-    width: 900px;
-    height: 60vh;
+  .questionlist-scrollbox {
+    margin-top: 13vh;
     overflow-y: auto;
   }
-  .questionlist .question-list::-webkit-scrollbar {
+  .questionlist-scrollbox::-webkit-scrollbar {
     width: 15px;
   }
-  .questionlist .question-list::-webkit-scrollbar-track {
+  .questionlist-scrollbox::-webkit-scrollbar-track {
     border-radius: 15px;
     background: #afcde2;
     box-shadow: inset 0 0 5px #afcde2;
   }
-  .questionlist .question-list::-webkit-scrollbar-thumb {
+  .questionlist-scrollbox::-webkit-scrollbar-thumb {
     background: #3782b8;
     border-radius: 10px;
   }
-  .questionlist .question-list::-webkit-scrollbar-thumb:hover {
+  .questionlist-scrollbox::-webkit-scrollbar-thumb:hover {
     background: #fff3b8;
   }
-  .questionlist .question-box {
+  .questionlist-scrollbox .question-list {
+    width: 800px;
+    height: 60vh;
+  }
+  .questionlist-scrollbox .question-box {
     margin: 0.5rem 0;
   }
-  .questionlist .question-box h3 {
+  .questionlist-scrollbox .question-box h3 {
     font-size: 1.4rem;
     letter-spacing: 0.4rem;
   }
-  .questionlist .question-box h3 button {
+  .questionlist-scrollbox .question-box h3 button {
     width: 3rem;
   }
-  .questionlist .question-box .p {
+  .questionlist-scrollbox .question-box .p {
     letter-spacing: 0.2rem;
     line-height: 2rem;
   }

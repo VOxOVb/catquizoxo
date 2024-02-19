@@ -22,6 +22,7 @@ export default function Answer({
   return (
     progress === "answer" && (
       <div className="answer">
+      <div className="answer-scrollbox">
         <div className="title"></div>
         <div className="answer-list">
           {questions.map((item, index) => (
@@ -68,6 +69,7 @@ export default function Answer({
               {item.toggle === false ? "" : <p className="p">A:{item.parse}</p>}
             </div>
           ))}
+        </div>
         </div>
         <div className="button-box">
           <button className="button-question-list" onClick={handleQuestionList}>

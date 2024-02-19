@@ -3,7 +3,8 @@
   padding: 10vh 0;
   width: 100%;
   .title {
-    @extend %default;
+    @extend %default-bg;
+    margin: auto;
     background-image: url(./answer/images/title_answer.png);
   }
   &-list {
@@ -65,10 +66,13 @@
       }
     }
   }
-  @media only screen and ($mediaMd) {
+  @media only screen and ($mediaSm) {
     .title {
       width: 193px;
       height: 28px;
+    }
+    &-scrollbox {
+      overflow-y: auto;
     }
     &-list {
       width: 300px;
@@ -108,15 +112,8 @@
       }
     }
   }
-  @media only screen and ($mediaLg) {
-    .title {
-      width: 193px;
-      height: 28px;
-    }
-    &-list {
-      margin: 5vh 10vh 0 0;
-      padding: 0 35vh 0 40vh;
-      height: 65vh;
+  @media only screen and ($mediaMdLg) {
+    &-scrollbox {
       overflow-y: auto;
       &::-webkit-scrollbar {
         width: 15px;
@@ -133,6 +130,15 @@
           }
         }
       }
+      .title {
+        width: 193px;
+        height: 28px;
+      }
+    }
+    &-list {
+      margin-top: 2vh;
+      padding: 0 25vh;
+      height: 74vh;
     }
     &-box {
       margin: 1.2vh 0;

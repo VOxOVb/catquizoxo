@@ -57,8 +57,6 @@
       position: static;
       margin: 0 auto;
       display: block;
-      margin-top: 16vh;
-      width: 800px;
     }
     &-box {
       margin: 1.2vh 0;
@@ -211,7 +209,7 @@
   }
   @media only screen and ($mediaMdLg) {
     .nav {
-      padding: 10vh 0 1vh 0;
+      padding-top: 10vh;
       .title {
         width: 193px;
         height: 28px;
@@ -257,43 +255,42 @@
         background-image: url(./questionList/images/border_bottom.png);
       }
     }
-    .question {
-      &-list {
-        margin: 13vh 10vh auto 51vh;
-        width: 900px;
-        height: 60vh;
-        overflow-y: auto;
-        &::-webkit-scrollbar {
-          width: 15px;
-          &-track {
-            border-radius: 15px;
-            background: $highline-color-40;
-            box-shadow: inset 0 0 5px $highline-color-40;
-          }
-          &-thumb {
-            background: $highline-color;
-            border-radius: 10px;
-            &:hover {
-              background: $primary-color;
-            }
+    &-scrollbox {
+      margin-top: 13vh;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 15px;
+        &-track {
+          border-radius: 15px;
+          background: $highline-color-40;
+          box-shadow: inset 0 0 5px $highline-color-40;
+        }
+        &-thumb {
+          background: $highline-color;
+          border-radius: 10px;
+          &:hover {
+            background: $primary-color;
           }
         }
       }
-      // &-container {
-      //   margin: 5vh auto;
-      // }
-      &-box {
-        margin: 0.5rem 0;
-        h3 {
-          font-size: 1.4rem;
-          letter-spacing: 0.4rem;
-          button {
-            width: 3rem;
-          }
+      .question {
+        &-list {
+          width: 800px;
+          height: 60vh;
         }
-        .p {
-          letter-spacing: 0.2rem;
-          line-height: 2rem;
+        &-box {
+          margin: 0.5rem 0;
+          h3 {
+            font-size: 1.4rem;
+            letter-spacing: 0.4rem;
+            button {
+              width: 3rem;
+            }
+          }
+          .p {
+            letter-spacing: 0.2rem;
+            line-height: 2rem;
+          }
         }
       }
     }

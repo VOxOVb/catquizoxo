@@ -38,6 +38,7 @@ export default function QuestionList({ progress, handleTryAgain }) {
             </a>
           </div>
         </div>
+        <div className="questionlist-scrollbox">
         <div className="question-list">
           <div id="behavior" className="question-container">
             <div className="border-top">
@@ -195,7 +196,7 @@ export default function QuestionList({ progress, handleTryAgain }) {
             </div>
             <div className="border-bottom"></div>
           </div>
-        </div>
+        </div></div>
         <div className="button-box">
           <button className="button-tryagain" onClick={handleTryAgain}>
             <img src={btnTryagain} alt="再測一次"></img>
