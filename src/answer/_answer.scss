@@ -141,7 +141,7 @@
   @media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
     &-scrollbox {
       overflow-y: auto;
-      height: 80vh;
+      height: 78vh;
       &::-webkit-scrollbar {
         width: 15px;
         &-track {

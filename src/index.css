@@ -905,7 +905,7 @@ small {
 @media only screen and (min-width:577px) and (max-width: 1024px) {
   .answer-scrollbox {
     overflow-y: auto;
-    height: 80vh;
+    height: 78vh;
   }
   .answer-scrollbox::-webkit-scrollbar {
     width: 15px;
