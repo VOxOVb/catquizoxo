@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.result .license-textbox, .result .license-nickname {
+.result .license-textbox, .result .license-nickname, .quizend .photo {
   position: absolute;
   left: 0;
   right: 0;
@@ -13,12 +13,12 @@
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -155,7 +155,7 @@ small {
     letter-spacing: 0.2rem;
   }
 }
-.result .license-textbox, .result .license-nickname {
+.result .license-textbox, .result .license-nickname, .quizend .photo {
   position: absolute;
   left: 0;
   right: 0;
@@ -169,12 +169,12 @@ small {
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next, .quizend .photo img {
+.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next {
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -407,9 +407,13 @@ small {
   background-image: url(./result/images/title_quizend.png);
 }
 .quizend .photo img {
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 50%;
 }
 .quizend .btn {
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
 }
