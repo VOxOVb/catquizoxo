@@ -13,7 +13,7 @@
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next {
+.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward, .quizend .btn-prev, .quizend .btn-next {
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -50,6 +50,7 @@
   margin: 0;
   font-family: FakePearl-Regular, "Microsoft JhengHei", "微軟正黑體", "PingFang", "LiHei Pro", "黑體-繁", sans-serif;
   scroll-behavior: smooth;
+  user-select: none;
 }
 
 ::-webkit-scrollbar,
@@ -169,7 +170,7 @@ small {
   margin: auto;
 }
 
-.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward img, .result .license-reward, .quizend .btn-prev, .quizend .btn-next {
+.questionlist .button-tryagain, .questionlist .nav .tag, .answer .button-question-list, .answer .button-tryagain, .answer .title, .result .button-share, .result .button-question, .result .button-tryagain, .result .license-loading div, .result .license-loading, .result .license-reward, .quizend .btn-prev, .quizend .btn-next {
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -544,6 +545,8 @@ small {
   position: absolute;
 }
 .result .license-reward img {
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   border-radius: 50%;
 }

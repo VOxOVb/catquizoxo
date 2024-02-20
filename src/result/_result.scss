@@ -168,7 +168,8 @@
       @extend %default-bg;
       position: absolute;
       img {
-        @extend %default-bg;
+        background-size: cover;
+        background-repeat: no-repeat;
         position: absolute;
         border-radius: 50%;
       }
