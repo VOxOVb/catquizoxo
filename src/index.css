@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.result .license-textbox, .result .license-nickname, .quizend .photo {
+.result .license-textbox, .result .license-nickname {
   position: absolute;
   left: 0;
   right: 0;
@@ -18,7 +18,7 @@
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -155,7 +155,7 @@ small {
     letter-spacing: 0.2rem;
   }
 }
-.result .license-textbox, .result .license-nickname, .quizend .photo {
+.result .license-textbox, .result .license-nickname {
   position: absolute;
   left: 0;
   right: 0;
@@ -174,7 +174,7 @@ small {
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .photo, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;

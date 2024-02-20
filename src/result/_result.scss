@@ -8,7 +8,7 @@
     background-image: url(./result/images/title_quizend.png);
   }
   .photo {
-    @extend %position;
+    @extend %default;
     img {
       background-size: cover;
       background-repeat: no-repeat;
