@@ -208,9 +208,6 @@ export default function Result({
         <div className="title"></div>
         <div id="imgDownload" className="license">
           <h3 className="license-nickname">{nickname}</h3>
-          <div className="license-title"></div>
-          <div className="license-name"></div>
-          <div className="license-star"></div>
           <div className="license-loading">
             <div></div>
           </div>

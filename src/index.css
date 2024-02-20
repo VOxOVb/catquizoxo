@@ -18,7 +18,7 @@
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -32,17 +32,6 @@
   height: 100vh;
   padding: 10vh 0;
   width: 100%;
-}
-
-.result .license-star {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
 }
 
 * {
@@ -175,7 +164,7 @@ small {
   background-repeat: no-repeat;
 }
 
-.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license-name, .result .license-title, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
+.questionlist .button-box, .questionlist .question-list, .questionlist .nav .title, .answer .button-box, .answer-list, .result .button-box, .result .license-reward-name, .result .license, .result .title, .quizend .submit, .quizend .int, .quizend .question, .quizend .btn, .quizend .title, .quiz .answer-0, .quiz .answer-1, .quiz .question, .quiz main, .quiz nav .slider, .quiz nav, .landing .btn, .landing p, .landing main, .landing .title, .landing .subtitle {
   position: absolute;
   left: 0;
   right: 0;
@@ -189,17 +178,6 @@ small {
   height: 100vh;
   padding: 10vh 0;
   width: 100%;
-}
-
-.result .license-star {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
 }
 
 .landing .subtitle {
@@ -582,15 +560,6 @@ small {
 .result .license {
   background-image: url(./result/images/result_bg.png);
 }
-.result .license-title {
-  background-image: url(./result/images/result_title.png);
-}
-.result .license-name {
-  background-image: url(./result/images/result_name.png);
-}
-.result .license-star {
-  background-image: url(./result/images/result_star.png);
-}
 .result .license-reward {
   position: absolute;
 }
@@ -648,16 +617,6 @@ small {
   }
   .result .license-nickname {
     top: 26%;
-  }
-  .result .license-title {
-    width: 246px;
-    height: 56px;
-    bottom: 0;
-  }
-  .result .license-name {
-    width: 74px;
-    height: 29px;
-    top: 18%;
   }
   .result .license-reward {
     width: 155px;
@@ -719,16 +678,6 @@ small {
   }
   .result .license-nickname {
     top: 22%;
-  }
-  .result .license-title {
-    width: 118px;
-    height: 27px;
-    bottom: 0;
-  }
-  .result .license-name {
-    width: 36px;
-    height: 14px;
-    top: 18%;
   }
   .result .license-reward {
     width: 100px;
@@ -860,6 +809,7 @@ small {
   }
   .answer-scrollbox .button-box {
     width: 520px;
+    margin-top: 10px;
   }
   .answer-scrollbox .button-question-list, .answer-scrollbox .button-tryagain {
     width: 234px;

@@ -152,18 +152,6 @@
     &-nickname {
       @extend %position;
     }
-    &-title {
-      @extend %default;
-      background-image: url(./result/images/result_title.png);
-    }
-    &-name {
-      @extend %default;
-      background-image: url(./result/images/result_name.png);
-    }
-    &-star {
-      @extend %size;
-      background-image: url(./result/images/result_star.png);
-    }
     &-reward {
       @extend %default-bg;
       position: absolute;
@@ -236,16 +224,6 @@
       &-nickname {
         top: 26%;
       }
-      &-title {
-        width: 246px;
-        height: 56px;
-        bottom: 0;
-      }
-      &-name {
-        width: 74px;
-        height: 29px;
-        top: 18%;
-      }
       &-reward {
         width: 155px;
         height: 184px;
@@ -311,16 +289,6 @@
       height: 202px;
       &-nickname {
         top: 22%;
-      }
-      &-title {
-        width: 118px;
-        height: 27px;
-        bottom: 0;
-      }
-      &-name {
-        width: 36px;
-        height: 14px;
-        top: 18%;
       }
       &-reward {
         width: 100px;
