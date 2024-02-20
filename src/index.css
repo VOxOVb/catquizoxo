@@ -1832,9 +1832,4 @@ body {
   .container {
     overflow-y: hidden;
   }
-}
-@media only screen and (max-width: 576px) {
-  .container {
-    overflow-y: auto;
-  }
 }/*# sourceMappingURL=index.css.map */
