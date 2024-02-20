@@ -193,7 +193,10 @@
       @media only screen and ($mediaSm) {
         animation: m-a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
       }
-      @media only screen and ($mediaMdLg) {
+      @media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
+        animation: a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      @media only screen and ($mediaDesk) {
         animation: a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
       }
     }
@@ -201,7 +204,10 @@
       @media only screen and ($mediaSm) {
         animation: m-a-bottom-show 1s cubic-bezier(0.65, 0, 0.35, 1);
       }
-      @media only screen and ($mediaMdLg) {
+      @media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
+        animation: a-bottom-show 1s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+      @media only screen and ($mediaDesk) {
         animation: a-bottom-show 1s cubic-bezier(0.65, 0, 0.35, 1);
       }
     }
