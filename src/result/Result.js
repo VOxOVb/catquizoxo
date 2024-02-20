@@ -20,6 +20,7 @@ import goldP from "./images/result_gold_p.png";
 import copperBg from "./images/result_copper_bg.png";
 import silverBg from "./images/result_silver_bg.png";
 import goldBg from "./images/result_gold_bg.png";
+import imgbox from "./images/imgbox.png";
 import btnShare from "../shared/images/btn_share_p.png";
 import btnQuestions from "./images/btn_question_p.png";
 import btnTryagain from "../shared/images/btn_tryagain_p.png";
@@ -290,10 +291,8 @@ export default function Result({
         </div>
         <div ref={imgBox} className="imgbox">
           <div className="license">
+            <img src={imgbox} alt=""></img>
             <h3 className="license-nickname">{nickname}</h3>
-            <div className="license-loading">
-              <div></div>
-            </div>
             <div
               className="license-reward"
               style={{ backgroundImage: `url(${reward})` }}
