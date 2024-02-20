@@ -65,55 +65,9 @@
       }
     }
   }
-  @media only screen and ($mediaSm) {
-    .title {
-      width: 193px;
-      height: 28px;
-    }
-    &-scrollbox {
-      height: 80vh;
-      overflow-y: scroll;
-    }
-    &-list {
-      width: 300px;
-    }
-    &-box {
-      margin: 1.2vh 0;
-      h3 {
-        font-size: 1rem;
-        line-height: 2.2rem;
-        letter-spacing: 0.12rem;
-        text-align: left;
-        white-space: nowrap;
-        img {
-          width: 36px;
-          height: 36px;
-        }
-      }
-      p {
-        font-size: 0.95rem;
-        line-height: 1.2rem;
-        letter-spacing: 0.2rem;
-      }
-    }
-    .button {
-      &-box {
-        position: relative;
-        width: 300px;
-        margin-bottom: 1rem;
-      }
-      &-question-list,
-      &-tryagain {
-        width: 147px;
-        height: 46px;
-        &:active {
-          width: 145px;
-          height: 44px;
-        }
-      }
-    }
-  }
-  @media only screen and ($mediaMdLg) {
+  
+  
+  @media only screen and ($mediaDesk) {
     &-scrollbox {
       overflow-y: auto;
       height: 80vh;
@@ -171,7 +125,7 @@
       height: 74vh;
     }
     &-box {
-      margin: 1.2vh 0;
+      margin: 2vh 0;
       h3 {
         letter-spacing: 0.4rem;
         img {
@@ -181,6 +135,125 @@
       }
       p {
         letter-spacing: 0.3rem;
+      }
+    }
+  }
+  @media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
+    &-scrollbox {
+      overflow-y: auto;
+      height: 80vh;
+      &::-webkit-scrollbar {
+        width: 15px;
+        &-track {
+          border-radius: 15px;
+          background: $highline-color-40;
+          box-shadow: inset 0 0 5px $highline-color-40;
+        }
+        &-thumb {
+          background: $highline-color;
+          border-radius: 10px;
+          &:hover {
+            background: $primary-color;
+          }
+        }
+      }
+      .title {
+        width: 193px;
+        height: 28px;
+      }
+      .button {
+        &-box {
+          width: 520px;
+        }
+        &-question-list,
+        &-tryagain {
+          width: 234px;
+          height: 79px;
+          &:hover {
+            width: 224px;
+            height: 70px;
+          }
+          &:active {
+            width: 224px;
+            height: 70px;
+          }
+        }
+        &-question-list {
+          &:hover {
+            background-image: url(./shared/images/btn_result_hover.png);
+          }
+        }
+        &-tryagain {
+          &:hover {
+            background-image: url(./shared/images/btn_highline_hover.png);
+          }
+        }
+      }
+    }
+    &-list {
+      margin-top: 2vh;
+      padding: 0 8vh;
+      height: 74vh;
+    }
+    &-box {
+      margin: 2vh 0;
+      h3 {
+        letter-spacing: 0.4rem;
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      p {
+        letter-spacing: 0.3rem;
+      }
+    }
+  } 
+  @media only screen and ($mediaSm) {
+    .title {
+      width: 193px;
+      height: 28px;
+    }
+    &-scrollbox {
+      height: 80vh;
+      overflow-y: scroll;
+    }
+    &-list {
+      width: 300px;
+    }
+    &-box {
+      margin: 1.2vh 0;
+      h3 {
+        font-size: 1rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.12rem;
+        text-align: left;
+        white-space: nowrap;
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+      p {
+        font-size: 0.95rem;
+        line-height: 1.2rem;
+        letter-spacing: 0.2rem;
+      }
+    }
+    .button {
+      &-box {
+        position: relative;
+        width: 300px;
+        margin-bottom: 1rem;
+      }
+      &-question-list,
+      &-tryagain {
+        width: 147px;
+        height: 46px;
+        &:active {
+          width: 145px;
+          height: 44px;
+        }
       }
     }
   }

@@ -114,109 +114,7 @@
       }
     }
   }
-  @media only screen and ($mediaSm) {
-    h3 {
-      font-size: 1rem;
-      line-height: 2.2rem;
-      letter-spacing: 0.1rem;
-      text-align: left;
-      white-space: nowrap;
-      button {
-        width: 3rem;
-      }
-    }
-    .p {
-      font-size: 0.95rem;
-      line-height: 1rem;
-      letter-spacing: 0.1rem;
-    }
-    &-list {
-      width: 300px;
-    }
-    .nav {
-      padding: 10vh 0 0;
-      .tag {
-        &-box {
-          width: 270px;
-          height: 26px;
-          overflow: hidden;
-        }
-        img {
-          width: 127px;
-          height: 39px;
-          transform: translate(-28px, -6px);
-        }
-        width: 85px;
-        height: 26px;
-        &:active {
-          width: 85px;
-          height: 26px;
-        }
-      }
-    }
-    .border {
-      &-top {
-        img {
-          background-size: contain;
-          background-repeat: no-repeat;
-          width: 111px;
-          height: 35px;
-          background-image: url(./shared/images/btn_result.png);
-        }
-      }
-    }
-    &-scrollbox {
-      margin-top: 10vh;
-    }
-    .question {
-      &-list {
-        width: 300px;
-      }
-      &-container {
-        margin: 3vh auto;
-      }
-      &-box {
-        h3 {
-          letter-spacing: 0.05rem;
-          button {
-            width: 3rem;
-          }
-        }
-        .p {
-          letter-spacing: 0.2rem;
-          line-height: 1rem;
-        }
-      }
-    }
-    .button {
-      &-box {
-        width: 300px;
-      }
-      &-share,
-      &-tryagain {
-        width: 147px;
-        height: 46px;
-        transition: transform 200ms;
-        &:active {
-          width: 145px;
-          height: 44px;
-        }
-      }
-      &-share {
-        background-image: url(./shared/images/btn_result.png);
-        &:active {
-          background-image: url(./shared/images/btn_result_active.png);
-        }
-      }
-      &-tryagain {
-        background-image: url(./shared/images/btn_highline.png);
-        &:active {
-          background-image: url(./shared/images/btn_highline_active.png);
-        }
-      }
-    }
-  }
-  @media only screen and ($mediaMdLg) {
+  @media only screen and ($mediaDesk) {
     .nav {
       padding-top: 10vh;
       .title {
@@ -335,4 +233,205 @@
       }
     }
   }
+  @media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
+    .nav {
+      padding-top: 10vh;
+      .title {
+        width: 193px;
+        height: 28px;
+      }
+      .tag {
+        &-box {
+          width: 500px;
+          margin-top: 6vh;
+        }
+        width: 167px;
+        height: 53px;
+        scale: 0.8;
+        &:hover {
+          width: 170px;
+          height: 56px;
+          background-image: url(./shared/images/btn_result_hover.png);
+        }
+        &:active {
+          width: 170px;
+          height: 56px;
+        }
+      }
+    }
+    .border {
+      &-top {
+        height: 70px;
+        img {
+          width: 200px;
+          height: 64px;
+          scale: 0.8;
+        }
+      }
+      &-middle {
+        padding: 0 7%;
+      }
+      &-bottom {
+        height: 30px;
+      }
+    }
+    &-scrollbox {
+      margin-top: 13vh;
+      overflow-y: scroll;
+      .question {
+        &-list {
+          width: 800px;
+          height: 60vh;
+        }
+        &-box {
+          margin: 0.5rem 0;
+          h3 {
+            font-size: 1.4rem;
+            letter-spacing: 0.4rem;
+            button {
+              width: 3rem;
+            }
+          }
+          .p {
+            letter-spacing: 0.2rem;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+    .button {
+      &-box {
+        width: 480px;
+      }
+      &-share,
+      &-tryagain {
+        width: 234px;
+        height: 79px;
+        scale: 0.8;
+        &:hover {
+          width: 241px;
+          height: 77px;
+          scale: 0.8;
+        }
+        &:active {
+          width: 241px;
+          height: 77px;
+          scale: 0.8;
+        }
+      }
+      &-share {
+        &:hover {
+          background-image: url(./shared/images/btn_result_hover.png);
+        }
+      }
+      &-tryagain {
+        &:hover {
+          background-image: url(./shared/images/btn_highline_hover.png);
+        }
+      }
+    }
+  }
+  @media only screen and ($mediaSm) {
+    h3 {
+      font-size: 1rem;
+      line-height: 2.2rem;
+      letter-spacing: 0.1rem;
+      text-align: left;
+      white-space: nowrap;
+      button {
+        width: 3rem;
+      }
+    }
+    .p {
+      font-size: 0.95rem;
+      line-height: 1rem;
+      letter-spacing: 0.1rem;
+    }
+    &-list {
+      width: 300px;
+    }
+    .nav {
+      padding: 10vh 0 0;
+      .tag {
+        &-box {
+          width: 270px;
+          height: 26px;
+          overflow: hidden;
+        }
+        img {
+          width: 127px;
+          height: 39px;
+          transform: translate(-28px, -6px);
+        }
+        width: 85px;
+        height: 26px;
+        &:active {
+          width: 85px;
+          height: 26px;
+        }
+      }
+    }
+    .border {
+      &-top {
+        img {
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 111px;
+          height: 35px;
+          background-image: url(./shared/images/btn_result.png);
+        }
+      }
+    }
+    &-scrollbox {
+      margin-top: 10vh;
+    }
+    .question {
+      &-list {
+        width: 300px;
+      }
+      &-container {
+        margin: 3vh auto;
+      }
+      &-box {
+        h3 {
+          letter-spacing: 0.05rem;
+          button {
+            width: 3rem;
+          }
+        }
+        .p {
+          letter-spacing: 0.2rem;
+          line-height: 1rem;
+        }
+      }
+    }
+    .button {
+      &-box {
+        width: 300px;
+      }
+      &-share,
+      &-tryagain {
+        width: 147px;
+        height: 46px;
+        transition: transform 200ms;
+        &:active {
+          width: 145px;
+          height: 44px;
+        }
+      }
+      &-share {
+        background-image: url(./shared/images/btn_result.png);
+        &:active {
+          background-image: url(./shared/images/btn_result_active.png);
+        }
+      }
+      &-tryagain {
+        background-image: url(./shared/images/btn_highline.png);
+        &:active {
+          background-image: url(./shared/images/btn_highline_active.png);
+        }
+      }
+    }
+  }
+  
 }
