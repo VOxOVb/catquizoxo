@@ -10,7 +10,8 @@
   .photo {
     @extend %default;
     img {
-      @extend %default-bg;
+      background-size: cover;
+      background-repeat: no-repeat;
       border-radius: 50%;
     }
   }
