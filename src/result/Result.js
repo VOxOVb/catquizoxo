@@ -133,7 +133,14 @@ export default function Result({
 
   const imgBox = useRef(null);
   const handleImgDownload = () => {
-    html2canvas(imgBox.current, { backgroundColor: "null" }).then((canvas) => {
+    html2canvas(imgBox.current, {
+      backgroundColor: "null",
+      scale: scale,
+      canvas: canvas,
+      width: width,
+      height: height,
+      dpi: window.devicePixelRatio,
+    }).then((canvas) => {
       const dataUrl = canvas.toDataURL("image/png");
       const link = document.createElement("a");
       link.download = "測驗結果.png";
