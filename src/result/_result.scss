@@ -8,7 +8,7 @@
     background-image: url(./result/images/title_quizend.png);
   }
   .photo {
-    @extend %default;
+    @extend %position;
     img {
       background-size: cover;
       background-repeat: no-repeat;
@@ -16,8 +16,7 @@
     }
   }
   .btn {
-    background-size: cover;
-    background-repeat: no-repeat;
+    @extend %default;
     display: flex;
     justify-content: space-between;
     &-prev,
