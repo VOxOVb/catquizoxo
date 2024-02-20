@@ -722,14 +722,27 @@ small {
     height: 44px;
   }
 }
-.result .imgbox {
-  position: relative;
-  top: -100%;
-  width: 650px;
-  height: 430px;
+@media only screen and (min-width: 577px) {
+  .result .imgbox {
+    position: relative;
+    top: -100%;
+    width: 650px;
+    height: 430px;
+  }
+  .result .imgbox .license {
+    top: 0;
+  }
 }
-.result .imgbox .license {
-  top: 0;
+@media only screen and (max-width: 576px) {
+  .result .imgbox {
+    position: relative;
+    top: -100%;
+    width: 355px;
+    height: 250px;
+  }
+  .result .imgbox .license {
+    top: 0;
+  }
 }
 
 .answer {

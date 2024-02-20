@@ -135,11 +135,6 @@ export default function Result({
   const handleImgDownload = () => {
     html2canvas(imgBox.current, {
       backgroundColor: "null",
-      scale: scale,
-      canvas: canvas,
-      width: width,
-      height: height,
-      dpi: window.devicePixelRatio,
     }).then((canvas) => {
       const dataUrl = canvas.toDataURL("image/png");
       const link = document.createElement("a");
