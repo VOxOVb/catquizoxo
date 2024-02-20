@@ -190,9 +190,6 @@
       }
     }
     &-0 {
-      @media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
-        animation: a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
-      }
       @media only screen and ($mediaDesk) {
         animation: a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
       }
@@ -201,9 +198,6 @@
       }
     }
     &-1 {
-      @media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
-        animation: a-bottom-show 1s cubic-bezier(0.65, 0, 0.35, 1);
-      }
       @media only screen and ($mediaDesk) {
         animation: a-bottom-show 1s cubic-bezier(0.65, 0, 0.35, 1);
       }
@@ -215,24 +209,7 @@
   .handle-click {
     animation: btn-handle-click 1s cubic-bezier(0.33, 1, 0.68, 1);
   }
-  @media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
-    .device {
-      .answer {
-        &-0,
-        &-1 {
-          &:active {
-            animation: btn-handle-click 0.66s cubic-bezier(0.33, 1, 0.68, 1);
-          }
-        }
-        &-0 {
-          animation: a-top-show 0.8s cubic-bezier(0.65, 0, 0.35, 1);
-        }
-        &-1 {
-            animation: a-bottom-show 1s cubic-bezier(0.65, 0, 0.35, 1);
-        }
-      }
-    }
-  }
+  
   @keyframes slider-show {
     0% {
       width: 0;
@@ -340,7 +317,6 @@
     }
   }
 }
-
 .quizend {
   animation: result-up 0.6s cubic-bezier(0.33, 1, 0.68, 1);
   .title {
