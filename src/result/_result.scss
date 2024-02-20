@@ -351,6 +351,8 @@
   }
   @media only screen and ($mediaSm) {
     .imgbox {
+      background-color: $bg-color;
+      background-image: url(./shared/images/bgline.png);
       position: relative;
       top: -100%;
       width: 355px;

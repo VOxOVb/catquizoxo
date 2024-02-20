@@ -735,6 +735,8 @@ small {
 }
 @media only screen and (max-width: 576px) {
   .result .imgbox {
+    background-color: #fbf2e9;
+    background-image: url(./shared/images/bgline.png);
     position: relative;
     top: -100%;
     width: 355px;
