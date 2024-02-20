@@ -449,6 +449,11 @@ small {
   }
 }
 
+@media only screen and (min-width:577px) and (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+}
 .quizend .title {
   width: 193px;
   height: 28px;

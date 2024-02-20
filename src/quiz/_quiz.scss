@@ -198,3 +198,9 @@
     }
   }
 }
+
+@media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
+  .desktop {
+    display: none;
+  }
+}
