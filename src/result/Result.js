@@ -1,5 +1,6 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { randomNickname } from "../randomNickname";
+import DomToImage from "dom-to-image";
 import border from "./images/img_border.png";
 import result from "./images/btn_result_p.png";
 import photo00 from "./images/img_00.jpg";
@@ -130,7 +131,20 @@ export default function Result({
     setQuestions(questionsA);
   };
 
-  const handleImgDownload = async () => {};
+  const imgBox = useRef();
+  const handleImgDownload = () => {
+    console.log(imgBox.current);
+    DomToImage.toPng(imgBox.current)
+    .then((dataUrl) => {
+      const link = document.createElement("a");
+      link.download = "測驗結果.png";
+      link.href = dataUrl;
+      link.click();
+    })
+    .catch ((error) => {
+      console.error("糟糕，出錯了",error);
+    })
+  };
 
   return progress === "quizEnd" ? (
     <div className="quizend">
@@ -205,11 +219,10 @@ export default function Result({
   ) : (
     progress === "result" && (
       <div className="result">
-        <div className="title"></div>
-        <div id="imgDownload" className="license">
+        <div className="title" ref={imgBox}></div>
+        <div id="imgDownload"  className="license">
           <h3 className="license-nickname">{nickname}</h3>
           <div className="license-loading">
-            <div></div>
           </div>
           <div
             className="license-reward"
