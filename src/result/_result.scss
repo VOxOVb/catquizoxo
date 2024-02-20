@@ -15,7 +15,8 @@
     }
   }
   .btn {
-    @extend %default;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
     &-prev,
