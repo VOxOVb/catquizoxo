@@ -21,5 +21,7 @@ body {
 .container {
   width: 100%;
   height: 100vh;
-  overflow-y: hidden;
+  @media only screen and ($mediaLg) {
+    overflow-y: hidden;
+  }
 }

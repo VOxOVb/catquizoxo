@@ -39,7 +39,6 @@
   .button {
     &-box {
       @extend %default;
-      position: static;
       display: flex;
       justify-content: space-between;
     }
@@ -99,7 +98,9 @@
     }
     .button {
       &-box {
+        position: relative;
         width: 300px;
+        margin-bottom: 1rem;
       }
       &-question-list,
       &-tryagain {
@@ -115,6 +116,7 @@
   @media only screen and ($mediaMdLg) {
     &-scrollbox {
       overflow-y: auto;
+      height: 80vh;
       &::-webkit-scrollbar {
         width: 15px;
         &-track {
@@ -134,6 +136,34 @@
         width: 193px;
         height: 28px;
       }
+      .button {
+        &-box {
+          width: 520px;
+        }
+        &-question-list,
+        &-tryagain {
+          width: 234px;
+          height: 79px;
+          &:hover {
+            width: 224px;
+            height: 70px;
+          }
+          &:active {
+            width: 224px;
+            height: 70px;
+          }
+        }
+        &-question-list {
+          &:hover {
+            background-image: url(./shared/images/btn_result_hover.png);
+          }
+        }
+        &-tryagain {
+          &:hover {
+            background-image: url(./shared/images/btn_highline_hover.png);
+          }
+        }
+      }
     }
     &-list {
       margin-top: 2vh;
@@ -151,34 +181,6 @@
       }
       p {
         letter-spacing: 0.3rem;
-      }
-    }
-    .button {
-      &-box {
-        width: 520px;
-      }
-      &-question-list,
-      &-tryagain {
-        width: 234px;
-        height: 79px;
-        &:hover {
-          width: 224px;
-          height: 70px;
-        }
-        &:active {
-          width: 224px;
-          height: 70px;
-        }
-      }
-      &-question-list {
-        &:hover {
-          background-image: url(./shared/images/btn_result_hover.png);
-        }
-      }
-      &-tryagain {
-        &:hover {
-          background-image: url(./shared/images/btn_highline_hover.png);
-        }
       }
     }
   }
