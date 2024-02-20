@@ -394,20 +394,11 @@ small {
     height: 72px;
     border-radius: 2.5rem;
   }
-  .quiz .answer-0:hover, .quiz .answer-1:hover {
-    transform: translate(-15px, -4px);
-    background-color: rgba(225, 225, 225, 0.5);
-    background-blend-mode: lighten;
-    font-size: 1.35rem;
-  }
   .quiz .answer-0 {
     top: 64%;
   }
   .quiz .answer-1 {
     top: 75%;
-  }
-  .quiz .desktop {
-    display: none;
   }
 }
 @media only screen and (max-width: 576px) {
