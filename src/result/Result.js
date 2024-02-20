@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from "react";
+import html2canvas from "html2canvas";
 import { randomNickname } from "../randomNickname";
-import DomToImage from "dom-to-image";
 import border from "./images/img_border.png";
 import result from "./images/btn_result_p.png";
 import photo00 from "./images/img_00.jpg";
@@ -131,19 +131,15 @@ export default function Result({
     setQuestions(questionsA);
   };
 
-  const imgBox = useRef();
+  const imgBox = useRef(null);
   const handleImgDownload = () => {
-    console.log(imgBox.current);
-    DomToImage.toPng(imgBox.current)
-    .then((dataUrl) => {
+    html2canvas(imgBox.current, { backgroundColor: "null" }).then((canvas) => {
+      const dataUrl = canvas.toDataURL("image/png");
       const link = document.createElement("a");
       link.download = "測驗結果.png";
       link.href = dataUrl;
       link.click();
-    })
-    .catch ((error) => {
-      console.error("糟糕，出錯了",error);
-    })
+    });
   };
 
   return progress === "quizEnd" ? (
@@ -219,10 +215,11 @@ export default function Result({
   ) : (
     progress === "result" && (
       <div className="result">
-        <div className="title" ref={imgBox}></div>
-        <div id="imgDownload"  className="license">
+        <div className="title"></div>
+        <div id="license" className="license">
           <h3 className="license-nickname">{nickname}</h3>
           <div className="license-loading">
+            <div></div>
           </div>
           <div
             className="license-reward"
@@ -287,6 +284,82 @@ export default function Result({
                   <small>要好好愛他們喔!ヽ(=^･ω･^=)丿</small>
                 </>
               ))}
+          </div>
+        </div>
+        <div ref={imgBox} className="imgbox">
+          <div className="license">
+            <h3 className="license-nickname">{nickname}</h3>
+            <div className="license-loading">
+              <div></div>
+            </div>
+            <div
+              className="license-reward"
+              style={{ backgroundImage: `url(${reward})` }}
+            >
+              <img
+                src={border}
+                alt="選擇中的圖片"
+                style={{
+                  backgroundImage:
+                    imgPick === 5
+                      ? imgUpload !== null
+                        ? `url(${imgUpload})`
+                        : `url(${photoList[6]})`
+                      : `url(${photoList[imgPick]})`,
+                }}
+              ></img>
+            </div>
+            <img
+              className="license-reward-name"
+              src={
+                reward === copper
+                  ? copperP
+                  : reward === silver
+                  ? silverP
+                  : goldP
+              }
+              alt="稱號"
+              style={{
+                backgroundImage:
+                  reward === copper
+                    ? `url(${copperBg})`
+                    : reward === silver
+                    ? `url(${silverBg})`
+                    : `url(${goldBg})`,
+              }}
+            ></img>
+            <div className="license-score"></div>
+            <div className="license-textbox">
+              <small>你拿到了{totalScore}分!</small>
+              {reward === copper && (
+                <>
+                  <small>差強人意...多多補充相關知識</small>
+                  <small>和喵星人的相處能更融洽喔~</small>
+                  <small>加油好嗎(=^-ω-^=)</small>
+                </>
+              )}
+              {reward === silver && (
+                <>
+                  <small>還不錯的成績</small>
+                  <small>獲取更多貓知識與喵星人</small>
+                  <small>提高好感度吧!(=^ΦωΦ^=)</small>
+                </>
+              )}
+              {reward === gold &&
+                (totalScore === 100 ? (
+                  <>
+                    <small>太厲害了!滿分!!</small>
+                    <small>喵星人能和你在一起</small>
+                    <small>太幸福啦!└(=^･ω･^=)┐</small>
+                  </>
+                ) : (
+                  <>
+                    <small>獲得高分!</small>
+                    <small>想必是個和喵星人相處融洽的優秀貓奴</small>
+                    <small>要好好愛他們喔!ヽ(=^･ω･^=)丿</small>
+                  </>
+                ))}
+            </div>
           </div>
         </div>
         <div className="button-box">

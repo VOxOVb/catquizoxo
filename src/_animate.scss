@@ -209,7 +209,7 @@
   .handle-click {
     animation: btn-handle-click 1s cubic-bezier(0.33, 1, 0.68, 1);
   }
-  
+
   @keyframes slider-show {
     0% {
       width: 0;
@@ -356,7 +356,7 @@
   .title {
     animation: title-blank 1.2s cubic-bezier(0.33, 1, 0.68, 1);
   }
-  .license {
+  #license .license {
     &-loading {
       @media only screen and ($mediaSm) {
         animation: m-loading 1s cubic-bezier(0.33, 1, 0.68, 1) 3;

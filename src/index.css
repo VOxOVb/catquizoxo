@@ -722,6 +722,15 @@ small {
     height: 44px;
   }
 }
+.result .imgbox {
+  position: relative;
+  top: -100%;
+  width: 650px;
+  height: 430px;
+}
+.result .imgbox .license {
+  top: 0;
+}
 
 .answer {
   position: relative;
@@ -1699,22 +1708,22 @@ small {
   animation: title-blank 1.2s cubic-bezier(0.33, 1, 0.68, 1);
 }
 @media only screen and (max-width: 576px) {
-  .result .license-loading {
+  .result #license .license-loading {
     animation: m-loading 1s cubic-bezier(0.33, 1, 0.68, 1) 3;
   }
 }
 @media only screen and (min-width: 577px) {
-  .result .license-loading {
+  .result #license .license-loading {
     animation: loading 1s cubic-bezier(0.33, 1, 0.68, 1) 3;
   }
 }
-.result .license-reward {
+.result #license .license-reward {
   animation: reward 6s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.result .license-reward-name {
+.result #license .license-reward-name {
   animation: reward-name 4s cubic-bezier(0.33, 1, 0.68, 1);
 }
-.result .license-textbox {
+.result #license .license-textbox {
   animation: textbox 5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 @keyframes loading {
