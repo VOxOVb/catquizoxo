@@ -357,9 +357,12 @@
       position: relative;
       top: -100%;
       width: 360px;
-      height: 265px;
-      .license {
+      height: 295px;
+      .title {
         top: 10px;
+      }
+      .license {
+        top: 40px;
       }
     }
   }

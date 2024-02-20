@@ -741,10 +741,13 @@ small {
     position: relative;
     top: -100%;
     width: 360px;
-    height: 265px;
+    height: 295px;
+  }
+  .result .imgbox .title {
+    top: 10px;
   }
   .result .imgbox .license {
-    top: 10px;
+    top: 40px;
   }
 }
 

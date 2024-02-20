@@ -290,6 +290,7 @@ export default function Result({
           </div>
         </div>
         <div ref={imgBox} className="imgbox">
+          <div className="title"></div>
           <div className="license">
             <img src={imgbox} alt=""></img>
             <h3 className="license-nickname">{nickname}</h3>
