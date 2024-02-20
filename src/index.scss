@@ -24,4 +24,7 @@ body {
   @media only screen and ($mediaLg) {
     overflow-y: hidden;
   }
+  @media only screen and ($mediaSm) {
+    overflow-y: auto;
+  }
 }
