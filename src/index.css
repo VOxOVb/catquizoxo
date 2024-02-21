@@ -330,9 +330,6 @@ small {
   .quiz .answer-1 {
     top: 75%;
   }
-  .quiz .device {
-    display: none;
-  }
 }
 @media only screen and (min-width:577px) and (max-width: 1024px) {
   .quiz nav {

@@ -116,7 +116,7 @@ function QuestionItem({ questionList, handleClickAnswer, text, isActive }) {
     ""
   ) : (
     <>
-      <div className="desktop">
+      {/* <div className="desktop">
         <h3 key={text} className="question">
           {questionList[text].question}
         </h3>
@@ -136,8 +136,7 @@ function QuestionItem({ questionList, handleClickAnswer, text, isActive }) {
             {qOption[j].text}
           </button>
         ))}
-      </div>
-      <div className="device">
+      </div> */}
         <ul>
           <h3 key={text} className="question">
             {questionList[text].question}
@@ -159,7 +158,6 @@ function QuestionItem({ questionList, handleClickAnswer, text, isActive }) {
             </li>
           ))}
         </ul>
-      </div>
     </>
   );
 }
