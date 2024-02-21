@@ -330,6 +330,9 @@ small {
   .quiz .answer-1 {
     top: 75%;
   }
+  .quiz .devive {
+    display: none;
+  }
 }
 @media only screen and (min-width:577px) and (max-width: 1024px) {
   .quiz nav {
@@ -375,6 +378,9 @@ small {
   .quiz .answer-1 {
     top: 70%;
   }
+  .quiz .desktop {
+    display: none;
+  }
 }
 @media only screen and (max-width: 576px) {
   .quiz nav {
@@ -418,6 +424,9 @@ small {
   }
   .quiz .answer-1 {
     top: 70%;
+  }
+  .quiz .desktop {
+    display: none;
   }
 }
 
