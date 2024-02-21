@@ -95,9 +95,6 @@
         top: 75%;
       }
     }
-    .devive {
-      display: none;
-    }
   }
   @media only screen and ($mediaTabbleMin) and ($mediaTabbleMax) {
     nav {
@@ -146,9 +143,6 @@
         top: 70%;
       }
     }
-    .desktop {
-      display: none;
-    }
   }
   @media only screen and ($mediaSm) {
     nav {
@@ -196,8 +190,18 @@
         top: 70%;
       }
     }
-    .desktop {
-      display: none;
-    }
+  }
+}
+.desktop,.device {
+  display: none;
+}
+.desktop {
+  @media only screen and ($mediaDesk) {
+  display: contents;
+  }
+}
+.device {
+  @media only screen and ($mediaTabbleMax) {
+  display: contents;
   }
 }

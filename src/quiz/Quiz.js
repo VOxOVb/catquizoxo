@@ -120,32 +120,42 @@ function QuestionItem({ questionList, handleClickAnswer, text, isActive }) {
         <h3 key={text} className="question">
           {questionList[text].question}
         </h3>
-        {Array.from({ length: 2 }, (_, i) => i).map((_, j) => (
-          <li
-            key={`${text}${j}`}
-            className={`${text}${j}` === isActive ? "handle-click" : ""}
-            onClick={() =>
-              handleClickAnswer(qOption[j].isCorrect, `${text}${j}`)
-            }
-          >
-            <div className="desktop">
-              <button
-                className={`answer-${j} p`}
-                style={{ animation: aAni.at(j)[1] }}
-              >
-                {qOption[j].text}
-              </button>
-            </div>
-            <div className="device">
+        <div className="device">
+          {Array.from({ length: 2 }, (_, i) => i).map((_, j) => (
+            <li
+              key={`${text}${j}`}
+              className={`${text}${j}` === isActive ? "handle-click" : ""}
+              onClick={() =>
+                handleClickAnswer(qOption[j].isCorrect, `${text}${j}`)
+              }
+            >
               <button
                 className={`answer-${j} p`}
                 style={{ animation: aAni.at(j)[0] }}
               >
                 {qOption[j].text}
               </button>
-            </div>
-          </li>
-        ))}
+            </li>
+          ))}
+        </div>
+        <div className="desktop">
+          {Array.from({ length: 2 }, (_, i) => i).map((_, j) => (
+            <li
+              key={`${text}${j}`}
+              className={`${text}${j}` === isActive ? "handle-click" : ""}
+              onClick={() =>
+                handleClickAnswer(qOption[j].isCorrect, `${text}${j}`)
+              }
+            >
+              <button
+                className={`answer-${j} p`}
+                style={{ animation: aAni.at(j)[1] }}
+              >
+                {qOption[j].text}
+              </button>
+            </li>
+          ))}
+        </div>
       </ul>
     </>
   );
