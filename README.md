@@ -34,7 +34,7 @@ export const questionPick = (arr, count) => {
 <br>
 
 **🐈 依測驗分數及使用者的照片選擇，能產出不同的結果圖，供下載與好友分享**
-![](readme/images/p-01.png)
+![](readme/images/p-00.png)
 
 ```js
 const imgBox = useRef(null);
