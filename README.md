@@ -81,7 +81,7 @@ const questionsA = useMemo(() => {
 
 #### **⭐ UI/UX**
 
-![](readme/images/01.png)
+![](readme/images/00.png)
 ![](readme/images/01.png)
 ![](readme/images/02.png)
 ![](readme/images/00.gif)
