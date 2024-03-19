@@ -2,7 +2,7 @@
 
 > 想養貓，除了對貓咪的愛是不夠的!想跟喵星人相處融洽，他們的心情與行為、豢養所需物品、 身心保健等知識皆不可或缺，透過測驗小遊戲**貓奴檢定**測試自己是不是稱職貓奴吧!
 
-##### ![](readme/images/qrcode.png)_**👈 手機掃描 QR-code 立即遊玩!**_
+##### <img src="readme/images/qrcode.png" width="150px">**👈 手機掃描 QR-code 立即遊玩!**_
 
 ##### [你自認是專業貓奴嗎?貓奴檢定考，等你來挑戰!🐈](https://meowmastery.netlify.app/)
 
